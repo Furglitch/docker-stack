@@ -16,7 +16,7 @@ services:
     ports:
       - ${PORT_PLEX}:32400
     volumes:
-      - ${CONFIG_PLEX}:/config
+      - ${CONFIG_PLEX}:/config/Library/Application Support/Plex Media Server
       - ${MEDIA_MOVIE}:/movies
       - ${MEDIA_TV}:/tv
     restart: unless-stopped
