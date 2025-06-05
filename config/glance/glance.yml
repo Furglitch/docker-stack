@@ -1,0 +1,124 @@
+
+theme:
+  background-color: 240 21 15
+  contrast-multiplier: 1.2
+  primary-color: 217 92 83
+  positive-color: 115 54 76
+  negative-color: 347 70 65
+
+pages:
+  - name: Glance
+    columns:
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - name: UTC
+                timezone: UTC
+          - type: calendar
+            first-day-of-week: sunday
+          - type: bookmarks
+            groups:
+              - links:
+                - title: Email
+                  url: https://mail.proton.me/u/1/inbox
+                  icon: si:protonmail
+                - title: YouTube (!y)
+                  url: https://www.youtube.com/feed/subscriptions
+                  icon: si:youtube
+                - title: YouTube Music
+                  url: https://music.youtube.com/library/playlists
+                  icon: si:youtubemusic
+                - title: Reddit (!r)
+                  url: https://www.reddit.com/?feed=home
+                  icon: si:reddit
+                - title: GitHub
+                  url: https://www.github.com/Furglitch
+                  icon: si:github
+      - size: full
+        widgets:
+          - type: search
+            search-engine: https://www.startpage.com/sp/search?query={QUERY}
+            autofocus: true
+            new-tab: true
+            bangs:
+              - title: YouTube
+                shortcut: "!y"
+                url: https://www.youtube.com/results?search_query={QUERY}
+              - title: Reddit
+                shortcut: "!r"
+                url: https://www.reddit.com/search?q={QUERY}
+          - type: videos
+            limit: 10
+            channels:
+              - UCftcLVz-jtPXoH3cWUUDwYw # Bitwit
+              - UCdC0An4ZPNr_YiFiYoVbwaw # Daily Dose of Internet
+              - UCHDxYLv8iovIbhrfl16CNyg # GameLinked
+              - UCa8W2_uf81Ew6gYuw0VPSeA # Juxtopposed
+              - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+              - UCvWWf-LYjaujE50iYai8WgQ # Pauls Hardware
+              - UCeeFfhMcJa1kjtfZAGskOCA # TechLinked
+              - UC6Z_VulNXt6VmQYa2YrzDsw # TheLexikitty
+              - UCpnkp_D4FLPCiXOmDhoAeYA # UnusualVideos
+          - type: group
+            widgets:
+              - type: reddit
+                subreddit: gamingnews
+                collaspse-after: 3
+                show-thumbnails: true
+              - type: reddit
+                subreddit: technews
+                collaspse-after: 3
+                show-thumbnails: true
+      - size: small
+        widgets:
+          - type: monitor
+            cache: 1m
+            title: Servarr
+            sites:
+              - title: Plex
+                url: https://hoard.furglitch.com/web/index.html
+                icon: di:plex
+              - title: Sonarr
+                url: https://hoard.furglitch.com/dl/tv
+                icon: di:sonarr
+              - title: Radarr
+                url: https://hoard.furglitch.com/dl/movies
+                icon: di:radarr
+              - title: Prowlarr
+                url: http://192.168.1.74:32404/
+                icon: di:prowlarr
+              - title: Ombi
+                url: http://192.168.1.74:32406/
+                icon: di:ombi
+              - title: SabNZBD
+                url: http://192.168.1.74:8080/
+                icon: di:sabnzbd
+              - title: QBitTorrent
+                url: http://192.168.1.74:8081/
+                icon: di:qbittorrent
+          - type: monitor
+            cache: 1m
+            title: Services
+            sites:
+              - title: nginx
+                url: http://192.168.1.74:81/
+                icon: di:nginx
+              - title: VaultWarden
+                url: https://vault.furglitch.com/
+                icon: di:vaultwarden
+              - title: NextCloud
+                url: https://cloud.furglitch.com/
+                icon: di:nextcloud
+              - title: SillyTavern
+                url: http://192.168.1.74:9000/
+                icon: di:printer
+                alt-status-codes:
+                  - 403
+              - title: Mealie
+                url: https://chef.furglitch.com/
+                icon: di:mealie
+              - title: Firefly
+                url: https://firefly.furglitch.com/
+                icon: di:firefly
