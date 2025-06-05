@@ -1,6 +1,6 @@
 <Config>
     <BindAddress>*</BindAddress>
-    <Port>32503</Port>
+    <Port>32504</Port>
     <EnableSsl>False</EnableSsl>
     <LaunchBrowser>True</LaunchBrowser>
     <AuthenticationMethod>Forms</AuthenticationMethod>
