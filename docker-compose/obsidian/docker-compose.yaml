@@ -1,0 +1,17 @@
+services:
+
+  obsidian:
+    container_name: obsidian
+    image: lscr.io/linuxserver/obsidian:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    ports:
+      - ${PORT_OBSIDIAN}:${PORT_OBSIDIAN}
+    volumes:
+      - ${CONFIG_OBSIDIAN}:/config
+      - ${CONFIG_OBSIDIAN}/vaults:/vaults
+    restart: unless-stopped
+    shm_size: "1gb"
