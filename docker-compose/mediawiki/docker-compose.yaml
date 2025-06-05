@@ -1,0 +1,12 @@
+services:
+
+  mediawiki:
+    container_name: mediawiki
+    image: mediawiki
+    ports:
+      - ${PORT_MEDIAWIKI}:80
+    volumes:
+      #- ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php # Uncomment after initial setup
+      - ${CONFIG_MEDIAWIKI}/db:/var/www/data
+      - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
+    restart: unless-stopped
