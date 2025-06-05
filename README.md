@@ -1,0 +1,1 @@
+# Furglitch's Docker Stack
