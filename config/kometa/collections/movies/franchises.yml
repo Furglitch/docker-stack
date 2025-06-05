@@ -1,0 +1,236 @@
+collections:
+
+  Avatar:
+    trakt_list: https://trakt.tv/lists/official/avatar-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/303189
+    sync_mode: append
+
+  Beetlejuice:
+    trakt_list: https://trakt.tv/lists/official/beetlejuice-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/494477
+    sync_mode: append
+
+  Blade Runner:
+    trakt_list: https://trakt.tv/users/purokushi/lists/blade-runnerverse?display=movie
+    url_poster: https://theposterdb.com/api/assets/33975
+    ignore_ids: 57656
+    sync_mode: append
+
+  Breaking Bad:
+    trakt_list: https://trakt.tv/users/vargajoe/lists/breaking-bad-chronology?display=movie
+    url_poster: https://theposterdb.com/api/assets/503550
+    sync_mode: append
+
+  Code 8:
+    trakt_list: https://trakt.tv/lists/official/code-8-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/462092
+    sync_mode: append
+
+  The Dark Knight:
+    trakt_list: https://trakt.tv/lists/official/the-dark-knight-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/4790
+    sync_mode: append
+
+  DC Snyderverse (DCEU):
+    trakt_list: https://trakt.tv/users/oblogdamari/lists/dceu-dc-extended-universe?display=movie
+    url_poster: https://theposterdb.com/api/assets/48242
+    sync_mode: append
+
+  DC Universe (DCU):
+    trakt_list: https://trakt.tv/users/ianismajoris/lists/dc-universe?display=movie
+    url_poster: https://theposterdb.com/api/assets/113155
+    sync_mode: append
+
+  Deadpool:
+    trakt_list: https://trakt.tv/lists/official/deadpool-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/16115
+    sync_mode: append
+
+  DragonHeart:
+    trakt_list: https://trakt.tv/lists/official/dragonheart-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/23846
+    sync_mode: append
+
+  Dune:
+    trakt_list: https://trakt.tv/lists/official/dune-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/478768
+    sync_mode: append
+
+  Eastrail 117:
+    trakt_list: https://trakt.tv/lists/official/eastrail-177-trilogy?display=movie
+    url_poster: https://theposterdb.com/api/assets/10346
+    sync_mode: append
+
+  The Equalizer:
+    trakt_list: https://trakt.tv/lists/official/the-equalizer-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/416827
+    sync_mode: append
+
+  Fallen:
+    trakt_list: https://trakt.tv/lists/official/has-fallen-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/76958
+    sync_mode: append
+
+  Fast and Furious:
+    trakt_list: https://trakt.tv/lists/official/the-fast-and-the-furious-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/38957
+    sync_mode: append
+
+  How To Train Your Dragon:
+    trakt_list: https://trakt.tv/users/aeril/lists/how-to-train-your-dragon?display=movie
+    url_poster: https://theposterdb.com/api/assets/28
+    sync_mode: append
+    ignore_ids: 47626, 79379, 91417, 298115
+
+  The Hunger Games:
+    trakt_list: https://trakt.tv/lists/official/the-hunger-games-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/31012
+    sync_mode: append
+
+  Indiana Jones:
+    trakt_list: https://trakt.tv/lists/official/indiana-jones-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/53303
+    sync_mode: append
+
+  James Bond:
+    trakt_list: https://trakt.tv/users/amarantha/lists/james-bond?display=movie
+    url_poster: https://theposterdb.com/api/assets/115662
+    sync_mode: append
+
+  John Wick:
+    trakt_list: https://trakt.tv/lists/official/john-wick-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/17550
+    sync_mode: append
+
+  Jurassic Park:
+    trakt_list: https://trakt.tv/lists/official/jurassic-park-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/416827
+    sync_mode: append
+
+  Kingsman:
+    trakt_list: https://trakt.tv/lists/official/kingsman-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/50362
+
+  The Lego Movie:
+    trakt_list: https://trakt.tv/users/conanrocks/lists/movies-lego-movie?display=movie
+    url_poster: https://theposterdb.com/api/assets/46059
+    sync_mode: append
+
+  Marvel Cinematic Universe:
+    trakt_list: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe?display=movie
+    url_poster: https://theposterdb.com/api/assets/162885
+    sync_mode: append
+
+  The Matrix:
+    trakt_list: https://trakt.tv/lists/official/the-matrix-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/147306
+    sync_mode: append
+
+  The Maze Runner:
+    trakt_list: https://trakt.tv/lists/official/the-maze-runner-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/1026
+    sync_mode: append
+
+  Men in Black:
+    trakt_list: https://trakt.tv/lists/official/men-in-black-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/16550
+    sync_mode: append
+
+  Middle Earth:
+    trakt_list: https://trakt.tv/users/oya-kesh/lists/middle-earth?display=movie
+    url_poster: https://theposterdb.com/api/assets/61357
+    sync_mode: append
+
+  Mission Impossible:
+    trakt_list: https://trakt.tv/lists/official/mission-impossible-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/65202
+    sync_mode: append
+
+  MonsterVerse:
+    trakt_list: https://trakt.tv/users/folion/lists/monsterverse?display=movie
+    url_poster: https://theposterdb.com/api/assets/116534
+    sync_mode: append
+
+  My Little Pony:
+    trakt_list: https://trakt.tv/users/furglitch/lists/my-little-pony-chronological?display=movie
+    url_poster: https://theposterdb.com/api/assets/524767
+    sync_mode: append
+    ignore_ids: 359878,25400,25396,256439,19789,290996,57505,564638,612087
+
+  Pacific Rim:
+    trakt_list: https://trakt.tv/lists/official/pacific-rim-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/3397
+    sync_mode: append
+
+  Pirates of the Caribbean:
+    trakt_list: https://trakt.tv/lists/official/pirates-of-the-caribbean?display=movie
+    url_poster: https://theposterdb.com/api/assets/71934
+
+  Planet of the Apes:
+    trakt_list: https://trakt.tv/lists/official/planet-of-the-apes-reboot-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/97354
+    sync_mode: append
+
+  Pokemon:
+    trakt_list: https://trakt.tv/users/seriouspain/lists/pokemon?display=movie
+    url_poster: https://theposterdb.com/api/assets/438334
+    sync_mode: append
+    ignore_ids: 33376,36756,268998,36753,293245,295613,211814,216651,272087,249424,377909,332485,389621
+    
+  Shrek:
+    trakt_list: https://trakt.tv/users/paladin_g/lists/shrek-and-puss-in-boots
+    url_poster: https://theposterdb.com/api/assets/27739
+    sync_mode: append
+    ignore_ids: 634064,462650
+
+  Sonic the Hedgehog:
+    trakt_list: https://trakt.tv/users/folion/lists/sonic-timeline
+    url_poster: https://theposterdb.com/api/assets/486370
+    sync_mode: append
+    ignore_ids: 979296
+
+  Spider-Verse:
+    trakt_list: https://trakt.tv/users/username57/lists/sony-spider-verse?display=movie
+    url_poster: https://theposterdb.com/api/assets/311233
+    sync_mode: append
+
+  Star Trek:
+    trakt_list: https://trakt.tv/users/silvol/lists/star-trek?display=movie
+    url_poster: https://theposterdb.com/api/assets/62523
+    sync_mode: append
+
+  Star Wars:
+    trakt_list: https://trakt.tv/users/silvol/lists/star-wars?display=movie
+    url_poster: https://theposterdb.com/api/assets/27586
+    sync_mode: append
+
+  Studio Ghibli:
+    trakt_list: https://trakt.tv/users/asterlea/lists/studio-ghibli?display=movie
+    url_poster: https://theposterdb.com/api/assets/325047
+    sync_mode: append
+    ignore_ids: 514710,683127
+
+  Top Gun:
+    trakt_list: https://trakt.tv/lists/official/top-gun-collection?display=movie
+    url_poster: https://theposterdb.com/api/assets/251589
+    sync_mode: append
+
+  Transformers:
+    trakt_list: https://trakt.tv/users/strangerer/lists/transformers?display=movie
+    url_poster: https://theposterdb.com/api/assets/13251
+    sync_mode: append
+
+  The Witcher:
+    trakt_list: https://trakt.tv/users/martials/lists/the-witcher-chronological-order?display=movie
+    url_poster: https://theposterdb.com/api/assets/379612
+    sync_mode: append
+
+  Wizarding World:
+    trakt_list: https://trakt.tv/users/malvado/lists/wizarding-world?display=movie
+    url_poster: https://theposterdb.com/api/assets/20343
+    sync_mode: append
+
+  X-Men:
+    trakt_list: https://trakt.tv/users/donxy/lists/x-men-universe?display=movie
+    url_poster: https://theposterdb.com/api/assets/10
+    sync_mode: append

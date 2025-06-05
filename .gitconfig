@@ -6,6 +6,14 @@
 				-e 's/^GLUETUN_TYPE=.*/GLUETUN_TYPE=TYPE/g' \
 				-e 's/^GLUETUN_KEY=.*/GLUETUN_KEY=VPN-KEY/g'
 	smudge = cat
+[filter "redact-kometa"]
+	clean = sed \
+				-e 's|url:.*|url: http://192.168.X.X:PORT|g' \
+				-e 's|token:.*|token: TOKEN|g' \
+				-e 's|apikey:.*|apikey: APIKEY|g' \
+				-e 's|client_id:.*|client_id: CLIENT_ID|g' \
+				-e 's|client_secret:.*|client_secret: CLIENT_SECRET|g'
+	smudge = cat
 [filter "redact-mealie"]
     clean = sed \
 				-e 's|BASE_URL=.*|BASE_URL=http://192.168.X.X:${PORT_MEALIE}|g'
