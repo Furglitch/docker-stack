@@ -9,7 +9,7 @@ services:
       - UMASK=${UMASK}
       - TZ=${TZ}
     ports:
-      - ${PORT_OBSIDIAN}:${PORT_OBSIDIAN}
+      - ${PORT_OBSIDIAN}:3000
     volumes:
       - ${CONFIG_OBSIDIAN}:/config
       - ${CONFIG_OBSIDIAN}/vaults:/vaults
