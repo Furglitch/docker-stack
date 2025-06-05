@@ -9,17 +9,17 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
-      - VPN_SERVICE_PROVIDER=protonvpn
-      - VPN_TYPE=wireguard
-      - WIREGUARD_PRIVATE_KEY=REDACTED
+      - TZ=${TZ}
+      - VPN_SERVICE_PROVIDER=${GLUETUN_PROVIDER}
+      - VPN_TYPE=${GLUETUN_TYPE}
+      - WIREGUARD_PRIVATE_KEY=${GLUETUN_KEY}
       - BLOCK_MALICIOUS=off
     ports:
-      - 8080:8080 # SabNZBD
-      - 8081:8081 # qBittorrent WebUI
-      - 8082:8082 # qBittorrent Backend
+      - ${PORT_SABNZBD}:${PORT_SABNZBD}
+      - ${PORT_QBITTORRENT_UI}:${PORT_QBITTORRENT_UI}
+      - ${PORT_QBITTORRENT_IO}:${PORT_QBITTORRENT_IO}
     volumes:
-      - ${CONFIG}/gluetun:/gluetun
+      - ${CONFIG_GLUETUN}:/gluetun
     restart: always
   
   qbittorrent:
@@ -32,14 +32,15 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
-      - WEBUI_PORT=8081
-      - TORRENTING_PORT=8082
+      - TZ=${TZ}
+      - WEBUI_PORT=${PORT_QBITTORRENT_UI}
+      - TORRENTING_PORT=${PORT_QBITTORRENT_IO}
       - DOCKER_MODS=${PARK}:qbittorrent
       - TP_THEME=${THEME}
     volumes:
-      - ${CONFIG}/qbittorrent:/config
-      - ${SHARE}/downloads:/downloads
+      - ${CONFIG_QBITTORRENT}:/config
+      - ${DOWNLOADS_QBITTORRENT}:/downloads
+      - ${DOWNLOADS_QBITTORRENT_INCOMPLETE}:/downloads/incomplete
     restart: unless-stopped
 
   sabnzbd:
@@ -52,10 +53,11 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
       - DOCKER_MODS=${PARK}:sabnzbd
       - TP_THEME=${THEME}
     volumes:
-      - ${CONFIG}/sabnzbd:/config
-      - ${SHARE}/downloads:/downloads
+      - ${CONFIG_SABNZBD}:/config
+      - ${DOWNLOADS_SABNZBD}:/downloads
+      - ${DOWNLOADS_SABNZBD_INCOMPLETE}:/downloads/incomplete
     restart: unless-stopped

@@ -9,15 +9,15 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
       - DOCKER_MODS=${PARK}:sonarr
       - TP_THEME=${THEME}
     ports:
-      - 32402:8989
+      - ${PORT_SONARR}:${PORT_SONARR}
     volumes:
-      - ${CONFIG}/sonarr:/config
-      - ${SHARE}:/share
-      - ${SHARE}/downloads:/downloads
+      - ${CONFIG_SONARR}:/config
+      - ${MEDIA_TV}:/tv
+      - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
 
   radarr:
@@ -29,15 +29,15 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
       - DOCKER_MODS=${PARK}:radarr
       - TP_THEME=${THEME}
     ports:
-      - 32403:7878
+      - ${PORT_RADARR}:${PORT_RADARR}
     volumes:
-      - ${CONFIG}/radarr:/config
-      - ${SHARE}:/share
-      - ${SHARE}/downloads:/downloads
+      - ${CONFIG_RADARR}:/config
+      - ${MEDIA_TV}:/tv
+      - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
   
   prowlarr:
@@ -47,15 +47,15 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
       - DOCKER_MODS=${PARK}:prowlarr
       - TP_THEME=${THEME}
     ports:
-      - 32404:9696
+      - ${PORT_PROWLARR}:${PORT_PROWLARR}
     volumes:
-      - ${CONFIG}/prowlarr:/config
-      - ${SHARE}:/share
-      - ${SHARE}/downloads:/downloads
+      - ${CONFIG_PROWLARR}:/config
+      - ${MEDIA_MOVIE}:/movies
+      - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
 
   flaresolverr:
@@ -65,10 +65,10 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
       - LOG_LEVEL=info
     ports:
-      - 32405:8191
+      - ${PORT_FLARESOLVER}:8191
     volumes:
-      - ${CONFIG}/flaresolverr:/config
+      - ${CONFIG_FLARESOLVER}:/config
     restart: unless-stopped

@@ -7,13 +7,13 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
-      - VIRTUAL_HOST=REDACTED
-      - LETSENCRYPT_HOST=REDACTED
+      - TZ=${TZ}
+      - VIRTUAL_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}
+      - LETSENCRYPT_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}
     ports:
-      - 8092:443
+      - ${PORT_NEXTCLOUD}:443
     volumes: 
-      - '${CONFIG}/nextcloud/config:/config'
-      - '${CONFIG}/nextcloud/data:/data'
-      - '/mnt/share/nextcloud:/share'
+      - '${CONFIG_NEXTCLOUD}/config:/config'
+      - '${CONFIG_NEXTCLOUD}/data:/data'
+      - '${CLOUD_NEXTCLOUD}:/share'
     restart: always

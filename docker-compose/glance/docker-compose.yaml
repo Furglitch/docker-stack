@@ -7,9 +7,9 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
+      - TZ=${TZ}
     ports:
-      - 8095:8080
+      - ${PORT_GLANCE}:8080
     volumes:
-      - ${CONFIG}/glance:/app/config
+      - ${CONFIG_GLANCE}:/app/config
     restart: unless-stopped

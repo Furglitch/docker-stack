@@ -1,0 +1,17 @@
+[filter "redact-env"]
+	clean = sed \
+				-e 's/^MYSQL_USER=.*/MYSQL_USER=USER/g' \
+				-e 's/^MYSQL_PASSWORD=.*/MYSQL_PASSWORD=PASSWORD/g' \
+				-e 's/^GLUETUN_PROVIDER=.*/GLUETUN_PROVIDER=PROVIDER/g' \
+				-e 's/^GLUETUN_TYPE=.*/GLUETUN_TYPE=TYPE/g' \
+				-e 's/^GLUETUN_KEY=.*/GLUETUN_KEY=VPN-KEY/g'
+	smudge = cat
+[filter "redact-mealie"]
+    clean = sed \
+				-e 's|BASE_URL=.*|BASE_URL=http://192.168.X.X:${PORT_MEALIE}|g'
+    smudge = cat
+[filter "redact-nextcloud"]
+    clean = sed \
+				-e 's|VIRTUAL_HOST=.*|VIRTUAL_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}|g' \
+				-e 's|LETSENCRYPT_HOST=.*|LETSENCRYPT_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}|g'
+    smudge = cat

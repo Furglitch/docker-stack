@@ -5,11 +5,11 @@ services:
     image: qmcgaw/deunhealth:latest
     build: .
     environment:
-      - TZ=${TIME}
+      - TZ=${TZ}
       - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
       - LOG_LEVEL=info
     volumes:
-      - ${SOCK}:${SOCK}
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
     restart: always
 
   watchtower:
@@ -17,5 +17,5 @@ services:
     image: containrrr/watchtower:latest
     command: --cleanup=true --include-restarting=true --include-stopped=true --interval=86400
     volumes:
-      - ${SOCK}:${SOCK}
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
     restart: always

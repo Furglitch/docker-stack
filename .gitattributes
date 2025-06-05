@@ -1,0 +1,3 @@
+docker-compose/.env text eol=lf filter=redact-env
+docker-compose/mealie/docker-compose.yaml text eol=lf filter=redact-mealie
+docker-compose/nextcloud/docker-compose.yaml text eol=lf filter=redact-nextcloud

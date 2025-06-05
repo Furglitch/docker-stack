@@ -4,16 +4,15 @@ services:
     build: ..
     container_name: sillytavern
     hostname: sillytavern
-    network_mode: host
     image: ghcr.io/sillytavern/sillytavern:latest
     environment:
       - NODE_ENV=production
       - FORCE_COLOR=1
     ports:
-      - "9000:9000"
+      - ${PORT_SILLYTAVERN}:8000
     volumes:
-      - "${CONFIG}/sillytavern/config:/home/node/app/config"
-      - "${CONFIG}/sillytavern/data:/home/node/app/data"
-      - "${CONFIG}/sillytavern/plugins:/home/node/app/plugins"
-      - "${CONFIG}/sillytavern/extensions:/home/node/app/public/scripts/extensions/third-party"
+      - ${CONFIG_SILLYTAVERN}/config:/home/node/app/config
+      - ${CONFIG_SILLYTAVERN}/data:/home/node/app/data
+      - ${CONFIG_SILLYTAVERN}/plugins:/home/node/app/plugins
+      - ${CONFIG_SILLYTAVERN}/extensions:/home/node/app/public/scripts/extensions/third-party
     restart: unless-stopped

@@ -7,10 +7,9 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
-      - TZ=${TIME}
-      - I_REALLY_WANT_VOLATILE_STORAGE=true
+      - TZ=${TZ}
     ports:
-      - 8091:80
+      - ${PORT_VAULTWARDEN}:80
     volumes: 
-      - ${CONFIG}/vaultwarden:/config
+      - ${CONFIG_VAULTWARDEN}:/config
     restart: always
