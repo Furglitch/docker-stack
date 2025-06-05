@@ -32,7 +32,7 @@ case "$1" in
         ;;
 esac
 
-for folder in /mnt/share/*; doAdd commentMore actions
+for folder in /mnt/share/*; do
     chown 1000:1000 "$folder"
 done
 
