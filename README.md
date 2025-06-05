@@ -50,6 +50,6 @@ If you wish to change the location, modify the `.env` file and `start.sh` script
    ./start.sh
    ```
 
-<br/>
+
 ### Attribution
 This repository's file structure and scripts were inspired by [thatg33khub/docker-compose-samples](https://github.com/thatg33khub/docker-compose-samples).
