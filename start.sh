@@ -32,4 +32,8 @@ case "$1" in
         ;;
 esac
 
+for folder in /mnt/share/*; doAdd commentMore actions
+    chown 1000:1000 "$folder"
+done
+
 printf "\nEnd of script.\nExiting."
