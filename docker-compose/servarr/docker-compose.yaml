@@ -38,7 +38,7 @@ services:
       - ${PORT_RADARR}:${PORT_RADARR}
     volumes:
       - ${CONFIG_RADARR}:/config
-      - ${MEDIA_TV}:/tv
+      - ${MEDIA_MOVIE}:/movies
       - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
   
