@@ -37,6 +37,7 @@ services:
       - TORRENTING_PORT=${PORT_QBITTORRENT_IO}
       - DOCKER_MODS=${PARK}:qbittorrent
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     volumes:
       - ${CONFIG_QBITTORRENT}:/config
       - ${DOWNLOADS_QBITTORRENT}:/downloads
@@ -56,6 +57,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:sabnzbd
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     volumes:
       - ${CONFIG_SABNZBD}:/config
       - ${DOWNLOADS_SABNZBD}:/downloads

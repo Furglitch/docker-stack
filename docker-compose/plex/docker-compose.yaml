@@ -12,6 +12,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:plex
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_PLEX}:32400
     volumes:
@@ -30,6 +31,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:ombi
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_OMBI}:3579
     volumes:

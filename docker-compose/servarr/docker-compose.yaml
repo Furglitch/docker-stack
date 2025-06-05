@@ -12,6 +12,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:sonarr
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_SONARR}:${PORT_SONARR}
     volumes:
@@ -32,6 +33,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:radarr
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_RADARR}:${PORT_RADARR}
     volumes:
@@ -50,6 +52,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:prowlarr
       - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_PROWLARR}:${PORT_PROWLARR}
     volumes:
