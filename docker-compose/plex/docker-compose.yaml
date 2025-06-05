@@ -1,0 +1,51 @@
+services:
+  
+  plex:
+    container_name: plex
+    image: lscr.io/linuxserver/plex:latest
+    network_mode: host
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - VERSION=docker
+      - DOCKER_MODS=${PARK}:plex
+      - TP_THEME=${THEME}
+    ports:
+      - 32400:32400
+    volumes:
+      - ${CONFIG}/plex:/config
+      - ${SHARE}:/share
+    restart: unless-stopped
+
+  ombi:
+    container_name: ombi
+    image: lscr.io/linuxserver/ombi:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - DOCKER_MODS=${PARK}:ombi
+      - TP_THEME=${THEME}
+    ports:
+      - 32406:3579
+    volumes:
+      - ${CONFIG}/ombi:/config
+    restart: unless-stopped
+
+  kometa:
+    container_name: kometa
+    image: kometateam/kometa:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - KOMETA_TIME=03:00
+      - KOMETA_CONFIG=/config/config.yml
+      - KOMETA_RUN=True
+    volumes:
+      - ${CONFIG}/kometa:/config
+    restart: no

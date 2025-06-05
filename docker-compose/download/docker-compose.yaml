@@ -1,0 +1,61 @@
+services:
+  
+  gluetun:
+    container_name: gluetun
+    image: qmcgaw/gluetun:latest
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - VPN_TYPE=wireguard
+      - WIREGUARD_PRIVATE_KEY=REDACTED
+      - BLOCK_MALICIOUS=off
+    ports:
+      - 8080:8080 # SabNZBD
+      - 8081:8081 # qBittorrent WebUI
+      - 8082:8082 # qBittorrent Backend
+    volumes:
+      - ${CONFIG}/gluetun:/gluetun
+    restart: always
+  
+  qbittorrent:
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    network_mode: 'service:gluetun'
+    labels:
+      - "deunhealth.restart.on.unhealthy=true"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - WEBUI_PORT=8081
+      - TORRENTING_PORT=8082
+      - DOCKER_MODS=${PARK}:qbittorrent
+      - TP_THEME=${THEME}
+    volumes:
+      - ${CONFIG}/qbittorrent:/config
+      - ${SHARE}/downloads:/downloads
+    restart: unless-stopped
+
+  sabnzbd:
+    container_name: sabnzbd
+    image: lscr.io/linuxserver/sabnzbd:latest
+    network_mode: 'service:gluetun'
+    labels:
+      - "deunhealth.restart.on.unhealthy=true"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - DOCKER_MODS=${PARK}:sabnzbd
+      - TP_THEME=${THEME}
+    volumes:
+      - ${CONFIG}/sabnzbd:/config
+      - ${SHARE}/downloads:/downloads
+    restart: unless-stopped

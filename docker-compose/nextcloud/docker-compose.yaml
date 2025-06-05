@@ -1,0 +1,19 @@
+services:
+
+  nextcloud:
+    container_name: nextcloud
+    image: lscr.io/linuxserver/nextcloud:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - VIRTUAL_HOST=REDACTED
+      - LETSENCRYPT_HOST=REDACTED
+    ports:
+      - 8092:443
+    volumes: 
+      - '${CONFIG}/nextcloud/config:/config'
+      - '${CONFIG}/nextcloud/data:/data'
+      - '/mnt/share/nextcloud:/share'
+    restart: always

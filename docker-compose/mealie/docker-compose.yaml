@@ -1,0 +1,20 @@
+services:
+
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: unless-stopped
+    environment:
+      - TZ=${TIME}
+      - BASE_URL=REDACTED
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - ALLOW_SIGNUP=false
+    volumes:
+      - ${CONFIG}/mealie:/app/data
+    ports:
+      - "9001:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 1000M

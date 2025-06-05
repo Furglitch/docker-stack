@@ -1,0 +1,18 @@
+services:
+
+  nginx:
+    container_name: nginx
+    image: jc21/nginx-proxy-manager:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    volumes: 
+      - ${CONFIG}/nginx/data:/data
+      - ${CONFIG}/nginx/ssl:/etc/letsencrypt
+    restart: always

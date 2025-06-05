@@ -1,0 +1,16 @@
+services:
+
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TIME}
+      - I_REALLY_WANT_VOLATILE_STORAGE=true
+    ports:
+      - 8091:80
+    volumes: 
+      - ${CONFIG}/vaultwarden:/config
+    restart: always
