@@ -1,13 +1,14 @@
 <Config>
     <BindAddress>*</BindAddress>
-    <Port>32505</Port>
+    <Port>32503</Port>
+    <SslPort>6868</SslPort>
     <EnableSsl>False</EnableSsl>
     <LaunchBrowser>True</LaunchBrowser>
-    <AuthenticationMethod>Forms</AuthenticationMethod>
+    <AuthenticationMethod>None</AuthenticationMethod>
     <AuthenticationRequired>Enabled</AuthenticationRequired>
-    <Branch>main</Branch>
+    <Branch>develop</Branch>
     <LogLevel>debug</LogLevel>
-    <UrlBase>/dl</UrlBase>
-    <InstanceName>Radarr</InstanceName>
+    <UrlBase/>
+    <InstanceName>Readarr</InstanceName>
     <UpdateMechanism>Docker</UpdateMechanism>
 </Config>
