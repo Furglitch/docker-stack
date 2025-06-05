@@ -21,21 +21,16 @@ services:
       - ${MEDIA_TV}:/tv
     restart: unless-stopped
 
-  ombi:
-    container_name: ombi
-    image: lscr.io/linuxserver/ombi:latest
+  jellyseerr:
+    container_name: jellyseerr
+    image: fallenbagel/jellyseerr:latest
     environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - UMASK=${UMASK}
       - TZ=${TZ}
-      - DOCKER_MODS=${PARK}:ombi
-      - TP_THEME=${THEME}
-      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+      - LOG_LEVEL=info
     ports:
-      - ${PORT_OMBI}:3579
+      - ${PORT_JELLYSEERR}:5055
     volumes:
-      - ${CONFIG_OMBI}:/config
+      - ${CONFIG_JELLYSEERR}:/config
     restart: unless-stopped
 
   kometa:
