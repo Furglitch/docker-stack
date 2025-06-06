@@ -73,7 +73,7 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=${PARK}:bazarr
       - TP_THEME=${THEME}
-      - TP_COMMUNITY_THEME=${COMMUNITY}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_BAZARR}:${PORT_BAZARR}
     volumes:
