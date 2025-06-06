@@ -10,6 +10,7 @@ case "$1" in
         printf "Starting Docker containers...\n"
         for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
+                print "Starting containers from compose: $dir"
                 docker-compose -f "$dir/docker-compose.yaml" up -d
             fi
         done
@@ -18,6 +19,7 @@ case "$1" in
         printf "Restarting Docker containers...\n"
         for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
+                print "Restarting containers from compose: $dir"
                 docker-compose -f "$dir/docker-compose.yaml" restart
             fi
         done
@@ -26,6 +28,7 @@ case "$1" in
         printf "Stopping Docker containers...\n"
         for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
+                print "Stopping containers from compose: $dir"
                 docker-compose -f "$dir/docker-compose.yaml" down
             fi
         done
