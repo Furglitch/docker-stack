@@ -1,0 +1,16 @@
+background: 
+  image: https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/pixel-galaxy.png
+  blur: sm
+cardBlur: md
+
+theme: dark
+color: sky
+
+headerStyle: boxed
+layout:
+  Media:
+    style: row
+    columns: 4
+
+hideVersion: true
+disableUpdateCheck: true

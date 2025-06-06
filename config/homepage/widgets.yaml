@@ -1,0 +1,16 @@
+- datetime:
+    locale: en
+    format: 
+        dateStlye: calendar-iso8601
+        timeStyle: short
+        hourCycle: h23
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /mnt/share
+
+- search:
+    provider: custom
+    url: https://www.startpage.com/sp/search?q=
+    target: _blank
