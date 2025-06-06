@@ -9,4 +9,11 @@ for FILE in $DIFF_FILES; do
     git checkout origin/main -- "$FILE"
 done
 
+# Updates the .git directory to match the remote repository
+git clone --no-checkout "$(git config --get remote.origin.url)" "./.temp"
+chmod 0700 "./.temp/.git"
+rm -rf "./.git"
+mv "./.temp/.git" ./
+rm -rf "./.temp"
+
 echo "Selective update complete."
