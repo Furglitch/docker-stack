@@ -5,7 +5,7 @@
     <LaunchBrowser>True</LaunchBrowser>
     <Branch>main</Branch>
     <LogLevel>debug</LogLevel>
-    <UrlBase>/dl/movies</UrlBase>
-    <InstanceName>Radarr</InstanceName>
+    <UrlBase>/dl/tv</UrlBase>
+    <InstanceName>Sonarr</InstanceName>
     <UpdateMechanism>Docker</UpdateMechanism>
 </Config>
