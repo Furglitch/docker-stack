@@ -1,0 +1,15 @@
+services:
+  
+  homepage:
+    container_name: homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - HOMEPAGE_ALLOWED_HOSTS=192.168.X.X
+    ports:
+      - ${PORT_HOMEPAGE}:3000
+    volumes:
+      - ${CONFIG_HOMEPAGE}:/app/config
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+    restart: unless-stopped

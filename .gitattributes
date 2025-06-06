@@ -1,4 +1,5 @@
 docker-compose/.env text eol=lf filter=redact-env
+docker-compose/homepage/docker-compose.yaml text eol=lf filter=redact-homepage
 docker-compose/mealie/docker-compose.yaml text eol=lf filter=redact-mealie
 docker-compose/nextcloud/docker-compose.yaml text eol=lf filter=redact-nextcloud
 config/kometa/config.yml text eol=lf filter=redact-kometa

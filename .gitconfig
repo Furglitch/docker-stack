@@ -6,6 +6,10 @@
 				-e 's/^GLUETUN_TYPE=.*/GLUETUN_TYPE=TYPE/g' \
 				-e 's/^GLUETUN_KEY=.*/GLUETUN_KEY=VPN-KEY/g'
 	smudge = cat
+[filter "redact-homepage"]
+	clean = sed \
+				-e 's|HOMEPAGE_ALLOWED_HOSTS=.*|HOMEPAGE_ALLOWED_HOSTS=192.168.X.X|g'
+	smudge = cat
 [filter "redact-kometa"]
 	clean = sed \
 				-e 's|url:.*|url: http://192.168.X.X:PORT|g' \
