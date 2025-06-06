@@ -50,11 +50,11 @@ If you wish to change the location, modify the `.env` file and `start.sh` script
    ./start.sh
    ```
 
-To grab updates without affecting unchanged files, run the update script:
-   ```bash
-   ./update.sh
-   ```
-This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
+ 5. To grab updates without affecting unchanged files, run the update script:
+    ```bash
+    ./update.sh
+    ```
+    This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
 
 ### Attribution
 This repository's file structure and scripts were inspired by [thatg33khub/docker-compose-samples](https://github.com/thatg33khub/docker-compose-samples).
