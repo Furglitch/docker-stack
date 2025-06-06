@@ -1,11 +1,8 @@
 <Config>
     <BindAddress>*</BindAddress>
     <Port>32503</Port>
-    <SslPort>6868</SslPort>
     <EnableSsl>False</EnableSsl>
     <LaunchBrowser>True</LaunchBrowser>
-    <AuthenticationMethod>None</AuthenticationMethod>
-    <AuthenticationRequired>Enabled</AuthenticationRequired>
     <Branch>develop</Branch>
     <LogLevel>debug</LogLevel>
     <UrlBase/>

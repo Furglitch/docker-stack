@@ -3,8 +3,6 @@
     <Port>32501</Port>
     <EnableSsl>False</EnableSsl>
     <LaunchBrowser>True</LaunchBrowser>
-    <AuthenticationMethod>Forms</AuthenticationMethod>
-    <AuthenticationRequired>Enabled</AuthenticationRequired>
     <Branch>main</Branch>
     <LogLevel>debug</LogLevel>
     <UrlBase>/dl/movies</UrlBase>
