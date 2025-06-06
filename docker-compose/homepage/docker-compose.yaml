@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-      - HOMEPAGE_ALLOWED_HOSTS=192.168.X.X
+      - HOMEPAGE_ALLOWED_HOSTS=${IP_LOCAL}:${PORT_HOMEPAGE}
     ports:
       - ${PORT_HOMEPAGE}:3000
     volumes:

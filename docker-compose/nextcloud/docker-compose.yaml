@@ -8,8 +8,8 @@ services:
       - PGID=${PGID}
       - UMASK=${UMASK}
       - TZ=${TZ}
-      - VIRTUAL_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}
-      - LETSENCRYPT_HOST=http://192.168.X.X:${PORT_NEXTCLOUD}
+      - VIRTUAL_HOST=https://${IP_DOMAIN}
+      - LETSENCRYPT_HOST=https://${IP_DOMAIN}
     ports:
       - ${PORT_NEXTCLOUD}:443
     volumes: 

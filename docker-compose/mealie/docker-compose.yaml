@@ -9,7 +9,7 @@ services:
       - PGID=${PGID}
       - UMASK=${UMASK}
       - TZ=${TZ}
-      - BASE_URL=http://192.168.X.X:${PORT_MEALIE}
+      - BASE_URL=https://${IP_DOMAIN}
       - ALLOW_SIGNUP=false
     volumes:
       - ${CONFIG_MEALIE}:/app/data
