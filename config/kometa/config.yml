@@ -111,7 +111,7 @@ sonarr:
   monitor_existing: true
   ignore_cache: false
   tag:
-  search: true
+  search: false
   cutoff_search: false
   sonarr_path:
 
@@ -130,7 +130,7 @@ radarr:
   monitor_existing: true
   ignore_cache: false
   tag:
-  search: true
+  search: false
   radarr_path:
 
 
