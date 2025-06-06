@@ -2,7 +2,7 @@
 
 git fetch origin
 
-DIFF_FILES=$(git diff --name-only origin/main)
+DIFF_FILES=$(git diff --name-only HEAD..origin/main)
 
 for FILE in $DIFF_FILES; do
     echo "Updating file: $FILE"
