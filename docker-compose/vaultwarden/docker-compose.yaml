@@ -12,4 +12,5 @@ services:
       - ${PORT_VAULTWARDEN}:80
     volumes: 
       - ${CONFIG_VAULTWARDEN}:/config
+      - ${CONFIG_VAULTWARDEN}/data:/data
     restart: always
