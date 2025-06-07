@@ -13,7 +13,7 @@ services:
       - MEDIAWIKI_DB_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
-      - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
+      #- ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
     depends_on:
       - mediawiki-db
     restart: unless-stopped
