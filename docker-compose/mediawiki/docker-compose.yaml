@@ -6,21 +6,20 @@ services:
     ports:
       - ${PORT_MEDIAWIKI}:80
     volumes:
-      #- ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php # Uncomment after initial setup
-      #- ${CONFIG_MEDIAWIKI}/db:/var/www/data
       - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
+      # - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
     links:
       - mediawiki-db
     restart: unless-stopped
-  
+
   mediawiki-db:
     container_name: mediawiki-db
-    image: mysql
+    image: mariadb
     environment:
       - MYSQL_DATABASE=mediawiki
-      - MYSQL_USER=#{MYSQL_USER}
-      - MYSQL_PASSWORD=#{MYSQL_PASSWORD}
-      - MYSQL_RANDOM_ROOT_PASSWORD=#{MYSQL_RANDOM_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_RANDOM_ROOT_PASSWORD=${MYSQL_RANDOM_PASSWORD}
     volumes:
       - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
     restart: unless-stopped
