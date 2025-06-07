@@ -2,29 +2,20 @@ services:
 
   mediawiki:
     container_name: mediawiki
-    image: ubcctlt/mediawiki
+    image: mediawiki
     ports:
       - ${PORT_MEDIAWIKI}:80
     environment:
-      - MEDIAWIKI_SITE_SERVER=http://${IP_LOCAL}:${PORT_MEDIAWIKI}
-      - MEDIAWIKI_SITE_NAME="Furglitch Wiki"
-      - MEDIAWIKI_ADMIN_USER=furglitch
       - MEDIAWIKI_DB_TYPE=mysql
       - MEDIAWIKI_DB_HOST=mediawiki-db
       - MEDIAWIKI_DB_NAME=mediawiki
       - MEDIAWIKI_DB_USER=${MYSQL_USER}
       - MEDIAWIKI_DB_PASSWORD=${MYSQL_PASSWORD}
-      - MEDIAWIKI_SHARED=/data 
-      - RESTBASE_URL=http://nodeservices:7231
-      - MEDIAWIKI_MAIN_CACHE=CACHE_MEMCACHED
-      - MEDIAWIKI_MEMCACHED_SERVERS='["mediawiki-memcached:11211"]'
     volumes:
-      - ${CONFIG_MEDIAWIKI}/data/:/data/
+      - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
       - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
-    links:
+    depends_on:
       - mediawiki-db
-      - mediawiki-node
-      - mediawiki-memcached
     restart: unless-stopped
 
   mediawiki-db:
@@ -38,17 +29,3 @@ services:
     volumes:
       - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
     restart: unless-stopped
-
-  mediawiki-node:
-    container_name: mediawiki-node
-    image: ubcctlt/mediawiki-node-services
-    environment:
-      - MEDIAWIKI_API_URL=http://mediawiki/api.php
-      - MEDIAWIKI_REST_URL=http://mediawiki/rest.php
-      - LOG_LEVEL=debug
-    volumes:
-      - ${CONFIG_MEDIAWIKI}/node:/data
-
-  mediawiki-memcached:
-    container_name: mediawiki-memcached
-    image: memcached:1.6-alpine
