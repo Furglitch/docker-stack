@@ -8,9 +8,8 @@ services:
       - PGID=${PGID}
       - UMASK=${UMASK}
       - TZ=${TZ}
-      - CUSTOM_PORT="${PORT_OBSIDIAN}"
     ports:
-      - ${PORT_OBSIDIAN}:${PORT_OBSIDIAN}
+      - ${PORT_OBSIDIAN}:8080
     volumes:
       - ${CONFIG_OBSIDIAN}:/config
       - ${CONFIG_OBSIDIAN}/vaults:/vaults
