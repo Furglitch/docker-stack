@@ -1,2 +1,3 @@
 docker-compose/.env text eol=lf filter=redact-env
 config/kometa/config.yml text eol=lf filter=redact-kometa
+config/mediawiki/LocalSettings.php text eol=lf filter=redact-mediawiki

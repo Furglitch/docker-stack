@@ -2,12 +2,16 @@ services:
 
   mediawiki:
     container_name: mediawiki
-    image: mediawiki
+    image: ubcctlt/mediawiki
     ports:
       - ${PORT_MEDIAWIKI}:80
+    environment:
+      - MEDIAWIKI_SITE_SERVER=http://${IP_LOCAL}:${PORT_MEDIAWIKI}
+      - RESTBASE_URL=http://nodeservices:7231
+      - MEDIAWIKI_SHARED=/data 
     volumes:
-      - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
-      # - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
+      - ${CONFIG_MEDIAWIKI}/data/:/data/
+      - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
     links:
       - mediawiki-db
     restart: unless-stopped
@@ -23,3 +27,13 @@ services:
     volumes:
       - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
     restart: unless-stopped
+
+  mediawiki-node:
+    container_name: mediawiki-node
+    image: ubcctlt/mediawiki-node-services
+    environment:
+      - MEDIAWIKI_API_URL=http://mediawiki/api.php
+      - MEDIAWIKI_REST_URL=http://mediawiki/rest.php
+      - LOG_LEVEL=debug
+    volumes:
+      - ${CONFIG_MEDIAWIKI}/node:/data

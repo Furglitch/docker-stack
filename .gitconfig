@@ -16,3 +16,10 @@
 				-e 's|client_id:.*|client_id: CLIENT_ID|g' \
 				-e 's|client_secret:.*|client_secret: CLIENT_SECRET|g'
 	smudge = cat
+[filter "redact-mediawiki"]
+	clean = sed \
+				-e 's|wgServer = .*|wgServer = \"https://wiki.example.com\"|g' \
+				-e 's|wgDBuser = .*|wgDBuser = \"USER\"|g' \
+				-e 's|wgDBpassword = .*|wgDBpassword = \"PASSWORD\"|g' \
+				-e 's|wgSecretKey = .*|wgSecretKey = \"64_CHAR_SECRET_KEY\"|g'
+	smudge = cat
