@@ -17,12 +17,14 @@ services:
       - MEDIAWIKI_SHARED=/data 
       - RESTBASE_URL=http://nodeservices:7231
       - MEDIAWIKI_MAIN_CACHE=CACHE_MEMCACHED
-      - MEDIAWIKI_MEMCACHED_SERVERS='["memcached:11211"]'
+      - MEDIAWIKI_MEMCACHED_SERVERS='["mediawiki-memcached:11211"]'
     volumes:
       - ${CONFIG_MEDIAWIKI}/data/:/data/
       - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
     links:
       - mediawiki-db
+      - mediawiki-node
+      - mediawiki-memcached
     restart: unless-stopped
 
   mediawiki-db:
@@ -46,3 +48,7 @@ services:
       - LOG_LEVEL=debug
     volumes:
       - ${CONFIG_MEDIAWIKI}/node:/data
+
+  mediawiki-memcached:
+    container_name: mediawiki-memcached
+    image: memcached:1.6-alpine
