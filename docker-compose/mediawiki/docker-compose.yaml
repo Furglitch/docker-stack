@@ -23,4 +23,4 @@ services:
       - MYSQL_RANDOM_ROOT_PASSWORD=#{MYSQL_RANDOM_PASSWORD}
     volumes:
       - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
-    restart:unless-stopped
+    restart: unless-stopped
