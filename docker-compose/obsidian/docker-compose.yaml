@@ -2,16 +2,17 @@ services:
 
   obsidian:
     container_name: obsidian
-    image: lscr.io/linuxserver/obsidian:latest
+    image: ghcr.io/sytone/obsidian-remote:latest
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK=${UMASK}
       - TZ=${TZ}
+      - CUSTOM_PORT="${PORT_OBSIDIAN}"
     ports:
-      - ${PORT_OBSIDIAN}:3000
+      - ${PORT_OBSIDIAN}:${PORT_OBSIDIAN}
     volumes:
       - ${CONFIG_OBSIDIAN}:/config
       - ${CONFIG_OBSIDIAN}/vaults:/vaults
+      - ${CONFIG_OBSIDIAN}/fonts:/usr/share/fonts/truetype
     restart: unless-stopped
-    shm_size: "1gb"
