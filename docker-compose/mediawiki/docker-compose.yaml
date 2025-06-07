@@ -7,8 +7,17 @@ services:
       - ${PORT_MEDIAWIKI}:80
     environment:
       - MEDIAWIKI_SITE_SERVER=http://${IP_LOCAL}:${PORT_MEDIAWIKI}
-      - RESTBASE_URL=http://nodeservices:7231
+      - MEDIAWIKI_SITE_NAME="Furglitch Wiki"
+      - MEDIAWIKI_ADMIN_USER=furglitch
+      - MEDIAWIKI_DB_TYPE=mysql
+      - MEDIAWIKI_DB_HOST=mediawiki-db
+      - MEDIAWIKI_DB_NAME=mediawiki
+      - MEDIAWIKI_DB_USER=${MYSQL_USER}
+      - MEDIAWIKI_DB_PASSWORD=${MYSQL_PASSWORD}
       - MEDIAWIKI_SHARED=/data 
+      - RESTBASE_URL=http://nodeservices:7231
+      - MEDIAWIKI_MAIN_CACHE=CACHE_MEMCACHED
+      - MEDIAWIKI_MEMCACHED_SERVERS='["memcached:11211"]'
     volumes:
       - ${CONFIG_MEDIAWIKI}/data/:/data/
       - ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
