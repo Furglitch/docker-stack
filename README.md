@@ -26,7 +26,6 @@ A collection of docker compose files for deploying multiple services, such as Se
 | Mealie        | Recipe management            |
 | SillyTavern   | Chat front-end               |
 | MediaWiki     | Wiki platform                |
-| Obsidian      | Personal knowledge base      |
 
 ## Installation
 
