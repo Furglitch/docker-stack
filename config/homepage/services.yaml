@@ -1,0 +1,86 @@
+- Media:
+    - Plex:
+        icon: plex.png
+        url: http://192.168.X.X:PORT/
+        href: http://192.168.X.X:PORT/
+        description: "Plex Media Server"
+        server: localhost
+        container: plex
+        widgets:
+        - type: tautulli
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+
+- Servarr:
+    - Sonarr:
+        icon: sonarr.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: sonarr
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+    - Radarr:
+        icon: radarr.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: radarr
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+    - Readarr:
+        icon: readarr.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: readarr
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: prowlarr
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+
+- Download:
+    - "qBittorrent":
+        icon: qbittorrent.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: qbittorrent
+          url: http://192.168.X.X:PORT/
+          username: admin
+          password: PASSWORD
+    - "SABnzbd":
+        icon: sabnzbd.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: sabnzbd
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
+
+- "Web":
+    - "VaultWarden":
+        icon: vaultwarden.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Password Manager"
+    - "Nextcloud":
+        icon: nextcloud.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Cloud Storage"
+    - "Mealie":
+        icon: mealie.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Meal Planning"
+    - "SillyTavern":
+        icon: https://sillytavern.app/img/logo.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "AI Chat Client"
+    - "MediaWiki":
+        icon: mediawiki.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Wiki"

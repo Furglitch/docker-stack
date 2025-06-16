@@ -8,6 +8,14 @@
 				-e 's/^IP_LOCAL=.*/IP_LOCAL=192.168.X.X/g' \
 				-e 's/^IP_DOMAIN=.*/IP_DOMAIN=example.com/g'
 	smudge = cat
+[filter "redact-homepage"]
+	clean = sed \
+				-e 's|url: .*|url: http://192.168.X.X:PORT/|g' \
+				-e 's|href: .*|href: http://192.168.X.X:PORT/|g' \
+				-e 's|siteMonitor: .*|siteMonitor: http://192.168.X.X:PORT/|g' \
+				-e 's|key: .*|key: API_KEY|g' \
+				-e 's|password: .*|password: PASSWORD|g'
+	smudge = cat
 [filter "redact-kometa"]
 	clean = sed \
 				-e 's|url:.*|url: http://192.168.X.X:PORT|g' \

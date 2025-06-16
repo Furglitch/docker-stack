@@ -10,7 +10,13 @@ headerStyle: boxed
 layout:
   Media:
     style: row
-    columns: 4
+    columns: 1
+  Servarr:
+    style: row
+    columns: 2
+  Download:
+    style: row
+    columns: 2
 
 hideVersion: true
 disableUpdateCheck: true
