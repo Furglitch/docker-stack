@@ -964,7 +964,7 @@ metadata:
     url_poster: https://theposterdb.com/api/assets/65207
   "Mission: Impossible - Fallout":
     url_poster: https://theposterdb.com/api/assets/65208
-  "Mission: Impossible - Dead Reckoning: Part One":
+  "Mission: Impossible - Dead Reckoning":
     url_poster: https://theposterdb.com/api/assets/386302
   
   # MonsterVerse
@@ -1475,7 +1475,7 @@ metadata:
   "Megalopolis":
     url_poster: https://theposterdb.com/api/assets/530096
   "The Menu":
-    url_poster: https://theposterdb.com/api/assets/414921
+    url_poster: https://theposterdb.com/api/assets/305216
   "A Minecraft Movie":
     url_poster: https://theposterdb.com/api/assets/579582
   "The Ministry of Ungentlemanly Warfare":
@@ -1521,6 +1521,8 @@ metadata:
     url_poster: https://theposterdb.com/api/assets/83696
   "Snake Eyes":
     url_poster: https://theposterdb.com/api/assets/182370
+  "Spaceballs":
+    url_poster: https://theposterdb.com/api/assets/73168
   "Starship Troopers":
     url_poster: https://theposterdb.com/api/assets/5526
   "Superhero Movie":
