@@ -84,3 +84,8 @@
         href: http://192.168.X.X:PORT/
         siteMonitor: http://192.168.X.X:PORT/
         description: "Wiki"
+    - "AudioBookshelf":
+        icon: audiobookshelf.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Books and Audiobooks"
