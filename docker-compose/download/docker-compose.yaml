@@ -40,8 +40,8 @@ services:
       - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     volumes:
       - ${CONFIG_QBITTORRENT}:/config
-      - ${DOWNLOADS_QBITTORRENT}:/downloads
-      - ${DOWNLOADS_QBITTORRENT_INCOMPLETE}:/downloads/incomplete
+      - ${DOWNLOADS_QBITTORRENT}:/downloads/usenet
+      - ${DOWNLOADS_QBITTORRENT_INCOMPLETE}:/downloads/usenet/incomplete
     restart: unless-stopped
 
   sabnzbd:
@@ -60,6 +60,6 @@ services:
       - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     volumes:
       - ${CONFIG_SABNZBD}:/config
-      - ${DOWNLOADS_SABNZBD}:/downloads
-      - ${DOWNLOADS_SABNZBD_INCOMPLETE}:/downloads/incomplete
+      - ${DOWNLOADS_SABNZBD}:/downloads/torrent
+      - ${DOWNLOADS_SABNZBD_INCOMPLETE}:/downloads/torrent/incomplete
     restart: unless-stopped
