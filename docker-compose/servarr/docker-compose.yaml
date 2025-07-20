@@ -65,7 +65,7 @@ services:
 
   lidarr:
     container_name: lidarr
-    image: lscr.io/linuxserver/lidarr:latest
+    image: blampe/lidarr:latest
     depends_on:
       - prowlarr
     environment:
