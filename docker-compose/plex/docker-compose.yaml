@@ -19,6 +19,7 @@ services:
       - ${CONFIG_PLEX}:/config/Library/Application Support/Plex Media Server
       - ${MEDIA_MOVIE}:/movies
       - ${MEDIA_TV}:/tv
+      - ${MEDIA_MUSIC}:/music
     restart: unless-stopped
 
   jellyseerr:

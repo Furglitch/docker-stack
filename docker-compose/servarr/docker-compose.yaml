@@ -63,6 +63,27 @@ services:
       - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
 
+  lidarr:
+    container_name: lidarr
+    image: lscr.io/linuxserver/lidarr:latest
+    depends_on:
+      - prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:lidarr
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_LIDARR}:${PORT_LIDARR}
+    volumes:
+      - ${CONFIG_LIDARR}:/config
+      - ${MEDIA_MUSIC}:/music
+      - ${MEDIA_DOWNLOADS}:/downloads
+    restart: unless-stopped
+
   bazarr:
     container_name: bazarr
     image: lscr.io/linuxserver/bazarr:latest
