@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$USER" != "root" ]; then
+    printf "This script must be run as root. Please use sudo.\nExiting."
+    exit 1
+fi
+
 git fetch origin
 
 DIFF_FILES=$(git diff --name-only HEAD..origin/main)
