@@ -8,12 +8,12 @@ services:
       - PGID=${PGID}
       - UMASK=${UMASK}
       - TZ=${TZ}
-      - DOCKER_MODS=${PARK}:readarr
+      - DOCKER_MODS=${PARK}:calibreweb
       - TP_THEME=${THEME}
       - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
       - ${PORT_CALIBRE}:8083
     volumes:
-      - ${CONFIG_READARR}:/config
+      - ${CONFIG_CALIBRE}/web:/config
       - ${MEDIA_BOOKS}:/books
     restart: unless-stopped
