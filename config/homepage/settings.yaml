@@ -1,10 +1,10 @@
 background: 
-  image: https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/pixel-galaxy.png
+  image: "https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/pixel-galaxy.png"
   blur: sm
 cardBlur: md
 
 theme: dark
-color: sky
+color: cyan
 
 headerStyle: boxed
 layout:
