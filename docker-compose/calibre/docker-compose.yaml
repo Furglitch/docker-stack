@@ -27,9 +27,9 @@ services:
       - TP_THEME=${THEME}
       - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
     ports:
-      - ${PORT_CALIBRE}:8083
+      - ${PORT_CALIBRE_WEB}:8083
     volumes:
-      - ${CONFIG_CALIBRE}/config:/config
-      - ${CONFIG_CALIBRE}/web:/config/web
+      - ${CONFIG_CALIBRE}-web:/config
+      - ${CONFIG_CALIBRE}:/calibre-config
       - ${MEDIA_BOOKS}:/books
     restart: unless-stopped
