@@ -1,0 +1,9 @@
+services:
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower:latest
+    command: --cleanup=true --include-restarting=true --include-stopped=true --interval=86400
+    volumes:
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+    restart: always

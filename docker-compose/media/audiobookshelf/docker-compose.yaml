@@ -1,0 +1,16 @@
+services:
+
+  audiobookshelf:
+    container_name: audiobookshelf
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    ports:
+      - ${PORT_AUDIOBOOKSHELF}:80
+    volumes:
+      - ${MEDIA_BOOKS}:/books
+      - ${CONFIG_AUDIOBOOKSHELF}/config:/config
+      - ${CONFIG_AUDIOBOOKSHELF}/metadata:/metadata

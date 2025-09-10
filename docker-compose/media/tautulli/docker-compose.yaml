@@ -1,0 +1,19 @@
+services:
+  
+  tautulli:
+    container_name: tautulli
+    image: lscr.io/linuxserver/tautulli:latest
+    environment:
+      - VERSION=docker
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:tautulli
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_TAUTULLI}:${PORT_TAUTULLI}
+    volumes:
+      - ${CONFIG_TAUTULLI}:/config
+    restart: unless-stopped

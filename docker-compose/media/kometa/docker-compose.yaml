@@ -1,0 +1,21 @@
+services:
+
+  kometa:
+    container_name: kometa
+    image: kometateam/kometa:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - KOMETA_TIME=00:00,06:00,12:00,18:00
+      - KOMETA_CONFIG=/config/config.yml
+      - KOMETA_RUN=True
+    volumes:
+      - ${CONFIG_KOMETA}:/config
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "3"
+        max-size: "10m"
+    restart: unless-stopped

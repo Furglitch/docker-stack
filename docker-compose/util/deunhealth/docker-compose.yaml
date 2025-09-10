@@ -1,0 +1,13 @@
+services:
+
+  deunhealth:
+    container_name: deunhealth
+    image: qmcgaw/deunhealth:latest
+    build: .
+    environment:
+      - TZ=${TZ}
+      - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
+      - LOG_LEVEL=info
+    volumes:
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+    restart: always

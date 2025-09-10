@@ -1,0 +1,16 @@
+services:
+
+  flaresolverr:
+    container_name: flaresolverr
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - LOG_LEVEL=info
+    ports:
+      - ${PORT_FLARESOLVER}:8191
+    volumes:
+      - ${CONFIG_FLARESOLVER}:/config
+    restart: unless-stopped
