@@ -1,6 +1,6 @@
 <Config>
     <BindAddress>*</BindAddress>
-    <Port>32502</Port>
+    <Port>32503</Port>
     <EnableSsl>False</EnableSsl>
     <LaunchBrowser>True</LaunchBrowser>
     <Branch>main</Branch>
