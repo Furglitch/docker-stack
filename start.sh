@@ -8,7 +8,7 @@ fi
 case "$1" in
     ""| "--start")
         printf "Starting Docker containers...\n"
-        for dir in docker-compose/*/*; do
+        for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
                 printf "Starting containers from compose: $dir \n"
                 docker compose -f "$dir/docker-compose.yaml" up -d
@@ -17,7 +17,7 @@ case "$1" in
         ;;
     "--restart")
         printf "Restarting Docker containers...\n"
-        for dir in docker-compose/*/*; do
+        for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
                 printf "Restarting containers from compose: $dir \n"
                 docker compose -f "$dir/docker-compose.yaml" restart
@@ -26,7 +26,7 @@ case "$1" in
         ;;
     "--stop")
         printf "Stopping Docker containers...\n"
-        for dir in docker-compose/*/*; do
+        for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
                 printf "Stopping containers from compose: $dir \n"
                 docker compose -f "$dir/docker-compose.yaml" down
@@ -34,9 +34,5 @@ case "$1" in
         done
         ;;
 esac
-
-for folder in /mnt/hoard/*; do
-    chown 1000:1000 "$folder"
-done
 
 printf "\nEnd of script.\nExiting."

@@ -1,0 +1,133 @@
+version: '3.8'
+services:
+  homepage:
+    container_name: homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - HOMEPAGE_ALLOWED_HOSTS=${IP_LOCAL}:${PORT_HOMEPAGE}
+    ports:
+      - ${PORT_HOMEPAGE}:3000
+    volumes:
+      - ${CONFIG_HOMEPAGE}:/app/config
+      - ${SHARE}:${SHARE}
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+    restart: unless-stopped
+
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - BASE_URL=https://${IP_DOMAIN}
+      - ALLOW_SIGNUP=false
+    volumes:
+      - ${CONFIG_MEALIE}:/app/data
+    ports:
+      - ${PORT_MEALIE}:9000
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+
+  mediawiki:
+    container_name: mediawiki
+    image: mediawiki
+    ports:
+      - ${PORT_MEDIAWIKI}:80
+    environment:
+      - MEDIAWIKI_DB_TYPE=mysql
+      - MEDIAWIKI_DB_HOST=mediawiki-db
+      - MEDIAWIKI_DB_NAME=mediawiki
+      - MEDIAWIKI_DB_USER=${MYSQL_USER}
+      - MEDIAWIKI_DB_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
+      #- ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
+    depends_on:
+      - mediawiki-db
+    restart: unless-stopped
+
+  mediawiki-db:
+    container_name: mediawiki-db
+    image: mariadb
+    environment:
+      - MYSQL_DATABASE=mediawiki
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_RANDOM_ROOT_PASSWORD=${MYSQL_RANDOM_PASSWORD}
+    volumes:
+      - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
+    restart: unless-stopped
+
+  nginx-pm:
+    container_name: nginx-pm
+    image: jc21/nginx-proxy-manager:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    ports:
+      - ${PORT_NGINX_IO}:80
+      - ${PORT_NGINX_HTTP}:81
+      - ${PORT_NGINX_HTTPS}:443
+    volumes: 
+      - ${CONFIG_NGINX}/data:/data
+      - ${CONFIG_NGINX}/ssl:/etc/letsencrypt
+    restart: always
+
+  nextcloud:
+    container_name: nextcloud
+    image: lscr.io/linuxserver/nextcloud:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - VIRTUAL_HOST=https://${IP_DOMAIN}
+      - LETSENCRYPT_HOST=https://${IP_DOMAIN}
+    ports:
+      - ${PORT_NEXTCLOUD}:443
+    volumes: 
+      - '${CONFIG_NEXTCLOUD}/config:/config'
+      - '${CONFIG_NEXTCLOUD}/data:/data'
+      - '${CLOUD_NEXTCLOUD}:/share'
+    restart: always
+
+  sillytavern:
+    build: ..
+    container_name: sillytavern
+    hostname: sillytavern
+    image: ghcr.io/sillytavern/sillytavern:latest
+    environment:
+      - NODE_ENV=production
+      - FORCE_COLOR=1
+    ports:
+      - ${PORT_SILLYTAVERN}:8000
+    volumes:
+      - ${CONFIG_SILLYTAVERN}/config:/home/node/app/config
+      - ${CONFIG_SILLYTAVERN}/data:/home/node/app/data
+      - ${CONFIG_SILLYTAVERN}/plugins:/home/node/app/plugins
+      - ${CONFIG_SILLYTAVERN}/extensions:/home/node/app/public/scripts/extensions/third-party
+    restart: unless-stopped
+
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    environment: 
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    ports:
+      - ${PORT_VAULTWARDEN}:80
+    volumes: 
+      - ${CONFIG_VAULTWARDEN}:/config
+      - ${CONFIG_VAULTWARDEN}/data:/data
+    restart: always

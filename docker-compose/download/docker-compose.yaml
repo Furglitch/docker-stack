@@ -1,5 +1,6 @@
+version: '3.8'
 services:
-  
+
   qbittorrent:
     container_name: qbittorrent
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -20,4 +21,24 @@ services:
       - ${CONFIG_QBITTORRENT}:/config
       - ${DOWNLOADS_QBITTORRENT}:/downloads/torrent
       - ${DOWNLOADS_QBITTORRENT_INCOMPLETE}:/downloads/torrent/incomplete
+    restart: unless-stopped
+
+  sabnzbd:
+    container_name: sabnzbd
+    image: lscr.io/linuxserver/sabnzbd:latest
+    network_mode: 'service:gluetun'
+    labels:
+      - "deunhealth.restart.on.unhealthy=true"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:sabnzbd
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    volumes:
+      - ${CONFIG_SABNZBD}:/config
+      - ${DOWNLOADS_SABNZBD}:/downloads/usenet
+      - ${DOWNLOADS_SABNZBD_INCOMPLETE}:/downloads/usenet/incomplete
     restart: unless-stopped

@@ -1,5 +1,17 @@
+version: '3.8'
 services:
-  
+  deunhealth:
+    container_name: deunhealth
+    image: qmcgaw/deunhealth:latest
+    build: .
+    environment:
+      - TZ=${TZ}
+      - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
+      - LOG_LEVEL=info
+    volumes:
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+    restart: always
+
   gluetun:
     container_name: gluetun
     image: qmcgaw/gluetun:latest
@@ -20,4 +32,12 @@ services:
       - ${PORT_QBITTORRENT_IO}:${PORT_QBITTORRENT_IO}
     volumes:
       - ${CONFIG_GLUETUN}:/gluetun
+    restart: always
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower:latest
+    command: --cleanup=true --include-restarting=true --include-stopped=true --interval=86400
+    volumes:
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
     restart: always

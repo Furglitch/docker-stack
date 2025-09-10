@@ -1,0 +1,206 @@
+version: '3.8'
+services:
+  audiobookshelf:
+    container_name: audiobookshelf
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    ports:
+      - ${PORT_AUDIOBOOKSHELF}:80
+    volumes:
+      - ${MEDIA_BOOKS}:/books
+      - ${CONFIG_AUDIOBOOKSHELF}/config:/config
+      - ${CONFIG_AUDIOBOOKSHELF}/metadata:/metadata
+
+  bazarr:
+    container_name: bazarr
+    image: lscr.io/linuxserver/bazarr:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:bazarr
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_BAZARR}:${PORT_BAZARR}
+    volumes:
+      - ${CONFIG_BAZARR}:/config
+      - ${MEDIA_MOVIE}:/movies
+      - ${MEDIA_TV}:/tv
+    restart: unless-stopped
+
+  jellyfin:
+    container_name: jellyfin
+    image: lscr.io/linuxserver/jellyfin:latest
+    network_mode: host
+    environment:
+      - VERSION=docker
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:jellyfin
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_JELLYFIN}:8096
+    volumes:
+      - ${CONFIG_JELLYFIN}:/config
+      - ${MEDIA_MOVIE}:/data/movies
+      - ${MEDIA_TV}:/data/tvshows
+      - ${MEDIA_MUSIC}:/data/music
+    restart: unless-stopped
+
+  jellyseerr:
+    container_name: jellyseerr
+    image: fallenbagel/jellyseerr:latest
+    environment:
+      - TZ=${TZ}
+      - LOG_LEVEL=info
+    ports:
+      - ${PORT_JELLYSEERR}:5055
+    volumes:
+      - ${CONFIG_JELLYSEERR}:/config
+    restart: unless-stopped
+
+  kometa:
+    container_name: kometa
+    image: kometateam/kometa:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - KOMETA_TIME=00:00,06:00,12:00,18:00
+      - KOMETA_CONFIG=/config/config.yml
+      - KOMETA_RUN=True
+    volumes:
+      - ${CONFIG_KOMETA}:/config
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "3"
+        max-size: "10m"
+    restart: unless-stopped
+
+  plex:
+    container_name: plex
+    image: lscr.io/linuxserver/plex:latest
+    profiles:
+      - disabled
+    network_mode: host
+    environment:
+      - VERSION=docker
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:plex
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_PLEX}:32400
+    volumes:
+      - ${CONFIG_PLEX}:/config/Library/Application Support/Plex Media Server
+      - ${MEDIA_MOVIE}:/movies
+      - ${MEDIA_TV}:/tv
+      - ${MEDIA_MUSIC}:/music
+    restart: unless-stopped
+
+  radarr:
+    container_name: radarr
+    image: lscr.io/linuxserver/radarr:latest
+    depends_on:
+      - prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:radarr
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_RADARR}:${PORT_RADARR}
+    volumes:
+      - ${CONFIG_RADARR}:/config
+      - ${MEDIA_MOVIE}:/movies
+      - ${MEDIA_DOWNLOADS}:/downloads
+    restart: unless-stopped
+
+  sonarr:
+    container_name: sonarr
+    image: lscr.io/linuxserver/sonarr:latest
+    depends_on:
+      - prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:sonarr
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_SONARR}:${PORT_SONARR}
+    volumes:
+      - ${CONFIG_SONARR}:/config
+      - ${MEDIA_TV}:/tv
+      - ${MEDIA_DOWNLOADS}:/downloads
+    restart: unless-stopped
+
+  prowlarr:
+    container_name: prowlarr
+    image: lscr.io/linuxserver/prowlarr:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:prowlarr
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_PROWLARR}:${PORT_PROWLARR}
+    volumes:
+      - ${CONFIG_PROWLARR}:/config
+      - ${MEDIA_DOWNLOADS}:/downloads
+    restart: unless-stopped
+  
+  flaresolverr:
+    container_name: flaresolverr
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - LOG_LEVEL=info
+    ports:
+      - ${PORT_FLARESOLVER}:8191
+    volumes:
+      - ${CONFIG_FLARESOLVER}:/config
+    restart: unless-stopped
+
+  tautulli:
+    container_name: tautulli
+    image: lscr.io/linuxserver/tautulli:latest
+    environment:
+      - VERSION=docker
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:tautulli
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_TAUTULLI}:${PORT_TAUTULLI}
+    volumes:
+      - ${CONFIG_TAUTULLI}:/config
+    restart: unless-stopped
