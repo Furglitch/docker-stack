@@ -53,28 +53,37 @@ The repo is meant to be installed within `/mnt/share`, allowing the included con
 If you wish to change the location, modify the `.env` file and `start.sh` script, then adjust the below installation commands as needed.
 
 1. Clone the repository into /mnt/share:
-   ```bash
-   git clone https://github.com/furglitch/docker-stack.git /mnt/share
-   ```
+	 ```bash
+	 git clone https://github.com/furglitch/docker-stack.git /mnt/share
+	 ```
 
 2. Navigate to the project directory:
-   ```bash
-   cd /mnt/share
-   ```
+	 ```bash
+	 cd /mnt/share
+	 ```
 
 3. Ensure Docker is installed and running on your system.
 
 4. Run the startup script:
-   ```bash
-   ./start.sh
-   ```
+	 ```bash
+	 ./start.sh
+	 ```
 
- 5. To grab updates without affecting unchanged files, run the update script:
-    ```bash
-    ./update.sh
-    ```
-    This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
-    **Make sure to back up env values!**
+5. To grab updates without affecting unchanged files, run the update script:
+	 ```bash
+	 ./update.sh
+	 ```
+	 This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
+
+### Files that may need adjusting on install/updates
+
+| App      | Path                           | Changes                   |
+|----------|--------------------------------|---------------------------|
+| .env     | /docker-compose/.env           | IP, Domain, Secrets       |
+| Homepage | /config/homepage/services.yaml | Ports, API Keys, Passkeys |
+| Kometa   | /config/kometa/config.yml      | Ports, API Keys           |
+
+---
 
 ### Attribution
 This repository's file structure and scripts were inspired by [thatg33khub/docker-compose-samples](https://github.com/thatg33khub/docker-compose-samples).
