@@ -1,0 +1,23 @@
+services:
+  
+  jellyfin:
+    container_name: jellyfin
+    image: lscr.io/linuxserver/jellyfin:latest
+    network_mode: host
+    environment:
+      - VERSION=docker
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - DOCKER_MODS=${PARK}:jellyfin
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    ports:
+      - ${PORT_JELLYFIN}:8096
+    volumes:
+      - ${CONFIG_JELLYFIN}:/config
+      - ${MEDIA_MOVIE}:/data/movies
+      - ${MEDIA_TV}:/data/tvshows
+      - ${MEDIA_MUSIC}:/data/music
+    restart: unless-stopped
