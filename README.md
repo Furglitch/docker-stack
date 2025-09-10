@@ -49,17 +49,17 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ## Installation
 
-The repo is meant to be installed within `/mnt/share`, allowing the included configuration files to take effect seamlessly.<br/>
+The repo is meant to be installed within `/mnt/hoard`, allowing the included configuration files to take effect seamlessly.<br/>
 If you wish to change the location, modify the `.env` file and `start.sh` script, then adjust the below installation commands as needed.
 
-1. Clone the repository into /mnt/share:
+1. Clone the repository into /mnt/hoard:
 	 ```bash
-	 git clone https://github.com/furglitch/docker-stack.git /mnt/share
+	 git clone https://github.com/furglitch/docker-stack.git /mnt/hoard
 	 ```
 
 2. Navigate to the project directory:
 	 ```bash
-	 cd /mnt/share
+	 cd /mnt/hoard
 	 ```
 
 3. Ensure Docker is installed and running on your system.
