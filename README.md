@@ -2,30 +2,50 @@
 
 A collection of docker compose files for deploying multiple services, such as Servarr related apps and other personal sites.
 
+
 ## Included Apps
 
-| App           | Function                     |
-|---------------|------------------------------|
-| Plex          | Media server                 |
-| Sonarr        | TV Show management           |
-| Radarr        | Movie management             |
-| Readarr       | Book management              |
-| Bazarr        | Subtitle management          |
-| Prowlarr      | Download indexer             |
-| FlareSolverr  | Captcha solver               |
-| Jellyseerr    | Media request management     |
-| Tautulli      | Plex usage monitoring        |
-| Kometa        | Plex metadata management     |
-| Gluetun       | VPN client                   |
-| SABnzbd       | Usenet downloader            |
-| qBittorrent   | Torrent downloader           |
-| nginx-pm      | Webhosting manager           |
-| Glance        | System monitoring            |
-| VaultWarden   | Password manager             |
-| Nextcloud     | Cloud storage                |
-| Mealie        | Recipe management            |
-| SillyTavern   | Chat front-end               |
-| MediaWiki     | Wiki platform                |
+### Media Services
+
+| App            | Function                     |
+|----------------|------------------------------|
+| Plex           | Media server                 |
+| Audiobookshelf | Book/audiobook server        |
+| Sonarr         | TV Show management           |
+| Radarr         | Movie management             |
+| Bazarr         | Subtitle management          |
+| Jellyseerr     | Media request management     |
+| Tautulli       | Plex usage monitoring        |
+| Kometa         | Plex metadata management     |
+
+### Download Services
+
+| App            | Function                     |
+|----------------|------------------------------|
+| SABnzbd        | Usenet downloader            |
+| qBittorrent    | Torrent downloader           |
+| Prowlarr       | Download indexer             |
+| FlareSolverr   | Captcha solver               |
+
+### Web Services
+
+| App            | Function                     |
+|----------------|------------------------------|
+| nginx-pm       | Webhosting manager           |
+| Homepage       | Home page / Sysmon           |
+| VaultWarden    | Password manager             |
+| Nextcloud      | Cloud storage                |
+| Mealie         | Recipe management            |
+| MediaWiki      | Wiki platform                |
+| SillyTavern    | Chat front-end               |
+
+### Stack Utilities
+
+| App            | Function                     |
+|----------------|------------------------------|
+| Gluetun        | VPN client                   |
+| DeUnhealth     | Container status monitor     |
+| Watchtower     | Image update monitor         |
 
 ## Installation
 
@@ -54,6 +74,7 @@ If you wish to change the location, modify the `.env` file and `start.sh` script
     ./update.sh
     ```
     This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
+    **Make sure to back up env values!**
 
 ### Attribution
 This repository's file structure and scripts were inspired by [thatg33khub/docker-compose-samples](https://github.com/thatg33khub/docker-compose-samples).
