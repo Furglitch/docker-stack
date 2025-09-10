@@ -35,7 +35,7 @@ case "$1" in
         ;;
 esac
 
-for folder in /mnt/share/*; do
+for folder in /mnt/hoard/*; do
     chown 1000:1000 "$folder"
 done
 
