@@ -11,6 +11,7 @@
     #    icon: plex.png
     #    url: http://192.168.X.X:PORT/
     #    href: http://192.168.X.X:PORT/
+    #    key: API_KEY
     #    description: "Plex Media Server"
     #    server: localhost
     #    container: plex
