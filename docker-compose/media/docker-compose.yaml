@@ -71,6 +71,8 @@ services:
   kometa:
     container_name: kometa
     image: kometateam/kometa:latest
+    profiles:
+      - disabled
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
