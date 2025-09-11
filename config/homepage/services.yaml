@@ -1,15 +1,23 @@
 - Media:
-    - Plex:
-        icon: plex.png
+    - Jellyfin:
+        icon: jellyfin.png
         url: http://192.168.X.X:PORT/
         href: http://192.168.X.X:PORT/
-        description: "Plex Media Server"
+        key: API_KEY
+        description: "Jellyfin Media Server"
         server: localhost
-        container: plex
-        widgets:
-        - type: tautulli
-          url: http://192.168.X.X:PORT/
-          key: API_KEY
+        container: jellyfin
+    #- Plex:
+    #    icon: plex.png
+    #    url: http://192.168.X.X:PORT/
+    #    href: http://192.168.X.X:PORT/
+    #    description: "Plex Media Server"
+    #    server: localhost
+    #    container: plex
+    #    widgets:
+    #    - type: tautulli
+    #      url: http://192.168.X.X:PORT/
+    #      key: API_KEY
 
 - Servarr:
     - Sonarr:
