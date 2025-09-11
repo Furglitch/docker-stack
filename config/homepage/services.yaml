@@ -19,6 +19,11 @@
     #    - type: tautulli
     #      url: http://192.168.X.X:PORT/
     #      key: API_KEY
+    - "AudioBookshelf":
+        icon: audiobookshelf.png
+        href: http://192.168.X.X:PORT/
+        siteMonitor: http://192.168.X.X:PORT/
+        description: "Books and Audiobooks"
 
 - Servarr:
     - Sonarr:
@@ -33,13 +38,6 @@
         href: http://192.168.X.X:PORT/
         widgets:
         - type: radarr
-          url: http://192.168.X.X:PORT/
-          key: API_KEY
-    - Lidarr:
-        icon: lidarr.png
-        href: http://192.168.X.X:PORT/
-        widgets:
-        - type: lidarr
           url: http://192.168.X.X:PORT/
           key: API_KEY
     - Bazarr:
@@ -58,6 +56,13 @@
           key: API_KEY
 
 - Download:
+    - "SABnzbd":
+        icon: sabnzbd.png
+        href: http://192.168.X.X:PORT/
+        widgets:
+        - type: sabnzbd
+          url: http://192.168.X.X:PORT/
+          key: API_KEY
     - "qBittorrent":
         icon: qbittorrent.png
         href: http://192.168.X.X:PORT/
@@ -66,21 +71,8 @@
           url: http://192.168.X.X:PORT/
           username: admin
           password: PASSWORD
-    - "SABnzbd":
-        icon: sabnzbd.png
-        href: http://192.168.X.X:PORT/
-        widgets:
-        - type: sabnzbd
-          url: http://192.168.X.X:PORT/
-          key: API_KEY
 
 - "Web":
-    - "Calibre":
-        icon: calibre.png
-        href: http://192.168.X.X:PORT/
-    - "Calibre Web":
-        icon: calibre.png
-        href: http://192.168.X.X:PORT/
     - "VaultWarden":
         icon: vaultwarden.png
         href: http://192.168.X.X:PORT/
@@ -106,8 +98,3 @@
         href: http://192.168.X.X:PORT/
         siteMonitor: http://192.168.X.X:PORT/
         description: "Wiki"
-    - "AudioBookshelf":
-        icon: audiobookshelf.png
-        href: http://192.168.X.X:PORT/
-        siteMonitor: http://192.168.X.X:PORT/
-        description: "Books and Audiobooks"
