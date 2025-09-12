@@ -12,28 +12,6 @@ services:
       - ${DOCKER_SOCK}:${DOCKER_SOCK}
     restart: always
 
-  gluetun:
-    container_name: gluetun
-    image: qmcgaw/gluetun:latest
-    cap_add:
-      - NET_ADMIN
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - UMASK=${UMASK}
-      - TZ=${TZ}
-      - VPN_SERVICE_PROVIDER=${GLUETUN_PROVIDER}
-      - VPN_TYPE=${GLUETUN_TYPE}
-      - WIREGUARD_PRIVATE_KEY=${GLUETUN_KEY}
-      - BLOCK_MALICIOUS=off
-    ports:
-      - ${PORT_SABNZBD}:${PORT_SABNZBD}
-      - ${PORT_QBITTORRENT_UI}:${PORT_QBITTORRENT_UI}
-      - ${PORT_QBITTORRENT_IO}:${PORT_QBITTORRENT_IO}
-    volumes:
-      - ${CONFIG_GLUETUN}:/gluetun
-    restart: always
-
   watchtower:
     container_name: watchtower
     image: containrrr/watchtower:latest
