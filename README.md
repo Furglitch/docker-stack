@@ -9,7 +9,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 | App            | Function                     |
 |----------------|------------------------------|
-| Jellyfin       | Media server                 |
+| Plex           | Media server                 |
 | Audiobookshelf | Book/audiobook server        |
 | Sonarr         | TV Show management           |
 | Radarr         | Movie management             |

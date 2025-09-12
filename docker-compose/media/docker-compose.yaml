@@ -37,6 +37,8 @@ services:
   jellyfin:
     container_name: jellyfin
     image: lscr.io/linuxserver/jellyfin:latest
+    profiles:
+      - disabled
     network_mode: host
     environment:
       - VERSION=docker
@@ -71,8 +73,6 @@ services:
   kometa:
     container_name: kometa
     image: kometateam/kometa:latest
-    profiles:
-      - disabled
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -93,8 +93,6 @@ services:
   plex:
     container_name: plex
     image: lscr.io/linuxserver/plex:latest
-    profiles:
-      - disabled
     network_mode: host
     environment:
       - VERSION=docker
@@ -192,8 +190,6 @@ services:
   tautulli:
     container_name: tautulli
     image: lscr.io/linuxserver/tautulli:latest
-    profiles:
-      - disabled
     environment:
       - VERSION=docker
       - PUID=${PUID}
