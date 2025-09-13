@@ -33,7 +33,7 @@ case "$1" in
         for dir in docker-compose/*; do
             if [ -d "$dir" ]; then
                 printf "Stopping containers from compose: $dir \n"
-                docker compose -f "$dir/docker-compose.yaml" stop
+                docker compose -f "$dir/docker-compose.yaml" down
             fi
         done
         ;;
