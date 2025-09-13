@@ -49,8 +49,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ## Installation
 
-The repo is meant to be installed within `/mnt/hoard`, allowing the included configuration files to take effect seamlessly.<br/>
-If you wish to change the location, modify the `.env` file and `start.sh` script, then adjust the below installation commands as needed.
+This repo intends for repo and media files to be stored on `/mnt/hoard`, while configuration files are copied to and maintained at `/docker` (which is created by the script).
 
 1. Clone the repository into /mnt/hoard:
 	 ```bash
@@ -71,17 +70,17 @@ If you wish to change the location, modify the `.env` file and `start.sh` script
 
 5. To grab updates without affecting unchanged files, run the update script:
 	 ```bash
-	 ./update.sh
+	 ./scripts/git-update.sh
 	 ```
 	 This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
 
 ### Files that may need adjusting on install/updates
 
-| App      | Path                           | Changes                   |
-|----------|--------------------------------|---------------------------|
-| .env     | /docker-compose/.env           | IP, Domain, Secrets       |
-| Homepage | /config/homepage/services.yaml | Ports, API Keys, Passkeys |
-| Kometa   | /config/kometa/config.yml      | Ports, API Keys           |
+| App      | Path                                                             | Changes                   |
+|----------|------------------------------------------------------------------|---------------------------|
+| .env     | [/docker-compose/.env](/docker-compose/.env)                     | IP, Domain, Secrets       |
+| Homepage | [/config/homepage/services.yaml](/config/homepage/services.yaml) | Ports, API Keys, Passkeys |
+| Kometa   | [/config/kometa/config.yml](/config/kometa/config.yml)           | Ports, API Keys           |
 
 ---
 
