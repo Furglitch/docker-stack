@@ -49,7 +49,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ## Installation
 
-This repo intends for repo and media files to be stored on `/mnt/hoard`, while configuration files are copied to and maintained at `/docker` (which is created by the script).
+This repo intends for repo and media files to be stored on `/mnt/hoard`, while configuration files are copied to and maintained at `/home/user/` (which is created by the script). It also intends for the main user to be named `user`. These paths and parameters can be changed by editing `start.sh` and `docker-compose/.env`
 
 1. Clone the repository into /mnt/hoard:
 	 ```bash
