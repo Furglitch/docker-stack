@@ -12,7 +12,6 @@ services:
       - ${PORT_AUDIOBOOKSHELF}:80
     volumes:
       - ${MEDIA_BOOKS}:/books
-      - ${DB_AUDIOBOOKSHELF}:/config
       - ${CONFIG_AUDIOBOOKSHELF}/metadata:/metadata
 
   bazarr:
