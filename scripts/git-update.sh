@@ -5,6 +5,15 @@ if [ "$USER" != "root" ]; then
     exit 1
 fi
 
+printf 'Remember to review any changes to configuration files in the "config" directory and the .env file in "docker-compose".\n'
+printf 'Currently known files that may need adjustments:\n'
+printf ' - /docker-compose/.env (IPs, Domain, Secrets)\n'
+printf ' - /config/homepage/services.yaml (Ports, API Keys, Passkeys)\n'
+printf ' - /config/kometa/config.yml (Ports, API Keys)\n\n'
+printf '\n\n'
+printf 'Press [ENTER] to continue with the update or [CTRL+C] to cancel...'
+read -r
+
 git fetch origin
 
 DIFF_FILES=$(git diff --name-only HEAD..origin/main)
@@ -20,5 +29,7 @@ chmod 0700 "./.temp/.git"
 rm -rf "./.git"
 mv "./.temp/.git" ./
 rm -rf "./.temp"
+
+cp -r ./config /docker/config
 
 echo "Selective update complete."
