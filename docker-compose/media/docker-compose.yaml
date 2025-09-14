@@ -153,6 +153,19 @@ services:
       - ${MEDIA_DOWNLOADS}:/downloads
     restart: unless-stopped
 
+  recyclarr:
+    container_name: recyclarr
+    image: recyclarr/recyclarr:latest
+    depends_on:
+      - sonarr
+      - radarr
+    user: 1000:1000
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ${CONFIG_RECYCLARR}:/config
+    restart: unless-stopped
+
   prowlarr:
     container_name: prowlarr
     image: lscr.io/linuxserver/prowlarr:latest
