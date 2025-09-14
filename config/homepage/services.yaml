@@ -45,7 +45,7 @@
         href: http://192.168.X.X:PORT/
         widgets:
         - type: bazarr
-          url: http://192.168.X.X:PORT/
+          url: http://192.168.X.X:PORT/dl/subtitle
           key: API_KEY
     - Prowlarr:
         icon: prowlarr.png
@@ -68,7 +68,7 @@
         href: http://192.168.X.X:PORT/
         widgets:
         - type: qbittorrent
-          url: http://192.168.X.X:PORT/
+          url: http://192.168.X.X:PORT
           username: admin
           password: PASSWORD
 
