@@ -39,29 +39,12 @@ services:
     image: mediawiki
     ports:
       - ${PORT_MEDIAWIKI}:80
-    environment:
-      - MEDIAWIKI_DB_TYPE=mysql
-      - MEDIAWIKI_DB_HOST=mediawiki-db
-      - MEDIAWIKI_DB_NAME=mediawiki
-      - MEDIAWIKI_DB_USER=${MYSQL_USER}
-      - MEDIAWIKI_DB_PASSWORD=${MYSQL_PASSWORD}
     volumes:
+      - ${CONFIG_MEDIAWIKI}/db:/var/www/data # docker exec mediawiki chown www-data:www-data /var/www/data
       - ${CONFIG_MEDIAWIKI}/images:/var/www/html/images
+      - ${CONFIG_MEDIAWIKI}/skins:/var/www/html/skins
+      - ${CONFIG_MEDIAWIKI}/extensions:/var/www/html/extensions
       #- ${CONFIG_MEDIAWIKI}/LocalSettings.php:/var/www/html/LocalSettings.php
-    depends_on:
-      - mediawiki-db
-    restart: unless-stopped
-
-  mediawiki-db:
-    container_name: mediawiki-db
-    image: mariadb
-    environment:
-      - MYSQL_DATABASE=mediawiki
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_RANDOM_ROOT_PASSWORD=${MYSQL_RANDOM_PASSWORD}
-    volumes:
-      - ${CONFIG_MEDIAWIKI}/db:/var/lib/mysql
     restart: unless-stopped
 
   nginx-pm:
