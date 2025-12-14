@@ -93,7 +93,7 @@ services:
       - ${CONFIG_WEB_PATH}/mediawiki/images:/var/www/html/images
       - ${CONFIG_WEB_PATH}/mediawiki/skins:/var/www/html/skins
       - ${CONFIG_WEB_PATH}/mediawiki/extensions:/var/www/html/extensions
-      - ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
+      #- ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
 
   audiobookshelf:
     <<: *default-service

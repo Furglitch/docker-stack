@@ -22,13 +22,6 @@ attributesfile = .gitattributes
 			-e 's|password: .*|password: PASSWORD|g'
 	smudge = cat
 
-[filter "redact-mediawiki"]
-	clean = sed -E \
-			-e 's|wgDBuser = .*|wgDBuser = \"USER\"|g' \
-			-e 's|wgDBpassword = .*|wgDBpassword = \"PASSWORD\"|g' \
-			-e 's|wgSecretKey = .*|wgSecretKey = \"64_CHAR_SECRET_KEY\"|g'
-	smudge = cat
-
 [filter "redact-ip"]
     clean = sed -E -e 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/192.168.XXX.XXX/g'
     smudge = cat

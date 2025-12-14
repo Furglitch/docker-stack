@@ -26,7 +26,7 @@
 /config-web/mealie/**
 /config-web/sillytavern/**
 /config-web/mediawiki/**
-!/config-web/mediawiki/LocalSettings.php
+!/config-web/mediawiki/LocalSettings.php.bk
 !/config-web/mediawiki/images/
 !/config-web/mediawiki/images/**
 !/config-web/mediawiki/extensions/
