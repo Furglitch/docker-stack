@@ -181,7 +181,7 @@ services:
     ports:
       - ${PORT_SABNZBD}:80
       - ${PORT_QBITTORRENT_UI}:8080
-      - ${PORT_QBITTORRENT_NODE}:8090
+      - ${PORT_QBITTORRENT_IO}:8090
     restart: always
 
   qbittorrent:
