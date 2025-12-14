@@ -1,21 +1,21 @@
 - Bookmarks:
   - Proton Mail:
     - abbr: "PM"
-      icon: si-protonmail-#cdd6f4
+      icon: "si-protonmail-#cdd6f4"
       href: "https://mail.proton.me/u/0/inbox"
   - YouTube:
     - abbr: "Y"
-      icon: si-youtube-#cdd6f4
+      icon: "si-youtube-#cdd6f4"
       href: "https://www.youtube.com/feed/subscriptions"
   - YouTube Music:
     - abbr: "YM"
-      icon: si-youtubemusic-#cdd6f4
+      icon: "si-youtubemusic-#cdd6f4"
       href: "https://music.youtube.com/library/playlists"
   - Reddit:
     - abbr: "R"
-      icon: si-reddit-#cdd6f4
+      icon: "si-reddit-#cdd6f4"
       href: "https://www.reddit.com/?feed=home"
   - GitHub:
     - abbr: "GH"
-      icon: si-github-#cdd6f4
+      icon: "si-github-#cdd6f4"
       href: "https://www.github.com/Furglitch"
