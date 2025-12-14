@@ -17,7 +17,7 @@ for FILE in $DIFF_FILES; do
     echo "Updating file: $FILE"
     git checkout origin/main -- "$FILE"
 done
-git clone --no-checkout "$(git config --get remote.origin.url)" "./.temp"
+git clone --recurse-submodules --no-checkout "$(git config --get remote.origin.url)" "./.temp"
 if [ -d ./.temp/.git ]; then
     rm -rf "./.git"
     mv "./.temp/.git" ./
