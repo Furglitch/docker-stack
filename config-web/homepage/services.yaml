@@ -86,8 +86,8 @@
         description: "Password Manager"
     - "Nextcloud":
         icon: si-nextcloud-#cdd6f4
-        href: http://192.168.XXX.XXX:32703/
-        siteMonitor: http://192.168.XXX.XXX:32703/
+        href: https://192.168.XXX.XXX:32703/
+        siteMonitor: https://192.168.XXX.XXX:32703/
         description: "Cloud Storage"
     - "Mealie":
         icon: si-mealie-#cdd6f4
