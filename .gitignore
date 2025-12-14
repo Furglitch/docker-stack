@@ -29,6 +29,10 @@
 !/config-web/mediawiki/LocalSettings.php
 !/config-web/mediawiki/images/
 !/config-web/mediawiki/images/**
+!/config-web/mediawiki/extensions/
+!/config-web/mediawiki/extensions/**
+!/config-web/mediawiki/skins/
+!/config-web/mediawiki/skins/**
 /config-web/audiobookshelf/**
 /config-util/deunhealth/**
 /config-util/watchtower/**

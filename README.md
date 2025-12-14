@@ -45,7 +45,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 This stack is designed to be cloned to `/home/user/docker` and run from there.
 ```bash
-git clone https://github.com/Furglitch/docker-stack.git /home/user/docker
+git clone --recurse-submodules https://github.com/Furglitch/docker-stack.git /home/user/docker
 ```
 Additionally, SMB shares are expected to be mounted at `/mnt/media` and `/mnt/cloud`, for Plex media and Nextcloud cloud storage respectively.
 
