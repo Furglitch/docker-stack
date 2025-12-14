@@ -42,18 +42,24 @@ case "$2" in
     "")
         ;;
     "media")
-        cp -r ./config-media/* /home/user/docker/config
+        if [ "$1" == "--start" ]; then
+            cp -r ./config-media/* /home/user/docker/config
+        fi
         printf "Setting up media containers...\n"
         docker compose -f "compose-media/docker-compose.yaml" $command
         ;;
     "web")
-        cp -r ./config-web/* /home/user/docker/config
+        if [ "$1" == "--start" ]; then
+            cp -r ./config-web/* /home/user/docker/config
+        fi
         printf "Setting up web containers...\n"
         docker compose -f "compose-web/docker-compose.yaml" $command
         ;;
     "all")
-        cp -r ./config-media/* /home/user/docker/config
-        cp -r ./config-web/* /home/user/docker/config
+        if [ "$1" == "--start" ]; then
+            cp -r ./config-media/* /home/user/docker/config
+            cp -r ./config-web/* /home/user/docker/config
+        fi
         printf "Setting up media containers...\n"
         docker compose -f "compose-media/docker-compose.yaml" $command
         printf "Setting up web containers...\n"
