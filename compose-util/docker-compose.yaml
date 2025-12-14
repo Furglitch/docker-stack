@@ -25,3 +25,15 @@ services:
     image: containrrr/watchtower:latest
     container_name: watchtower
     command: --cleanup=true --include-restarting=true --include-stopped=true --interval=86400
+
+  nginx-pm:
+    <<: *default-service
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-pm
+    ports:
+      - ${PORT_NGINX_IO}:80
+      - ${PORT_NGINX_HTTP}:81
+      - ${PORT_NGINX_HTTPS}:443
+    volumes: 
+      - ${CONFIG_UTIL_PATH}/nginx/data:/data
+      - ${CONFIG_UTIL_PATH}/nginx/ssl:/etc/letsencrypt
