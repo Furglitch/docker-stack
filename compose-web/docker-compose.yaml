@@ -86,7 +86,7 @@ services:
 
   mediawiki:
     <<: *default-service
-    image: mediawiki
+    image: mediawiki:1.44
     container_name: mediawiki
     ports:
       - ${PORT_MEDIAWIKI}:80
