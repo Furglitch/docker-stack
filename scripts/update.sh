@@ -35,13 +35,13 @@ fi
 # For files that exist in both places, rename the local file to .bk before copying
 for FILE in $DIFF_FILES; do
     if [ -f "$FILE" ]; then
-        printf "Backing up existing file: $FILE to $FILE.bk\n"
+        echo "Backing up existing file: $FILE to $FILE.bk"
         mv "$FILE" "$FILE.bk"
     fi
 done
 
 for FILE in $(find ./.temp -type f -printf '%P\n' | sort); do
-    printf "Copying file: $FILE\n"
+    echo "Copying file: $FILE"
     cp ./.temp/"$FILE" "$FILE"
 done
 
