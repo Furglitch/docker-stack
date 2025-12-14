@@ -2,7 +2,6 @@
 
 A collection of docker compose files for deploying multiple services, such as Servarr related apps and other personal sites.
 
-
 ## Included Apps
 
 ### Media Services
@@ -10,79 +9,81 @@ A collection of docker compose files for deploying multiple services, such as Se
 | App            | Function                     |
 |----------------|------------------------------|
 | Plex           | Media server                 |
-| Audiobookshelf | Book/audiobook server        |
-| Sonarr         | TV Show management           |
-| Radarr         | Movie management             |
-| Bazarr         | Subtitle management          |
-| Jellyseerr     | Media request management     |
 | Tautulli       | Plex usage monitoring        |
-| Kometa         | Plex metadata management     |
-
-### Download Services
-
-| App            | Function                     |
-|----------------|------------------------------|
-| SABnzbd        | Usenet downloader            |
-| qBittorrent    | Torrent downloader           |
+| Posterizarr    | Plex poster manager          |
+| Tdarr          | Media transcoder             |
+| Radarr         | Movie management             |
+| Sonarr         | TV Show management           |
+| Bazarr         | Subtitle management          |
 | Prowlarr       | Download indexer             |
 | FlareSolverr   | Captcha solver               |
+| Recyclarr      | TRaSH Guide syncer           |
+| Gluetun        | Container VPN router         |
+| SABnzbd        | Usenet downloader            |
+| qBittorrent    | Torrent downloader           |
 
 ### Web Services
 
 | App            | Function                     |
 |----------------|------------------------------|
-| nginx-pm       | Webhosting manager           |
 | Homepage       | Home page / Sysmon           |
 | VaultWarden    | Password manager             |
 | Nextcloud      | Cloud storage                |
 | Mealie         | Recipe management            |
+| SillyTavern    | AI Chat front-end            |
 | MediaWiki      | Wiki platform                |
-| SillyTavern    | Chat front-end               |
+| Audiobookshelf | Book/audiobook server        |
 
 ### Stack Utilities
 
 | App            | Function                     |
 |----------------|------------------------------|
-| Gluetun        | VPN client                   |
 | DeUnhealth     | Container status monitor     |
 | Watchtower     | Image update monitor         |
 
 ## Installation
 
-This repo intends for repo and media files to be stored on `/mnt/hoard`, while configuration files are copied to and maintained at `/home/user/` (which is created by the script). It also intends for the main user to be named `user`. These paths and parameters can be changed by editing `start.sh` and `docker-compose/.env`
+This stack is designed to be cloned to `/home/user/docker` and run from there.
+```bash
+git clone https://github.com/Furglitch/docker-stack.git /home/user/docker
+```
+Additionally, SMB shares are expected to be mounted at `/mnt/media` and `/mnt/cloud`, for Plex media and Nextcloud cloud storage respectively.
 
-1. Clone the repository into /mnt/hoard:
-	 ```bash
-	 git clone https://github.com/furglitch/docker-stack.git /mnt/hoard
-	 ```
 
-2. Navigate to the project directory:
-	 ```bash
-	 cd /mnt/hoard
-	 ```
+#### Usage
 
-3. Ensure Docker is installed and running on your system.
+```bash
+./setup.sh [action] [compose]
 
-4. Run the startup script:
-	 ```bash
-	 ./start.sh
-	 ```
+action: --start | --restart | --stop | --clear
+compose: media | web | all
+```
 
-5. To grab updates without affecting unchanged files, run the update script:
-	 ```bash
-	 ./scripts/git-update.sh
-	 ```
-	 This should help avoid conflicts like removing API keys for *arr apps, but double check commits before running the script.
+- `--start`: runs `docker compose up -d` for the chosen compose file(s).
+- `--restart`: runs `docker compose restart`.
+- `--stop`: runs `docker compose stop`.
+- `--clear`: runs `docker compose down`.
+
+**Compose selection**
+- `media` — runs `compose-media/docker-compose.yaml` and copies `config-media` into the target config folder.
+- `web` — runs `compose-web/docker-compose.yaml` and copies `config-web` into the target config folder.
+- `all` — runs both compose files and copies both `config-media` and `config-web`.
+- The script also runs `compose-util/docker-compose.yaml` for all actions automatically.
+
+**Examples**
+
+```bash
+./setup.sh --start web # Starts web stack only
+./setup.sh --restart all # Restarts all containers
+./setup.sh --stop media # Stops media stack only
+./setup.sh --clear web # Deletes web stack only
+```
 
 ### Files that may need adjusting on install/updates
 
-| App      | Path                                                             | Changes                   |
-|----------|------------------------------------------------------------------|---------------------------|
-| .env     | [/docker-compose/.env](/docker-compose/.env)                     | IP, Domain, Secrets       |
-| Homepage | [/config/homepage/services.yaml](/config/homepage/services.yaml) | Ports, API Keys, Passkeys |
-| Kometa   | [/config/kometa/config.yml](/config/kometa/config.yml)           | Ports, API Keys           |
-
----
-
-### Attribution
-This repository's file structure and scripts were inspired by [thatg33khub/docker-compose-samples](https://github.com/thatg33khub/docker-compose-samples).
+| App       | Path                                                                               | Changes                    |
+|-----------|------------------------------------------------------------------------------------|----------------------------|
+| .env      | [/.env](/.env)                                                                     | Domain info, Secrets       |
+| Recyclarr | [/config-media/recyclarr/recyclarr.yml](/config-media/recyclarr/recyclarr.yml)     | Domain info, Secrets       |
+| Homepage  | [/config-web/homepage/services.yaml](/config-web/homepage/services.yaml)           | Ports, API Keys, Passkeys  |
+| MediaWiki | [/config-web/mediawiki/LocalSettings.php](/config-web/mediawiki/LocalSettings.php) | Server URL, Secrets        |

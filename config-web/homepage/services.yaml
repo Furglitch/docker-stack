@@ -1,0 +1,106 @@
+- Media:
+    - Plex:
+        icon: sh-plex
+        url: http://192.168.XXX.XXX:32400/
+        href: http://192.168.XXX.XXX:32400/
+        key: API_KEY
+        description: "Plex Media Server"
+        server: localhost
+        container: plex
+        widgets:
+        - type: tautulli
+          url: http://192.168.XXX.XXX:32410/
+          key: API_KEY
+    - "AudioBookshelf":
+        icon: si-audiobookshelf-#cdd6f4
+        href: http://192.168.XXX.XXX:32707/
+        siteMonitor: http://192.168.XXX.XXX:32707/
+        description: "Books and Audiobooks"
+
+- Servarr:
+    - Radarr:
+        icon: sh-radarr
+        href: http://192.168.XXX.XXX:32501/
+        widgets:
+        - type: radarr
+          url: http://192.168.XXX.XXX:32501/
+          key: API_KEY
+    - Sonarr:
+        icon: sh-sonarr
+        href: http://192.168.XXX.XXX:32502/
+        widgets:
+        - type: sonarr
+          url: http://192.168.XXX.XXX:32502/
+          key: API_KEY
+    - Bazarr:
+        icon: sh-bazarr
+        href: http://192.168.XXX.XXX:32503/
+        widgets:
+        - type: bazarr
+          url: http://192.168.XXX.XXX:32503/
+          key: API_KEY
+    - Prowlarr:
+        icon: sh-prowlarr
+        href: http://192.168.XXX.XXX:32504/
+        widgets:
+        - type: prowlarr
+          url: http://192.168.XXX.XXX:32504/
+          key: API_KEY
+    - Posterizarr:
+        icon: sh-posterizarr
+        href: http://192.168.XXX.XXX:32411/
+        #widgets:
+        #- type: posterizarr
+        #  url: http://192.168.XXX.XXX:32411/
+        #  key: API_KEY
+    - TDarr:
+        icon: sh-tdarr
+        href: http://192.168.XXX.XXX:32412/
+        widgets:
+        - type: tdarr
+          url: http://192.168.XXX.XXX:32413/
+          key: API_KEY
+
+- Download:
+    - "SABnzbd":
+        icon: sh-sabnzbd
+        href: http://192.168.XXX.XXX:32601/
+        widgets:
+        - type: sabnzbd
+          url: http://192.168.XXX.XXX:32601/
+          key: API_KEY
+    - "qBittorrent":
+        icon: sh-qbittorrent
+        href: http://192.168.XXX.XXX:32602/
+        widgets:
+        - type: qbittorrent
+          url: http://192.168.XXX.XXX:32603/
+          username: admin
+          password: PASSWORD
+
+- "Web":
+    - "VaultWarden":
+        icon: si-vaultwarden-#cdd6f4
+        href: http://192.168.XXX.XXX:32702/
+        siteMonitor: http://192.168.XXX.XXX:32702/
+        description: "Password Manager"
+    - "Nextcloud":
+        icon: si-nextcloud-#cdd6f4
+        href: http://192.168.XXX.XXX:32703/
+        siteMonitor: http://192.168.XXX.XXX:32703/
+        description: "Cloud Storage"
+    - "Mealie":
+        icon: si-mealie-#cdd6f4
+        href: http://192.168.XXX.XXX:32704/
+        siteMonitor: http://192.168.XXX.XXX:32704/
+        description: "Meal Planning"
+    - "SillyTavern":
+        icon: https://sillytavern.app/img/logo.png
+        href: http://192.168.XXX.XXX:32705/
+        siteMonitor: http://192.168.XXX.XXX:32705/
+        description: "AI Chat Client"
+    - "MediaWiki":
+        icon: si-wikimediafoundation-#cdd6f4
+        href: http://192.168.XXX.XXX:32706/
+        siteMonitor: http://192.168.XXX.XXX:32706/
+        description: "Wiki"

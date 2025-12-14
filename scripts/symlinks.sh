@@ -1,5 +1,8 @@
 #!/bin/bash
 
-for dir in ../docker-compose/*; do
-    ln -s ../.env $dir/.env
-done;
+for dir in compose-media compose-web compose-util; do
+    if [ -d "$dir" ]; then
+        rm -f "$dir/.env"
+        ln -s "../.env" "$dir/.env"
+    fi
+done

@@ -1,4 +1,10 @@
-docker-compose/.env text eol=lf filter=redact-env
-config/homepage/services.yaml text eol=lf filter=redact-homepage
-config/kometa/config.yml text eol=lf filter=redact-kometa
-config/mediawiki/LocalSettings.php text eol=lf filter=redact-mediawiki
+.env text eol=lf filter=redact-env
+
+config-media/recyclarr/recyclarr.yml text eol=lf filter=redact-ip
+config-media/recyclarr/recyclarr.yml text eol=lf filter=redact-recyclarr
+
+config-web/homepage/services.yaml text eol=lf filter=redact-ip
+config-web/homepage/services.yaml text eol=lf filter=redact-homepage
+
+config-web/mediawiki/LocalSettings.php text eol=lf filter=redact-ip
+config-web/mediawiki/LocalSettings.php text eol=lf filter=redact-mediawiki

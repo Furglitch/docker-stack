@@ -1,33 +1,34 @@
+[core]
+attributesfile = .gitattributes
+
 [filter "redact-env"]
-	clean = sed \
-				-e 's/^MYSQL_USER=.*/MYSQL_USER=USER/g' \
-				-e 's/^MYSQL_PASSWORD=.*/MYSQL_PASSWORD=PASSWORD/g' \
-				-e 's/^GLUETUN_PROVIDER=.*/GLUETUN_PROVIDER=PROVIDER/g' \
-				-e 's/^GLUETUN_TYPE=.*/GLUETUN_TYPE=TYPE/g' \
-				-e 's/^GLUETUN_KEY=.*/GLUETUN_KEY=VPN-KEY/g' \
-				-e 's/^IP_LOCAL=.*/IP_LOCAL=192.168.X.X/g' \
-				-e 's/^IP_DOMAIN=.*/IP_DOMAIN=example.com/g'
+	clean = sed -E \
+			-e 's/^IP_DOMAIN=.*/IP_DOMAIN=example.com/g' \
+			-e 's/^MYSQL_USER=.*/MYSQL_USER=USER/g' \
+			-e 's/^MYSQL_PASSWORD=.*/MYSQL_PASSWORD=PASSWORD/g' \
+			-e 's/^GLUETUN_PROVIDER=.*/GLUETUN_PROVIDER=PROVIDER/g' \
+			-e 's/^GLUETUN_TYPE=.*/GLUETUN_TYPE=TYPE/g' \
+			-e 's/^GLUETUN_KEY=.*/GLUETUN_KEY=VPN-KEY/g'
 	smudge = cat
+
+[filter "redact-recyclarr"]
+	clean = sed -E \
+			-e 's|api_key: .*|api_key: API_KEY|g'
+	smudge = cat
+
 [filter "redact-homepage"]
-	clean = sed \
-				-e 's|url: .*|url: http://192.168.X.X:PORT/|g' \
-				-e 's|href: .*|href: http://192.168.X.X:PORT/|g' \
-				-e 's|siteMonitor: .*|siteMonitor: http://192.168.X.X:PORT/|g' \
-				-e 's|key: .*|key: API_KEY|g' \
-				-e 's|password: .*|password: PASSWORD|g'
+	clean = sed -E \
+			-e 's|key: .*|key: API_KEY|g' \
+			-e 's|password: .*|password: PASSWORD|g'
 	smudge = cat
-[filter "redact-kometa"]
-	clean = sed \
-				-e 's|url:.*|url: http://192.168.X.X:PORT|g' \
-				-e 's|token:.*|token: TOKEN|g' \
-				-e 's|apikey:.*|apikey: APIKEY|g' \
-				-e 's|client_id:.*|client_id: CLIENT_ID|g' \
-				-e 's|client_secret:.*|client_secret: CLIENT_SECRET|g'
-	smudge = cat
+
 [filter "redact-mediawiki"]
-	clean = sed \
-				-e 's|wgServer = .*|wgServer = \"https://wiki.example.com\"|g' \
-				-e 's|wgDBuser = .*|wgDBuser = \"USER\"|g' \
-				-e 's|wgDBpassword = .*|wgDBpassword = \"PASSWORD\"|g' \
-				-e 's|wgSecretKey = .*|wgSecretKey = \"64_CHAR_SECRET_KEY\"|g'
+	clean = sed -E \
+			-e 's|wgDBuser = .*|wgDBuser = \"USER\"|g' \
+			-e 's|wgDBpassword = .*|wgDBpassword = \"PASSWORD\"|g' \
+			-e 's|wgSecretKey = .*|wgSecretKey = \"64_CHAR_SECRET_KEY\"|g'
 	smudge = cat
+
+[filter "redact-ip"]
+    clean = sed -E -e 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/192.168.XXX.XXX/g'
+    smudge = cat

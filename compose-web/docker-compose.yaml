@@ -1,0 +1,103 @@
+version: "3.8"
+
+x-common-config: &default-service
+    labels:
+      - "deunhealth.restart.on.unhealthy=true"
+    environment:
+      - PUID=${PUID}
+      - PGID=${GUID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+      - TP_THEME=${THEME}
+      - TP_COMMUNITY_THEME=${THEME_COMMUNITY}
+    restart: unless-stopped
+      
+services:
+
+  homepage:
+    <<: *default-service
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=${IP_LOCAL}:${PORT_HOMEPAGE}
+    ports:
+      - ${PORT_HOMEPAGE}:3000
+    volumes:
+      - ${CONFIG_WEB_PATH}/homepage:/app/config
+      - ${DOCKER_SOCK}:${DOCKER_SOCK}
+
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    ports:
+      - ${PORT_VAULTWARDEN}:80
+    volumes: 
+      - ${CONFIG_WEB_PATH}/vaultwarden:/config
+      - ${CONFIG_WEB_PATH}/vaultwarden/data:/data
+    restart: always
+
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - VIRTUAL_HOST=https://${IP_DOMAIN}
+      - LETSENCRYPT_HOST=https://${IP_DOMAIN}
+    ports:
+      - ${PORT_NEXTCLOUD}:443
+    volumes: 
+      - ${CONFIG_WEB_PATH}/nextcloud/config:/config
+      - ${CONFIG_WEB_PATH}/nextcloud/data:/data
+      - ${CLOUD_SHARE}:/share
+    restart: always
+
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    environment:
+      - BASE_URL=https://${IP_DOMAIN}
+      - ALLOW_SIGNUP=false
+    volumes:
+      - ${CONFIG_WEB_PATH}/mealie:/app/data
+    ports:
+      - ${PORT_MEALIE}:9000
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+
+  sillytavern:
+    build: ..
+    image: ghcr.io/sillytavern/sillytavern:latest
+    container_name: sillytavern
+    environment:
+      - NODE_ENV=production
+      - FORCE_COLOR=1
+    ports:
+      - ${PORT_SILLYTAVERN}:8000
+    volumes:
+      - ${CONFIG_WEB_PATH}/sillytavern/config:/home/node/app/config
+      - ${CONFIG_WEB_PATH}/sillytavern/data:/home/node/app/data
+      - ${CONFIG_WEB_PATH}/sillytavern/plugins:/home/node/app/plugins
+      - ${CONFIG_WEB_PATH}/sillytavern/extensions:/home/node/app/public/scripts/extensions/third-party
+
+  mediawiki:
+    image: mediawiki
+    container_name: mediawiki
+    ports:
+      - ${PORT_MEDIAWIKI}:80
+    volumes:
+      - ${CONFIG_WEB_PATH}/mediawiki/db:/var/www/data # docker exec mediawiki chown www-data:www-data /var/www/data
+      - ${CONFIG_WEB_PATH}/mediawiki/images:/var/www/html/images
+      - ${CONFIG_WEB_PATH}/mediawiki/skins:/var/www/html/skins
+      - ${CONFIG_WEB_PATH}/mediawiki/extensions:/var/www/html/extensions
+      - ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
+
+  audiobookshelf:
+    <<: *default-service
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    container_name: audiobookshelf
+    volumes:
+      - ${CONFIG_WEB_PATH}/audiobookshelf/metadata:/metadata
+      - ${MEDIA_SHARE}:/share
+    ports:
+      - ${PORT_AUDIOBOOKSHELF}:80
