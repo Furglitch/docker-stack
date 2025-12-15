@@ -195,8 +195,8 @@ services:
       - TORRENTING_PORT=8091
     volumes:
       - ${CONFIG_MEDIA_PATH}/qbittorrent:/config
-      - ${MEDIA_SHARE}/downloads/torrent:/downloads
-      - ${MEDIA_SHARE}/downloads/torrent/incomplete:/downloads/incomplete
+      - ${MEDIA_SHARE}/downloads/torrent:/share/downloads/torrent
+      - ${MEDIA_SHARE}/downloads/torrent/incomplete:/share/downloads/torrent/incomplete
 
   sabnzbd:
     <<: *default-service
@@ -207,5 +207,5 @@ services:
       - DOCKER_MODS=${PARK}:sabnzbd
     volumes:
       - ${CONFIG_MEDIA_PATH}/sabnzbd:/config
-      - ${MEDIA_SHARE}/downloads/usenet:/downloads
-      - ${MEDIA_SHARE}/downloads/usenet/incomplete:/downloads/incomplete
+      - ${MEDIA_SHARE}/downloads/usenet:/share/downloads/usenet
+      - ${MEDIA_SHARE}/downloads/usenet/incomplete:/share/downloads/usenet/incomplete
