@@ -3,6 +3,8 @@
 /config-media/plex/**
 /config-media/tautulli/**
 /config-media/kometa/**
+!/config-media/kometa/assets
+!/config-media/kometa/assets/.blank
 !/config-media/kometa/collections
 !/config-media/kometa/collections/**
 !/config-media/kometa/playlists
