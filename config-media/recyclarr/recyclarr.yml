@@ -4,6 +4,35 @@ radarr:
     api_key: API_KEY
     quality_definition:
       type: movie
+    media_naming:
+      folder: plex-tmdb
+      movie:
+        rename: true
+        standard: plex-tmdb
+    quality_profiles:
+      - name: TRaSH_WEB-1080p
+        upgrade:
+          allowed: true
+          until_quality: "WEBRip-1080p"
+          until_score: 10000
+        min_format_score: 0
+        min_upgrade_format_score: 5
+        quality_sort: top
+        qualities:
+          - name: "Remux-1080p"
+            enabled: false
+          - name: "Bluray-1080p"
+          - name: "WEBRip-1080p"
+          - name: "WEBDL-1080p"
+          - name: "HDTV-1080p"
+          - name: "Bluray-720p"
+            enabled: false
+          - name: "WEBRip-720p"
+            enabled: false
+          - name: "WEBDL-720p"
+            enabled: false
+          - name: "HDTV-720p"
+            enabled: false
     custom_formats:
       - trash_ids:
           # HQ Source Groups
@@ -68,6 +97,61 @@ sonarr:
     api_key: API_KEY
     quality_definition:
       type: series
+    media_naming:
+      series: plex-tvdb
+      season: default
+      episodes:
+        rename: true
+        standard: default
+        daily: default
+        anime: default
+    quality_profiles:
+      - name: TRaSH_WEB-1080p
+        upgrade:
+          allowed: true
+          until_quality: "WEBRip-1080p"
+          until_score: 10000
+        min_format_score: 0
+        min_upgrade_format_score: 5
+        quality_sort: top
+        qualities:
+          - name: "Bluray-1080p Redux"
+            enabled: false
+          - name: "Bluray-1080p"
+          - name: "WEBRip-1080p"
+          - name: "WEBDL-1080p"
+          - name: "HDTV-1080p"
+          - name: "Bluray-720p"
+            enabled: false
+          - name: "WEBRip-720p"
+            enabled: false
+          - name: "WEBDL-720p"
+            enabled: false
+          - name: "HDTV-720p"
+            enabled: false
+      - name: TRaSH_WEB-720p
+        upgrade:
+          allowed: true
+          until_quality: "WEBRip-720p"
+          until_score: 10000
+        min_format_score: 0
+        min_upgrade_format_score: 5
+        quality_sort: top
+        qualities:
+          - name: "Bluray-1080p Redux"
+            enabled: false
+          - name: "Bluray-1080p"
+            enabled: false
+          - name: "WEBRip-1080p"
+            enabled: false
+          - name: "WEBDL-1080p"
+            enabled: false
+          - name: "HDTV-1080p"
+            enabled: false
+          - name: "Bluray-720p"
+          - name: "WEBRip-720p"
+          - name: "WEBDL-720p"
+          - name: "HDTV-720p"
     custom_formats:
       - trash_ids:
           # HQ Source Groups
