@@ -23,6 +23,7 @@ services:
     volumes:
       - ${CONFIG_MEDIA_PATH}/plex:/config/Library/Application Support/Plex Media Server
       - ${MEDIA_SHARE}:/share
+      - /tmp/plex_cache:/transcode
     ports:
       - ${PORT_PLEX}:32400
     devices:
