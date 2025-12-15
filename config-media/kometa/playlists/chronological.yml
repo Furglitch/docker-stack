@@ -4,7 +4,7 @@ playlists:
     libraries: Movies, TV Shows
     sync_to_users: all
     url_poster: https://seeklogo.com/images/B/blade-runner-unicorn-logo-18FA59EA1D-seeklogo.com.png
-    trakt_list: https://trakt.tv/users/purokushi/lists/blade-runnerverse
+    trakt_list: https://trakt.tv/users/furglitch/lists/blade-runner-chronological?sort=rank,asc
     summary: Blade Runner in Chronological Order
 
   Breaking Bad (Chronological):
