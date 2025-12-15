@@ -84,7 +84,7 @@ settings:
 
 
 plex:
-  url: http://192.168.XXX.XXX:PORT
+  url: http://192.168.XXX.XXX:32400
   token: TOKEN
   timeout: 60
   verify_ssl:
@@ -94,11 +94,29 @@ plex:
   optimize: false
 
 
-sonarr:
-  url: http://192.168.XXX.XXX:PORT
+radarr:
+  url: http://192.168.XXX.XXX:32501
   token: TOKEN
-  root_folder_path: /tv
-  plex_path: /tv
+  root_folder_path: /share/movies
+  plex_path: /share/movies
+  add_missing: true
+  monitor: true
+  quality_profile: TRASH_WEB-1080p
+  availability: released
+  add_existing: false
+  upgrade_existing: true
+  monitor_existing: true
+  ignore_cache: false
+  tag:
+  search: false
+  radarr_path:
+
+
+sonarr:
+  url: http://192.168.XXX.XXX:32502
+  token: TOKEN
+  root_folder_path: /share/series
+  plex_path: /share/series
   add_missing: true
   monitor: all
   quality_profile: TRASH_WEB-720p
@@ -116,24 +134,6 @@ sonarr:
   sonarr_path:
 
 
-radarr:
-  url: http://192.168.XXX.XXX:PORT
-  token: TOKEN
-  root_folder_path: /movies
-  plex_path: /movies
-  add_missing: true
-  monitor: true
-  quality_profile: TRASH_WEB-1080p
-  availability: released
-  add_existing: false
-  upgrade_existing: true
-  monitor_existing: true
-  ignore_cache: false
-  tag:
-  search: false
-  radarr_path:
-
-
 tmdb:
   apikey: APIKEY
   language: en
@@ -141,7 +141,7 @@ tmdb:
   cache_expiration: 60
 
 
-trakt:
+trakt: # https://metamanager.wiki/en/latest/config/trakt/#online-authorization
   client_id: CLIENT_ID
   client_secret: CLIENT_SECRET
   pin:
