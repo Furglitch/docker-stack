@@ -86,4 +86,5 @@ compose: media | web | all
 | .env      | [/.env](/.env)                                                                     | Domain info, Secrets       |
 | Recyclarr | [/config-media/recyclarr/recyclarr.yml](/config-media/recyclarr/recyclarr.yml)     | Domain info, Secrets       |
 | Homepage  | [/config-web/homepage/services.yaml](/config-web/homepage/services.yaml)           | Ports, API Keys, Passkeys  |
+| Kometa    | [/config-media/kometa/config.yml](/config-media/kometa/config.yml)                 | IPs, API Keys              |
 | MediaWiki | [/config-web/mediawiki/LocalSettings.php](/config-web/mediawiki/LocalSettings.php) | Server URL, Secrets        |
