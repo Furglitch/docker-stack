@@ -99,7 +99,6 @@ services:
     volumes:
       - ${CONFIG_MEDIA_PATH}/radarr:/config
       - ${MEDIA_SHARE}:/share
-      - ${CONFIG_MEDIA_PATH}/posterizarr:/posterizarr:rw
     ports:
       - ${PORT_RADARR}:7878
 
@@ -114,7 +113,6 @@ services:
     volumes:
       - ${CONFIG_MEDIA_PATH}/sonarr:/config
       - ${MEDIA_SHARE}:/share
-      - ${CONFIG_MEDIA_PATH}/posterizarr:/posterizarr:rw
     ports:
       - ${PORT_SONARR}:8989
 
