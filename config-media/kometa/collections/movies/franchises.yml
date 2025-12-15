@@ -11,7 +11,7 @@ collections:
     sync_mode: append
 
   Blade Runner:
-    trakt_list: https://trakt.tv/users/purokushi/lists/blade-runnerverse?display=movie
+    trakt_list: https://trakt.tv/users/furglitch/lists/blade-runner-chronological?display=movie
     url_poster: https://theposterdb.com/api/assets/33975
     ignore_ids: 57656
     sync_mode: append
