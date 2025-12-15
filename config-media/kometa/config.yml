@@ -101,7 +101,7 @@ radarr:
   plex_path: /share/movies
   add_missing: true
   monitor: true
-  quality_profile: TRASH_WEB-1080p
+  quality_profile: TRaSH_WEB-1080p
   availability: released
   add_existing: false
   upgrade_existing: true
@@ -119,7 +119,7 @@ sonarr:
   plex_path: /share/series
   add_missing: true
   monitor: all
-  quality_profile: TRASH_WEB-720p
+  quality_profile: TRaSH_WEB-720p
   availability: released
   language_profile: English
   series_type: standard
