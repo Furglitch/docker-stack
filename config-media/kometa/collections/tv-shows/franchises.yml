@@ -1,0 +1,88 @@
+collections:
+
+  Blade Runner:
+    trakt_list: https://trakt.tv/users/purokushi/lists/blade-runnerverse?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/33975
+    sync_mode: append
+
+  Breaking Bad:
+    trakt_list: https://trakt.tv/users/vargajoe/lists/breaking-bad-chronology?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/503550
+    sync_mode: append
+    ignore_ids: 158704
+
+  DC Snyderverse (DCEU):
+    trakt_list: https://trakt.tv/users/oblogdamari/lists/dceu-dc-extended-universe?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/48242
+    sync_mode: append
+
+  DC Universe (DCU):
+    trakt_list: https://trakt.tv/users/ianismajoris/lists/dc-universe?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/113155
+    sync_mode: append
+
+  Marvel Cinematic Universe:
+    trakt_list: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/202286
+    sync_mode: append
+    ignore_ids: 248934,69069,138503,88987
+
+  Middle Earth:
+    trakt_list: https://trakt.tv/users/oya-kesh/lists/middle-earth?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/61357
+    sync_mode: append
+
+  MonsterVerse:
+    trakt_list: https://trakt.tv/users/folion/lists/monsterverse?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/116534
+    sync_mode: append
+    ignore_ids: 117678
+
+  My Little Pony:
+    trakt_list: https://trakt.tv/users/furglitch/lists/my-little-pony-chronological?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/524767
+    sync_mode: append
+    ignore_ids: 345,588,105313,202905
+
+  Pokemon:
+    trakt_list: https://trakt.tv/users/seriouspain/lists/pokemon?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/438334
+    sync_mode: append
+    
+  Sonic the Hedgehog:
+    trakt_list: https://trakt.tv/users/folion/lists/sonic-timeline?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/217419
+    sync_mode: append
+
+  Star Trek:
+    trakt_list: https://trakt.tv/users/silvol/lists/star-trek?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/62523
+    sync_mode: append
+    ignore_ids: 82491,1992,85948,106393,223530
+
+  Star Wars:
+    trakt_list: https://trakt.tv/users/silvol/lists/star-wars?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/27586
+    sync_mode: append
+
+  Stargate:
+    trakt_list: https://trakt.tv/users/stziza/lists/stargate-watching-order?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/87163
+    sync_mode: append
+
+  Supernatural:
+    trakt_list: https://trakt.tv/users/furglitch/lists/supernatural?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/143038
+    sync_mode: append
+    ignore_ids: 128896,32871
+
+  The Witcher:
+    trakt_list: https://trakt.tv/users/martials/lists/the-witcher-chronological-order?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/379612
+    sync_mode: append
+
+  Vought Cinematic Universe:
+    trakt_list: https://trakt.tv/users/tdjorgensen/lists/the-boys-collection?display=show,season,episode
+    url_poster: https://theposterdb.com/api/assets/486938
+    sync_mode: append
+    ignore_ids: 152483

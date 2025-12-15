@@ -1,0 +1,154 @@
+libraries:
+  TV Shows:
+    collection_files:
+    - file: /config/collections/tv-shows/franchises.yml
+      template_variables:
+        radarr_add_missing: true
+        collection_section: 1
+    metadata_files:
+    - file: /config/posters/tv.yml
+  Movies:
+    collection_files:
+    - file: /config/collections/movies/franchises.yml
+      template_variables:
+        radarr_add_missing: true
+        collection_section: 1
+    metadata_files:
+    - file: /config/posters/movies.yml
+
+
+playlist_files:
+- file: /config/playlists/chronological.yml
+  template_variables:
+    radarr_add_missing: false
+
+
+settings:
+  run_order:
+  - operations
+  - collections
+  - metadata
+  - overlays
+  cache: true
+  cache_expiration: 30
+
+  # Asset Management
+  asset_directory:
+  - /config/assets
+  - /config
+  asset_folders: true
+  download_url_assets: true
+  create_asset_folders: true
+  prioritize_assets: true
+  dimensional_asset_rename: false
+
+  # Collection and Playlist Management
+  minimum_items: 1
+  default_collection_order: release
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  sync_mode: append
+  playlist_sync_to_users: all
+  playlist_exclude_users:
+
+  # Filtering
+  missing_only_released: false
+  only_filter_missing: false
+  run_again_delay: 0
+
+  # Log Outputs
+  item_refresh_delay: 5
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: false
+  show_unmanaged: false
+  show_unconfigured: false
+  show_filtered: false
+  show_options: false
+  show_missing: true
+  show_missing_assets: false
+  playlist_report: false
+  save_report: false
+
+  # Misc
+  tvdb_language: default
+  verify_ssl: true
+  custom_repo:
+  asset_depth: 0
+
+  ignore_ids:
+  ignore_imdb_ids:
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality:
+  show_unfiltered: false
+
+
+plex:
+  url: http://192.168.XXX.XXX:PORT
+  token: TOKEN
+  timeout: 60
+  verify_ssl:
+  db_cache:
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+
+
+sonarr:
+  url: http://192.168.XXX.XXX:PORT
+  token: TOKEN
+  root_folder_path: /tv
+  plex_path: /tv
+  add_missing: true
+  monitor: all
+  quality_profile: TRASH_WEB-720p
+  availability: released
+  language_profile: English
+  series_type: standard
+  season_folder: true
+  add_existing: false
+  upgrade_existing: true
+  monitor_existing: true
+  ignore_cache: false
+  tag:
+  search: false
+  cutoff_search: false
+  sonarr_path:
+
+
+radarr:
+  url: http://192.168.XXX.XXX:PORT
+  token: TOKEN
+  root_folder_path: /movies
+  plex_path: /movies
+  add_missing: true
+  monitor: true
+  quality_profile: TRASH_WEB-1080p
+  availability: released
+  add_existing: false
+  upgrade_existing: true
+  monitor_existing: true
+  ignore_cache: false
+  tag:
+  search: false
+  radarr_path:
+
+
+tmdb:
+  apikey: APIKEY
+  language: en
+  region: US
+  cache_expiration: 60
+
+
+trakt:
+  client_id: CLIENT_ID
+  client_secret: CLIENT_SECRET
+  pin:
+  authorization:
+    access_token: TOKEN
+    token_type: Bearer
+    expires_in: 7889238
+    refresh_token: TOKEN
+    scope: public
+    created_at: 1745540754

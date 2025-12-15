@@ -2,8 +2,14 @@
 /.temp/
 /config-media/plex/**
 /config-media/tautulli/**
-/config-media/posterizarr/**
 /config-media/kometa/**
+!/config-media/kometa/collections
+!/config-media/kometa/collections/**
+!/config-media/kometa/playlists
+!/config-media/kometa/playlists/**
+!/config-media/kometa/posters
+!/config-media/kometa/posters/**
+!/config-media/kometa/config.yml
 /config-media/tdarr/**
 /config-media/radarr/**
 /config-media/sonarr/**
