@@ -169,6 +169,8 @@ services:
     container_name: gluetun
     cap_add:
       - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
     environment:
       - VPN_SERVICE_PROVIDER=${GLUETUN_PROVIDER}
       - VPN_TYPE=${GLUETUN_TYPE}
@@ -177,9 +179,9 @@ services:
     volumes:
       - ${CONFIG_MEDIA_PATH}/gluetun:/gluetun
     ports:
-      - ${PORT_SABNZBD}:80
-      - ${PORT_QBITTORRENT_UI}:8080
-      - ${PORT_QBITTORRENT_IO}:8090
+      - ${PORT_SABNZBD}:8085
+      - ${PORT_QBITTORRENT_UI}:8090
+      - ${PORT_QBITTORRENT_IO}:8091
     restart: always
 
   qbittorrent:
@@ -188,8 +190,8 @@ services:
     container_name: qbittorrent
     network_mode: 'service:gluetun'
     environment:
-      - WEBUI_PORT=8080
-      - TORRENTING_PORT=8090
+      - WEBUI_PORT=8090
+      - TORRENTING_PORT=8091
     volumes:
       - ${CONFIG_MEDIA_PATH}/qbittorrent:/config
       - ${MEDIA_SHARE}/downloads/torrent:/downloads
