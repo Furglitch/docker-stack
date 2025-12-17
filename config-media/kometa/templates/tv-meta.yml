@@ -1,0 +1,6 @@
+templates:
+  match:
+    title: "<<title>>"
+    year: "<<year>>"
+  theposterdb:
+    url_poster: "https://theposterdb.com/api/assets/<<poster_id>>"
