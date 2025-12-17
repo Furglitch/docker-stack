@@ -7,30 +7,27 @@ metadata:
 
   "Olympus Has Fallen (2013)":
     template:
-      name: match
-      title: "Olympus Has Fallen"
-      year: 2013
-    template:
-      name: theposterdb
-      poster_id: 71931
+      - name: match
+        title: "Olympus Has Fallen"
+        year: 2013
+      - name: theposterdb
+        poster_id: 71931
 
   "London Has Fallen (2016)":
     template:
-      name: match
-      title: "London Has Fallen"
-      year: 2016
-    template:
-      name: theposterdb
-      poster_id: 71932
+      - name: match
+        title: "London Has Fallen"
+        year: 2016
+      - name: theposterdb
+        poster_id: 71932
 
   "Angel Has Fallen (2019)":
     template:
-      name: match
-      title: "Angel Has Fallen"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 71933
+      - name: match
+        title: "Angel Has Fallen"
+        year: 2019
+      - name: theposterdb
+        poster_id: 71933
 
   #"Night Has Fallen (20XX)":
   #  template:

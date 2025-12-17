@@ -5,157 +5,142 @@ collections:
 
   "Blade Runner":
     template:
-      name: trakt-list
-      list_author: furglitch
-      list_name: blade-runner-chronological
-    template:
-      name: theposterdb
-      poster_id: 33975
+      - name: trakt-list
+        list_author: furglitch
+        list_name: blade-runner-chronological
+      - name: theposterdb
+        poster_id: 33975
 
   "Breaking Bad":
     template:
-      name: trakt-list
-      list_author: vargajoe
-      list_name: breaking-bad-chronology
-      ignore:
+      - name: trakt-list
+        list_author: vargajoe
+        list_name: breaking-bad-chronology
+        ignore:
         - 158704  # [Series] Slipping Jimmy
-    template:
-      name: theposterdb
-      poster_id: 503550
+      - name: theposterdb
+        poster_id: 503550
 
   "Hellaverse":
     template:
-      name: letterboxd-list
-      list_author: smol_human18
-      list_name: hellaverse
-    template:
-      name: theposterdb
-      poster_id: 486937
+      - name: letterboxd-list
+        list_author: smol_human18
+        list_name: hellaverse
+      - name: theposterdb
+        poster_id: 486937
 
   "John Wick":
     template:
-      name: trakt-list
-      list_author: drjenkins
-      list_name: john-wick
-    template:
-      name: theposterdb
-      poster_id: 20710
+      - name: trakt-list
+        list_author: drjenkins
+        list_name: john-wick
+      - name: theposterdb
+        poster_id: 20710
 
   "Middle Earth":
     template:
-      name: trakt-list
-      list_author: oya-kesh
-      list_name: middle-earth
-    template:
-      name: theposterdb
-      poster_id: 61357
+      - name: trakt-list
+        list_author: oya-kesh
+        list_name: middle-earth
+      - name: theposterdb
+        poster_id: 61357
 
   "MonsterVerse":
     template:
-      name: trakt-list
-      list_author: drjenkins
-      list_name: monsterverse
-      ignore:
+      - name: trakt-list
+        list_author: drjenkins
+        list_name: monsterverse
+        ignore:
         - 117678  # [Series] Skull Island (2023)
-    template:
-      name: theposterdb
-      poster_id: 116534
+      - name: theposterdb
+        poster_id: 116534
 
   "My Little Pony":
     template:
-      name: trakt-list
-      list_author: furglitch
-      list_name: my-little-pony-chronological
-      ignore:
+      - name: trakt-list
+        list_author: furglitch
+        list_name: my-little-pony-chronological
+        ignore:
         - 345     # [Series] My Little Pony (1986)
         - 588     # [Series] My Little Pony Tales (1992)
         - 105313  # [Series] My Little Pony: Pony Life (2020)
         - 158691  # [Series] My Little Pony: Make Your Mark (2022)
         - 202905  # [Series] My Little Pony: Tell Your Tale (2022)
-    template:
-      name: theposterdb
-      poster_id: 524767
+      - name: theposterdb
+        poster_id: 524767
   
   "Pokemon":
     template:
-      name: trakt-list
-      list_author: seriouspain
-      list_name: pokemon
-      ignore:
+      - name: trakt-list
+        list_author: seriouspain
+        list_name: pokemon
+        ignore:
         - 132300 # [Series] Pokémon Chronicles (2002)
-    template:
-      name: theposterdb
-      poster_id: 438334
+      - name: theposterdb
+        poster_id: 438334
 
   "Sonic the Hedgehog":
     template:
-      name: trakt-list
-      list_author: folion
-      list_name: sonic-timeline
-    template:
-      name: theposterdb
-      poster_id: 467191
+      - name: trakt-list
+        list_author: folion
+        list_name: sonic-timeline
+      - name: theposterdb
+        poster_id: 467191
 
   "Star Trek":
     template:
-      name: trakt-list
-      list_author: acfmovies
-      list_name: star-trek-chronological-order
-      ignore:
+      - name: trakt-list
+        list_author: acfmovies
+        list_name: star-trek-chronological-order
+        ignore:
         - 1992  # [Series] Star Trek: The Animated Series (1973)
-    template:
-      name: theposterdb
-      poster_id: 62523
+      - name: theposterdb
+        poster_id: 62523
 
   "Star Wars":
     template:
-      name: trakt-list
-      list_author: gratiskeder
-      list_name: star-wars
-      ignore:
+      - name: trakt-list
+        list_author: gratiskeder
+        list_name: star-wars
+        ignore:
         - 202998  # [Series] Young Jedi Adventures (2023)
         - 79093   # [Series] Star Wars Resistance (2018)
-    template:
-      name: theposterdb
-      poster_id: 27586
+      - name: theposterdb
+        poster_id: 27586
 
   "Stargate":
     template:
-      name: trakt-list
-      list_author: stziza
-      list_name: stargate-watching-order
-    template:
-      name: theposterdb
-      poster_id: 87163
+      - name: trakt-list
+        list_author: stziza
+        list_name: stargate-watching-order
+      - name: theposterdb
+        poster_id: 87163
 
   "Supernatural":
     template:
-      name: trakt-list
-      list_author: icecreamsoup
-      list_name: supernatural
-      ignore:
+      - name: trakt-list
+        list_author: icecreamsoup
+        list_name: supernatural
+        ignore:
         - 128896  # [Miniseries] Ghostfacers (2010)
         - 32871   # [Series] Supernatural: The Animation (2011)
-    template:
-      name: theposterdb
-      poster_id: 143038
+      - name: theposterdb
+        poster_id: 143038
 
   "Vought Cinematic Universe":
     template:
-      name: trakt-list
-      list_author: tdjorgensen
-      list_name: the-boys-collection
-      ignore:
+      - name: trakt-list
+        list_author: tdjorgensen
+        list_name: the-boys-collection
+        ignore:
         - 152483  # [Series] The Boys: Diabolical (2022)
-    template:
-      name: theposterdb
-      poster_id: 486938
+      - name: theposterdb
+        poster_id: 486938
 
   "The Witcher":
     template:
-      name: trakt-list
-      list_author: martials
-      list_name: the-witcher-chronological-order
-    template:
-      name: theposterdb
-      poster_id: 379612
+      - name: trakt-list
+        list_author: martials
+        list_name: the-witcher-chronological-order
+      - name: theposterdb
+        poster_id: 379612

@@ -7,30 +7,27 @@ metadata:
 
   "Men in Black (1997)":
     template:
-      name: match
-      title: "Men in Black"
-      year: 1997
-    template:
-      name: theposterdb
-      poster_id: 1037
+      - name: match
+        title: "Men in Black"
+        year: 1997
+      - name: theposterdb
+        poster_id: 1037
 
   "Men in Black II (2002)":
     template:
-      name: match
-      title: "Men in Black II"
-      year: 2002
-    template:
-      name: theposterdb
-      poster_id: 1038
+      - name: match
+        title: "Men in Black II"
+        year: 2002
+      - name: theposterdb
+        poster_id: 1038
 
   "Men in Black 3 (2012)":
     template:
-      name: match
-      title: "Men in Black 3"
-      year: 2012
-    template:
-      name: theposterdb
-      poster_id: 1039
+      - name: match
+        title: "Men in Black 3"
+        year: 2012
+      - name: theposterdb
+        poster_id: 1039
 
   # "Men in Black: International (2019)":
   #   template:

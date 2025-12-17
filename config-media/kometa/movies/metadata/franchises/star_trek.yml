@@ -7,126 +7,112 @@ metadata:
   
   "Star Trek: The Motion Picture (1979)":
     template:
-      name: match
-      title: "Star Trek: The Motion Picture"
-      year: 1979
-    template:
-      name: theposterdb
-      poster_id: 21271
+      - name: match
+        title: "Star Trek: The Motion Picture"
+        year: 1979
+      - name: theposterdb
+        poster_id: 21271
 
   "Star Trek II: The Wrath of Khan (1982)":
     template:
-      name: match
-      title: "Star Trek II: The Wrath of Khan"
-      year: 1982
-    template:
-      name: theposterdb
-      poster_id: 21272
+      - name: match
+        title: "Star Trek II: The Wrath of Khan"
+        year: 1982
+      - name: theposterdb
+        poster_id: 21272
 
   "Star Trek III: The Search for Spock (1984)":
     template:
-      name: match
-      title: "Star Trek III: The Search for Spock"
-      year: 1984
-    template:
-      name: theposterdb
-      poster_id: 21273
+      - name: match
+        title: "Star Trek III: The Search for Spock"
+        year: 1984
+      - name: theposterdb
+        poster_id: 21273
 
   "Star Trek IV: The Voyage Home (1986)":
     template:
-      name: match
-      title: "Star Trek IV: The Voyage Home"
-      year: 1986
-    template:
-      name: theposterdb
-      poster_id: 21274
+      - name: match
+        title: "Star Trek IV: The Voyage Home"
+        year: 1986
+      - name: theposterdb
+        poster_id: 21274
 
   "Star Trek V: The Final Frontier (1989)":
     template:
-      name: match
-      title: "Star Trek V: The Final Frontier"
-      year: 1989
-    template:
-      name: theposterdb
-      poster_id: 21275
+      - name: match
+        title: "Star Trek V: The Final Frontier"
+        year: 1989
+      - name: theposterdb
+        poster_id: 21275
 
   "Star Trek VI: The Undiscovered Country (1991)":
     template:
-      name: match
-      title: "Star Trek VI: The Undiscovered Country"
-      year: 1991
-    template:
-      name: theposterdb
-      poster_id: 21276
+      - name: match
+        title: "Star Trek VI: The Undiscovered Country"
+        year: 1991
+      - name: theposterdb
+        poster_id: 21276
 
   "Star Trek: Generations (1994)":
     template:
-      name: match
-      title: "Star Trek: Generations"
-      year: 1994
-    template:
-      name: theposterdb
-      poster_id: 21277
+      - name: match
+        title: "Star Trek: Generations"
+        year: 1994
+      - name: theposterdb
+        poster_id: 21277
 
   "Star Trek: First Contact (1996)":
     template:
-      name: match
-      title: "Star Trek: First Contact"
-      year: 1996
-    template:
-      name: theposterdb
-      poster_id: 21278
+      - name: match
+        title: "Star Trek: First Contact"
+        year: 1996
+      - name: theposterdb
+        poster_id: 21278
 
   "Star Trek: Insurrection (1998)":
     template:
-      name: match
-      title: "Star Trek: Insurrection"
-      year: 1998
-    template:
-      name: theposterdb
-      poster_id: 21279
+      - name: match
+        title: "Star Trek: Insurrection"
+        year: 1998
+      - name: theposterdb
+        poster_id: 21279
 
   "Star Trek: Nemesis (2002)":
     template:
-      name: match
-      title: "Star Trek: Nemesis"
-      year: 2002
-    template:
-      name: theposterdb
-      poster_id: 21280
+      - name: match
+        title: "Star Trek: Nemesis"
+        year: 2002
+      - name: theposterdb
+        poster_id: 21280
 
   "Star Trek (2009)":
     template:
-      name: match
-      title: "Star Trek"
-      year: 2009
-    template:
-      name: theposterdb
-      poster_id: 21281
+      - name: match
+        title: "Star Trek"
+        year: 2009
+      - name: theposterdb
+        poster_id: 21281
 
   "Star Trek Into Darkness (2013)":
     template:
-      name: match
-      title: "Star Trek Into Darkness"
-      year: 2013
-    template:
-      name: theposterdb
-      poster_id: 21282
+      - name: match
+        title: "Star Trek Into Darkness"
+        year: 2013
+      - name: theposterdb
+        poster_id: 21282
 
   "Star Trek Beyond (2016)":
     template:
-      name: match
-      title: "Star Trek Beyond"
-      year: 2016
-    template:
-      name: theposterdb
-      poster_id: 21283
+      - name: match
+        title: "Star Trek Beyond"
+        year: 2016
+      - name: theposterdb
+        poster_id: 21283
 
   "Star Trek: Section 31 (2024)":
     template:
-      name: match
-      title: "Star Trek: Section 31"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 565113
+      - name: match
+        title: "Star Trek: Section 31"
+        year: 2024
+      - name: theposterdb
+        poster_id: 565113

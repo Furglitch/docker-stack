@@ -23,155 +23,135 @@ metadata:
 
   "Star Wars: The Clone Wars (2008)":
     template:
-      name: match
-      title: "Star Wars: The Clone Wars"
-      year: 2008
-    template:
-      name: theposterdb
-      poster_id: 464734
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 599551
-      s1_poster_id: 464735
-      s2_poster_id: 464736
-      s3_poster_id: 464737
-      s4_poster_id: 464738
-      s5_poster_id: 464739
-      s6_poster_id: 464740
-      s7_poster_id: 464741
+      - name: match
+        title: "Star Wars: The Clone Wars"
+        year: 2008
+      - name: theposterdb
+        poster_id: 464734
+      - name: seasons-theposterdb
+        special_poster_id: 599551
+        s1_poster_id: 464735
+        s2_poster_id: 464736
+        s3_poster_id: 464737
+        s4_poster_id: 464738
+        s5_poster_id: 464739
+        s6_poster_id: 464740
+        s7_poster_id: 464741
 
   "Star Wars Rebels (2014)":
     template:
-      name: match
-      title: "Star Wars Rebels"
-      year: 2014
-    template:
-      name: theposterdb
-      poster_id: 464550
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 464551
-      s2_poster_id: 464552
-      s3_poster_id: 464553
-      s4_poster_id: 464554
+      - name: match
+        title: "Star Wars Rebels"
+        year: 2014
+      - name: theposterdb
+        poster_id: 464550
+      - name: seasons-theposterdb
+        s1_poster_id: 464551
+        s2_poster_id: 464552
+        s3_poster_id: 464553
+        s4_poster_id: 464554
 
   "The Mandalorian (2019)":
     template:
-      name: match
-      title: "The Mandalorian"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 464790
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 464791
-      s2_poster_id: 464792
-      s3_poster_id: 464793
+      - name: match
+        title: "The Mandalorian"
+        year: 2019
+      - name: theposterdb
+        poster_id: 464790
+      - name: seasons-theposterdb
+        s1_poster_id: 464791
+        s2_poster_id: 464792
+        s3_poster_id: 464793
 
   "Star Wars: The Bad Batch (2021)":
     template:
-      name: match
-      title: "Star Wars: The Bad Batch"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 464546
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 464547
-      s2_poster_id: 464548
-      s3_poster_id: 464549
+      - name: match
+        title: "Star Wars: The Bad Batch"
+        year: 2021
+      - name: theposterdb
+        poster_id: 464546
+      - name: seasons-theposterdb
+        s1_poster_id: 464547
+        s2_poster_id: 464548
+        s3_poster_id: 464549
 
   "Star Wars: Visions (2021)":
     template:
-      name: match
-      title: "Star Wars: Visions"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 470291
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 470292
-      s2_poster_id: 470293
-      s3_poster_id: 648697
+      - name: match
+        title: "Star Wars: Visions"
+        year: 2021
+      - name: theposterdb
+        poster_id: 470291
+      - name: seasons-theposterdb
+        s1_poster_id: 470292
+        s2_poster_id: 470293
+        s3_poster_id: 648697
 
   "The Book of Boba Fett (2021)":
     template:
-      name: match
-      title: "The Book of Boba Fett"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 464789
+      - name: match
+        title: "The Book of Boba Fett"
+        year: 2021
+      - name: theposterdb
+        poster_id: 464789
 
   "Andor (2022)":
     template:
-      name: match
-      title: "Andor"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 464543
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 464544
-      s2_poster_id: 593196
+      - name: match
+        title: "Andor"
+        year: 2022
+      - name: theposterdb
+        poster_id: 464543
+      - name: seasons-theposterdb
+        s1_poster_id: 464544
+        s2_poster_id: 593196
 
   "Obi-Wan Kenobi (2022)":
     template:
-      name: match
-      title: "Obi-Wan Kenobi"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 464545
+      - name: match
+        title: "Obi-Wan Kenobi"
+        year: 2022
+      - name: theposterdb
+        poster_id: 464545
 
   "Star Wars: Tales of the Jedi (2022)":
     template:
-      name: match
-      title: "Star Wars: Tales of the Jedi"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 464755
+      - name: match
+        title: "Star Wars: Tales of the Jedi"
+        year: 2022
+      - name: theposterdb
+        poster_id: 464755
 
   "Ahsoka (2023)":
     template:
-      name: match
-      title: "Ahsoka"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 464787
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 464788
+      - name: match
+        title: "Ahsoka"
+        year: 2023
+      - name: theposterdb
+        poster_id: 464787
+      - name: seasons-theposterdb
+        s1_poster_id: 464788
 
   "Star Wars: Tales of the Empire (2024)":
     template:
-      name: match
-      title: "Star Wars: Tales of the Empire"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 481837
+      - name: match
+        title: "Star Wars: Tales of the Empire"
+        year: 2024
+      - name: theposterdb
+        poster_id: 481837
 
   "Star Wars: Skeleton Crew (2024)":
     template:
-      name: match
-      title: "Star Wars: Skeleton Crew"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 517365
+      - name: match
+        title: "Star Wars: Skeleton Crew"
+        year: 2024
+      - name: theposterdb
+        poster_id: 517365
 
   "Star Wars: Tales of the Underworld (2024)":
     template:
-      name: match
-      title: "Star Wars: Tales of the Underworld"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 594290
+      - name: match
+        title: "Star Wars: Tales of the Underworld"
+        year: 2024
+      - name: theposterdb
+        poster_id: 594290

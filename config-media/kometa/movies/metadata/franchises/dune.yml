@@ -7,18 +7,16 @@ metadata:
 
   "Dune (2021)":
     template:
-      name: match
-      title: "Dune"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 356989
+      - name: match
+        title: "Dune"
+        year: 2021
+      - name: theposterdb
+        poster_id: 356989
 
   "Dune: Part Two (2024)":
     template:
-      name: match
-      title: "Dune: Part Two"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 356990
+      - name: match
+        title: "Dune: Part Two"
+        year: 2024
+      - name: theposterdb
+        poster_id: 356990

@@ -5,21 +5,19 @@ metadata:
 
   "Superman (2025)":
     template:
-      name: match
-      title: "Superman"
-      year: 2025
-    template:
-      name: theposterdb
-      poster_id: 615527
+      - name: match
+        title: "Superman"
+        year: 2025
+      - name: theposterdb
+        poster_id: 615527
 
   "Blue Beetle (2023)":
     template:
-      name: match
-      title: "Blue Beetle"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 385583
+      - name: match
+        title: "Blue Beetle"
+        year: 2023
+      - name: theposterdb
+        poster_id: 385583
 
   # "Supergirl (2026)":
   #   template:

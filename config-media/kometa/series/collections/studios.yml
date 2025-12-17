@@ -5,25 +5,23 @@ collections:
 
   "James Gunn's DC Universe (DCU)":
     template:
-      name: trakt-list
-      list_author: fistytristy
-      list_name: dc-universe-james-gunn-s-dcu
-    template:
-      name: theposterdb
-      poster_id: 113155
+      - name: trakt-list
+        list_author: fistytristy
+        list_name: dc-universe-james-gunn-s-dcu
+      - name: theposterdb
+        poster_id: 113155
 
   "Marvel Cinematic Universe (MCU)":
     template:
-      name: trakt-list
-      list_author: viperdu-vark
-      list_name: modified-chronological-mcu
-      ignore:
+      - name: trakt-list
+        list_author: viperdu-vark
+        list_name: modified-chronological-mcu
+        ignore:
         - 69069  # [Series] WHIH Newsfront (2015)
         - 138503 # [Series] Your Friendly Neighborhood Spider-Man (2025)
         - 88987  # [Series] Helstrom (2020)
-    template:
-      name: theposterdb
-      poster_id: 145336
+      - name: theposterdb
+        poster_id: 145336
     filters:
       title.not: 
         - "Stark Expo Shorts"  # [Series] Stark Expo Shorts (2010)
@@ -31,9 +29,8 @@ collections:
 
   "Zach Snyder's DC Extended Universe (DCEU)":
     template:
-      name: trakt-list
-      list_author: koekoeracha
-      list_name: dc-extended-universe-dceu
-    template:
-      name: theposterdb
-      poster_id: 48242
+      - name: trakt-list
+        list_author: koekoeracha
+        list_name: dc-extended-universe-dceu
+      - name: theposterdb
+        poster_id: 48242

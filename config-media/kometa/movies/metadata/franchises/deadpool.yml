@@ -7,27 +7,24 @@ metadata:
 
   "Deadpool (2016)":
     template:
-      name: match
-      title: "Deadpool"
-      year: 2016
-    template:
-      name: theposterdb
-      poster_id: 512268
+      - name: match
+        title: "Deadpool"
+        year: 2016
+      - name: theposterdb
+        poster_id: 512268
 
   "Deadpool 2 (2018)":
     template:
-      name: match
-      title: "Deadpool 2"
-      year: 2018
-    template:
-      name: theposterdb
-      poster_id: 512267
+      - name: match
+        title: "Deadpool 2"
+        year: 2018
+      - name: theposterdb
+        poster_id: 512267
 
   "Deadpool & Wolverine (2024)":
     template:
-      name: match
-      title: "Deadpool & Wolverine"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 512266
+      - name: match
+        title: "Deadpool & Wolverine"
+        year: 2024
+      - name: theposterdb
+        poster_id: 512266

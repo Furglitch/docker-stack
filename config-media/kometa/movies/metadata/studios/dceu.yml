@@ -7,144 +7,128 @@ metadata:
 
   "Man of Steel (2013)":
     template:
-      name: match
-      title: "Man of Steel"
-      year: 2013
-    template:
-      name: theposterdb
-      poster_id: 79224
+      - name: match
+        title: "Man of Steel"
+        year: 2013
+      - name: theposterdb
+        poster_id: 79224
 
   "Batman v Superman: Dawn of Justice (2016)":
     template:
-      name: match
-      title: "Batman v Superman: Dawn of Justice"
-      year: 2016
-    template:
-      name: theposterdb
-      poster_id: 79225
+      - name: match
+        title: "Batman v Superman: Dawn of Justice"
+        year: 2016
+      - name: theposterdb
+        poster_id: 79225
 
   "Suicide Squad (2016)":
     template:
-      name: match
-      title: "Suicide Squad"
-      year: 2016
-    template:
-      name: theposterdb
-      poster_id: 79226
+      - name: match
+        title: "Suicide Squad"
+        year: 2016
+      - name: theposterdb
+        poster_id: 79226
 
   "Wonder Woman (2017)":
     template:
-      name: match
-      title: "Wonder Woman"
-      year: 2017
-    template:
-      name: theposterdb
-      poster_id: 79227
+      - name: match
+        title: "Wonder Woman"
+        year: 2017
+      - name: theposterdb
+        poster_id: 79227
 
   "Justice League (2017)":
     template:
-      name: match
-      title: "Justice League"
-      year: 2017
-    template:
-      name: theposterdb
-      poster_id: 79228
+      - name: match
+        title: "Justice League"
+        year: 2017
+      - name: theposterdb
+        poster_id: 79228
 
   "Aquaman (2018)":
     template:
-      name: match
-      title: "Aquaman"
-      year: 2018
-    template:
-      name: theposterdb
-      poster_id: 79229
+      - name: match
+        title: "Aquaman"
+        year: 2018
+      - name: theposterdb
+        poster_id: 79229
 
   "Shazam! (2019)":
     template:
-      name: match
-      title: "Shazam!"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 79230
+      - name: match
+        title: "Shazam!"
+        year: 2019
+      - name: theposterdb
+        poster_id: 79230
 
   "Birds of Prey (2020)":
     template:
-      name: match
-      title: "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
-      year: 2020
-    template:
-      name: theposterdb
-      poster_id: 79231
+      - name: match
+        title: "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
+        year: 2020
+      - name: theposterdb
+        poster_id: 79231
 
   "Wonder Woman 1984 (2020)":
     template:
-      name: match
-      title: "Wonder Woman 1984"
-      year: 2020
-    template:
-      name: theposterdb
-      poster_id: 79232
+      - name: match
+        title: "Wonder Woman 1984"
+        year: 2020
+      - name: theposterdb
+        poster_id: 79232
 
   "Zack Snyder's Justice League (2021)":
     template:
-      name: match
-      title: "Zack Snyder's Justice League"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 138328
+      - name: match
+        title: "Zack Snyder's Justice League"
+        year: 2021
+      - name: theposterdb
+        poster_id: 138328
 
   "The Suicide Squad (2021)":
     template:
-      name: match
-      title: "The Suicide Squad"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 167287
+      - name: match
+        title: "The Suicide Squad"
+        year: 2021
+      - name: theposterdb
+        poster_id: 167287
 
   "Black Adam (2022)":
     template:
-      name: match
-      title: "Black Adam"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 286151
+      - name: match
+        title: "Black Adam"
+        year: 2022
+      - name: theposterdb
+        poster_id: 286151
 
   "Shazam! Fury of the Gods (2023)":
     template:
-      name: match
-      title: "Shazam! Fury of the Gods"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 347036
+      - name: match
+        title: "Shazam! Fury of the Gods"
+        year: 2023
+      - name: theposterdb
+        poster_id: 347036
 
   "The Flash (2023)":
     template:
-      name: match
-      title: "The Flash"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 385531
+      - name: match
+        title: "The Flash"
+        year: 2023
+      - name: theposterdb
+        poster_id: 385531
 
   "Blue Beetle (2023)":
     template:
-      name: match
-      title: "Blue Beetle"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 385583
+      - name: match
+        title: "Blue Beetle"
+        year: 2023
+      - name: theposterdb
+        poster_id: 385583
 
   "Aquaman and the Lost Kingdom (2023)":
     template:
-      name: match
-      title: "Aquaman and the Lost Kingdom"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 447435
+      - name: match
+        title: "Aquaman and the Lost Kingdom"
+        year: 2023
+      - name: theposterdb
+        poster_id: 447435

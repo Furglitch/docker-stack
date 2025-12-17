@@ -6,271 +6,233 @@ metadata:
 
   "Altered Carbon (2018)":
     template:
-      name: match
-      title: "Altered Carbon"
-      year: 2018
-    template:
-      name: theposterdb
-      poster_id: 43406
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 43407
-      s2_poster_id: 43408
+      - name: match
+        title: "Altered Carbon"
+        year: 2018
+      - name: theposterdb
+        poster_id: 43406
+      - name: seasons-theposterdb
+        s1_poster_id: 43407
+        s2_poster_id: 43408
 
   "Arcane (2021)":
     template:
-      name: match
-      title: "Arcane"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 541084
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 541082
-      s2_poster_id: 541083
+      - name: match
+        title: "Arcane"
+        year: 2021
+      - name: theposterdb
+        poster_id: 541084
+      - name: seasons-theposterdb
+        s1_poster_id: 541082
+        s2_poster_id: 541083
 
   "Beastars (2019)":
     template:
-      name: match
-      title: "Beastars"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 400118
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 400119
-      s2_poster_id: 400120
-      s3_poster_id: 548584
+      - name: match
+        title: "Beastars"
+        year: 2019
+      - name: theposterdb
+        poster_id: 400118
+      - name: seasons-theposterdb
+        s1_poster_id: 400119
+        s2_poster_id: 400120
+        s3_poster_id: 548584
 
   "The Blacklist (2013)":
     template:
-      name: match
-      title: "The Blacklist"
-      year: 2013
-    template:
-      name: theposterdb
-      poster_id: 328200
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 328201
-      s1_poster_id: 328202
-      s2_poster_id: 328203
-      s3_poster_id: 328204
-      s4_poster_id: 328205
-      s5_poster_id: 328206
-      s6_poster_id: 328207
-      s7_poster_id: 328208
-      s8_poster_id: 328209
-      s9_poster_id: 328210
-      s10_poster_id: 328211
+      - name: match
+        title: "The Blacklist"
+        year: 2013
+      - name: theposterdb
+        poster_id: 328200
+      - name: seasons-theposterdb
+        special_poster_id: 328201
+        s1_poster_id: 328202
+        s2_poster_id: 328203
+        s3_poster_id: 328204
+        s4_poster_id: 328205
+        s5_poster_id: 328206
+        s6_poster_id: 328207
+        s7_poster_id: 328208
+        s8_poster_id: 328209
+        s9_poster_id: 328210
+        s10_poster_id: 328211
 
   "The Edge of Sleep (2024)":
     template:
-      name: match
-      title: "The Edge of Sleep"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 534462
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 534463
+      - name: match
+        title: "The Edge of Sleep"
+        year: 2024
+      - name: theposterdb
+        poster_id: 534462
+      - name: seasons-theposterdb
+        s1_poster_id: 534463
 
   "Fallout (2024)":
     template:
-      name: match
-      title: "Fallout"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 542399
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 542400
-      s1_poster_id: 542401
-      s2_poster_id: 669666
+      - name: match
+        title: "Fallout"
+        year: 2024
+      - name: theposterdb
+        poster_id: 542399
+      - name: seasons-theposterdb
+        special_poster_id: 542400
+        s1_poster_id: 542401
+        s2_poster_id: 669666
 
   "Hazbin Hotel (2024)":
     template:
-      name: match
-      title: "Hazbin Hotel"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 656627
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 656628
-      s2_poster_id: 656629
+      - name: match
+        title: "Hazbin Hotel"
+        year: 2023
+      - name: theposterdb
+        poster_id: 656627
+      - name: seasons-theposterdb
+        s1_poster_id: 656628
+        s2_poster_id: 656629
 
   "Helluva Boss (2020)":
     template:
-      name: match
-      title: "Helluva Boss"
-      year: 2020
-    template:
-      name: theposterdb
-      poster_id: 447120
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 447121
-      s1_poster_id: 447122
-      s2_poster_id: 447123
+      - name: match
+        title: "Helluva Boss"
+        year: 2020
+      - name: theposterdb
+        poster_id: 447120
+      - name: seasons-theposterdb
+        special_poster_id: 447121
+        s1_poster_id: 447122
+        s2_poster_id: 447123
 
   "House (2004)":
     template:
-      name: match
-      title: "House"
-      year: 2004
-    template:
-      name: theposterdb
-      poster_id: 40167
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 41718
-      s1_poster_id: 40168
-      s2_poster_id: 40169
-      s3_poster_id: 40170
-      s4_poster_id: 40171
-      s5_poster_id: 40172
-      s6_poster_id: 40173
-      s7_poster_id: 40174
-      s8_poster_id: 40175
+      - name: match
+        title: "House"
+        year: 2004
+      - name: theposterdb
+        poster_id: 40167
+      - name: seasons-theposterdb
+        special_poster_id: 41718
+        s1_poster_id: 40168
+        s2_poster_id: 40169
+        s3_poster_id: 40170
+        s4_poster_id: 40171
+        s5_poster_id: 40172
+        s6_poster_id: 40173
+        s7_poster_id: 40174
+        s8_poster_id: 40175
 
   "The Last of Us (2023)":
     template:
-      name: match
-      title: "The Last of Us"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 596378
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 596379
-      s2_poster_id: 596380
+      - name: match
+        title: "The Last of Us"
+        year: 2023
+      - name: theposterdb
+        poster_id: 596378
+      - name: seasons-theposterdb
+        s1_poster_id: 596379
+        s2_poster_id: 596380
 
   "The Legend of Vox Machina (2022)":
     template:
-      name: match
-      title: "The Legend of Vox Machina"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 313886
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 313887
-      s2_poster_id: 313888
-      s3_poster_id: 537885
+      - name: match
+        title: "The Legend of Vox Machina"
+        year: 2022
+      - name: theposterdb
+        poster_id: 313886
+      - name: seasons-theposterdb
+        s1_poster_id: 313887
+        s2_poster_id: 313888
+        s3_poster_id: 537885
 
   "The Mighty Nein (2025)":
     template:
-      name: match
-      title: "The Mighty Nein"
-      year: 2025
-    template:
-      name: theposterdb
-      poster_id: 663276
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 663277
+      - name: match
+        title: "The Mighty Nein"
+        year: 2025
+      - name: theposterdb
+        poster_id: 663276
+      - name: seasons-theposterdb
+        s1_poster_id: 663277
 
   "The Orville (2017)":
     template:
-      name: match
-      title: "The Orville"
-      year: 2017
-    template:
-      name: theposterdb
-      poster_id: 268136
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 268137
-      s2_poster_id: 268138
-      s3_poster_id: 268139
+      - name: match
+        title: "The Orville"
+        year: 2017
+      - name: theposterdb
+        poster_id: 268136
+      - name: seasons-theposterdb
+        s1_poster_id: 268137
+        s2_poster_id: 268138
+        s3_poster_id: 268139
 
   "The Penguin (2024)":
     template:
-      name: match
-      title: "The Penguin"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 526094
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 526095
+      - name: match
+        title: "The Penguin"
+        year: 2024
+      - name: theposterdb
+        poster_id: 526094
+      - name: seasons-theposterdb
+        s1_poster_id: 526095
 
   "The Rookie (2018)":
     template:
-      name: match
-      title: "The Rookie"
-      year: 2018
-    template:
-      name: theposterdb
-      poster_id: 560567
-    template:
-      name: seasons-theposterdb
-      special_poster_id: 560568
-      s1_poster_id: 560569
-      s2_poster_id: 560570
-      s3_poster_id: 560571
-      s4_poster_id: 560572
-      s5_poster_id: 560573
-      s6_poster_id: 560574
-      s7_poster_id: 560575
+      - name: match
+        title: "The Rookie"
+        year: 2018
+      - name: theposterdb
+        poster_id: 560567
+      - name: seasons-theposterdb
+        special_poster_id: 560568
+        s1_poster_id: 560569
+        s2_poster_id: 560570
+        s3_poster_id: 560571
+        s4_poster_id: 560572
+        s5_poster_id: 560573
+        s6_poster_id: 560574
+        s7_poster_id: 560575
 
   "Secret Level (2024)":
     template:
-      name: match
-      title: "Secret Level"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 551126
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 551127
+      - name: match
+        title: "Secret Level"
+        year: 2024
+      - name: theposterdb
+        poster_id: 551126
+      - name: seasons-theposterdb
+        s1_poster_id: 551127
 
   "Space Force (2020)":
     template:
-      name: match
-      title: "Space Force"
-      year: 2020
-    template:
-      name: theposterdb
-      poster_id: 78470
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 78471
-      s2_poster_id: 214036
+      - name: match
+        title: "Space Force"
+        year: 2020
+      - name: theposterdb
+        poster_id: 78470
+      - name: seasons-theposterdb
+        s1_poster_id: 78471
+        s2_poster_id: 214036
 
   "Tulsa King (2022)":
     template:
-      name: match
-      title: "Tulsa King"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 283598
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 283599
-      s2_poster_id: 523414
-      s3_poster_id: 636302
+      - name: match
+        title: "Tulsa King"
+        year: 2022
+      - name: theposterdb
+        poster_id: 283598
+      - name: seasons-theposterdb
+        s1_poster_id: 283599
+        s2_poster_id: 523414
+        s3_poster_id: 636302
 
   "Twisted Metal (2023)":
     template:
-      name: match
-      title: "Twisted Metal"
-      year: 2023
-    template:
-      name: theposterdb
-      poster_id: 389473
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 389474
-      s2_poster_id: 622068
+      - name: match
+        title: "Twisted Metal"
+        year: 2023
+      - name: theposterdb
+        poster_id: 389473
+      - name: seasons-theposterdb
+        s1_poster_id: 389474
+        s2_poster_id: 622068

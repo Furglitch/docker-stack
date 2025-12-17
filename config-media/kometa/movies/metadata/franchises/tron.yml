@@ -7,27 +7,24 @@ metadata:
 
   "Tron (1982)":
     template:
-      name: match
-      title: "Tron"
-      year: 1982
-    template:
-      name: theposterdb
-      poster_id: 648842
+      - name: match
+        title: "Tron"
+        year: 1982
+      - name: theposterdb
+        poster_id: 648842
 
   "How to Train Your Dragon 2 (2014)":
     template:
-      name: match
-      title: "How to Train Your Dragon 2"
-      year: 2014
-    template:
-      name: theposterdb
-      poster_id: 648841
+      - name: match
+        title: "How to Train Your Dragon 2"
+        year: 2014
+      - name: theposterdb
+        poster_id: 648841
 
   "How to Train Your Dragon: The Hidden World (2019)":
     template:
-      name: match
-      title: "How to Train Your Dragon: The Hidden World"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 648840
+      - name: match
+        title: "How to Train Your Dragon: The Hidden World"
+        year: 2019
+      - name: theposterdb
+        poster_id: 648840

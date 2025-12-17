@@ -7,27 +7,24 @@ metadata:
 
   "Avatar (2009)":
     template:
-      name: match
-      title: "Avatar"
-      year: 2009
-    template:
-      name: theposterdb
-      poster_id: 672056
+      - name: match
+        title: "Avatar"
+        year: 2009
+      - name: theposterdb
+        poster_id: 672056
 
   "Avatar: The Way of Water (2022)":
     template:
-      name: match
-      title: "Avatar: The Way of Water"
-      year: 2022
-    template:
-      name: theposterdb
-      poster_id: 672055
+      - name: match
+        title: "Avatar: The Way of Water"
+        year: 2022
+      - name: theposterdb
+        poster_id: 672055
 
   "Avatar: Fire and Ash (2025)":
     template:
-      name: match
-      title: "Avatar: Fire and Ash"
-      year: 2025
-    template:
-      name: theposterdb
-      poster_id: 672054
+      - name: match
+        title: "Avatar: Fire and Ash"
+        year: 2025
+      - name: theposterdb
+        poster_id: 672054

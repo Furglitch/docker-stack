@@ -7,45 +7,40 @@ metadata:
 
   "DragonHeart (1996)":
     template:
-      name: match
-      title: "DragonHeart"
-      year: 1996
-    template:
-      name: theposterdb
-      poster_id: 197705
+      - name: match
+        title: "DragonHeart"
+        year: 1996
+      - name: theposterdb
+        poster_id: 197705
 
   "DragonHeart: A New Beginning (2000)":
     template:
-      name: match
-      title: "DragonHeart: A New Beginning"
-      year: 2000
-    template:
-      name: theposterdb
-      poster_id: 197706
+      - name: match
+        title: "DragonHeart: A New Beginning"
+        year: 2000
+      - name: theposterdb
+        poster_id: 197706
 
   "Dragonheart 3: The Sorcerer's Curse (2015)":
     template:
-      name: match
-      title: "Dragonheart 3: The Sorcerer's Curse"
-      year: 2015
-    template:
-      name: theposterdb
-      poster_id: 197707
+      - name: match
+        title: "Dragonheart 3: The Sorcerer's Curse"
+        year: 2015
+      - name: theposterdb
+        poster_id: 197707
 
   "Dragonheart: Battle for the Heartfire (2017)":
     template:
-      name: match
-      title: "Dragonheart: Battle for the Heartfire"
-      year: 2017
-    template:
-      name: theposterdb
-      poster_id: 197708
+      - name: match
+        title: "Dragonheart: Battle for the Heartfire"
+        year: 2017
+      - name: theposterdb
+        poster_id: 197708
 
   "Dragonheart: Vengeance (2021)":
     template:
-      name: match
-      title: "Dragonheart: Vengeance"
-      year: 2021
-    template:
-      name: theposterdb
-      poster_id: 197709
+      - name: match
+        title: "Dragonheart: Vengeance"
+        year: 2021
+      - name: theposterdb
+        poster_id: 197709

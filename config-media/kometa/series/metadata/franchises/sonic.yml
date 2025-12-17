@@ -6,12 +6,10 @@ metadata:
 
   "Knuckles (2024)":
     template:
-      name: match
-      title: "Knuckles"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 479895
-    template:
-      name: seasons-theposterdb
-      s1_poster_id: 479896
+      - name: match
+        title: "Knuckles"
+        year: 2024
+      - name: theposterdb
+        poster_id: 479895
+      - name: seasons-theposterdb
+        s1_poster_id: 479896

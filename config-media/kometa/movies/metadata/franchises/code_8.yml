@@ -7,18 +7,16 @@ metadata:
 
   "Code 8 (2019)":
     template:
-      name: match
-      title: "Code 8"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 595683
+      - name: match
+        title: "Code 8"
+        year: 2019
+      - name: theposterdb
+        poster_id: 595683
 
   "Code 8 Part II (2024)":
     template:
-      name: match
-      title: "Code 8 Part II"
-      year: 2024
-    template:
-      name: theposterdb
-      poster_id: 595682
+      - name: match
+        title: "Code 8 Part II"
+        year: 2024
+      - name: theposterdb
+        poster_id: 595682

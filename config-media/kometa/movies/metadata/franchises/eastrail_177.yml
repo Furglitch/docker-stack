@@ -7,27 +7,24 @@ metadata:
 
   "Unbreakable (2000)":
     template:
-      name: match
-      title: "Unbreakable"
-      year: 2000
-    template:
-      name: theposterdb
-      poster_id: 10347
+      - name: match
+        title: "Unbreakable"
+        year: 2000
+      - name: theposterdb
+        poster_id: 10347
 
   "Split (2017)":
     template:
-      name: match
-      title: "Split"
-      year: 2017
-    template:
-      name: theposterdb
-      poster_id: 10348
+      - name: match
+        title: "Split"
+        year: 2017
+      - name: theposterdb
+        poster_id: 10348
 
   "Glass (2019)":
     template:
-      name: match
-      title: "Glass"
-      year: 2019
-    template:
-      name: theposterdb
-      poster_id: 10349
+      - name: match
+        title: "Glass"
+        year: 2019
+      - name: theposterdb
+        poster_id: 10349
