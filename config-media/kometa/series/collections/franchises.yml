@@ -19,13 +19,6 @@ collections:
       - 402050    # [Series] Slippin' Jimmy
       poster_id: 503550
 
-  "Hellaverse":
-    template:
-      name: letterboxd-list
-      list_author: smol_human18
-      list_name: hellaverse
-      poster_id: 486937
-
   "John Wick":
     template:
       name: trakt-list
