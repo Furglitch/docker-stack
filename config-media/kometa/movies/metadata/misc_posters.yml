@@ -128,6 +128,13 @@ metadata:
       year: 2014
       poster_id: 20544
 
+  "Iron Lung (2026)":
+    template:
+      name: match
+      title: "Iron Lung"
+      year: 2026
+      poster_id: 670325
+
   "Joker (2019)":
     template:
       name: match
