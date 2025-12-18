@@ -16,7 +16,7 @@ collections:
       list_author: vargajoe
       list_name: breaking-bad-chronology
       ignore:
-      - 402050    # [Series] Slippin' Jimmy
+        - 402050    # [Series] Slippin' Jimmy
       poster_id: 503550
 
   "John Wick":
@@ -39,7 +39,7 @@ collections:
       list_author: drjenkins
       list_name: monsterverse
       ignore:
-      - 421104    # [Series] Skull Island (2023)
+        - 421104    # [Series] Skull Island (2023)
       poster_id: 116534
 
   "My Little Pony":
@@ -48,11 +48,11 @@ collections:
       list_author: furglitch
       list_name: my-little-pony-chronological
       ignore:
-      - 72001     # [Series] My Little Pony 'n Friends (1986)
-      - 76790     # [Series] My Little Pony Tales (1992)
-      - 372750    # [Series] My Little Pony: Pony Life (2020)
-      - 416741    # [Series] My Little Pony: Make Your Mark (2022)
-      - 416742    # [Series] My Little Pony: Tell Your Tale (2022)
+        - 72001     # [Series] My Little Pony 'n Friends (1986)
+        - 76790     # [Series] My Little Pony Tales (1992)
+        - 372750    # [Series] My Little Pony: Pony Life (2020)
+        - 416741    # [Series] My Little Pony: Make Your Mark (2022)
+        - 416742    # [Series] My Little Pony: Tell Your Tale (2022)
       poster_id: 524767
   
   "Pokemon":
@@ -62,7 +62,7 @@ collections:
       list_name: pokemon
       poster_id: 438334
       ignore:
-      - 72975 # [Series] Pokémon Chronicles (1998)
+        - 72975 # [Series] Pokémon Chronicles (1998)
 
   "Sonic the Hedgehog":
     template:
@@ -77,7 +77,7 @@ collections:
       list_author: acfmovies
       list_name: star-trek-chronological-order
       ignore:
-      - 73566  # [Series] Star Trek: The Animated Series (1973)
+        - 73566  # [Series] Star Trek: The Animated Series (1973)
       poster_id: 62523
 
   "Star Wars":
@@ -86,8 +86,8 @@ collections:
       list_author: gratiskeder
       list_name: star-wars
       ignore:
-      - 420658  # [Series] Young Jedi Adventures (2023)
-      - 351575   # [Series] Star Wars Resistance (2018)
+        - 420658  # [Series] Young Jedi Adventures (2023)
+        - 351575   # [Series] Star Wars Resistance (2018)
       poster_id: 27586
 
   "Stargate":
@@ -103,8 +103,8 @@ collections:
       list_author: icecreamsoup
       list_name: supernatural
       ignore:
-      - 261264  # [Miniseries] Ghostfacers (2010)
-      - 197001   # [Series] Supernatural: The Animation (2011)
+        - 261264  # [Miniseries] Ghostfacers (2010)
+        - 197001   # [Series] Supernatural: The Animation (2011)
       poster_id: 143038
 
   "Vought Cinematic Universe":
@@ -113,7 +113,7 @@ collections:
       list_author: tdjorgensen
       list_name: the-boys-collection
       ignore:
-      - 413188  # [Series] The Boys: Diabolical (2022)
+        - 413188  # [Series] The Boys: Diabolical (2022)
       poster_id: 486938
 
   "The Witcher":

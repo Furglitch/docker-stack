@@ -16,7 +16,7 @@ collections:
       list_author: viperdu-vark
       list_name: modified-chronological-mcu
       ignore:
-      - 758025   # [Short] Peter's To-Do List (2019)
+        - 758025   # [Short] Peter's To-Do List (2019)
       poster_id: 145336
 
   "Studio Ghibli":
@@ -25,8 +25,8 @@ collections:
       list_author: asterlea
       list_name: studio-ghibli
       ignore:
-      - 514710  # [Shorts] Modest Heroes (2018)
-      - 683127  # [Movie] Earwig and the Witch (2020)
+        - 514710  # [Shorts] Modest Heroes (2018)
+        - 683127  # [Movie] Earwig and the Witch (2020)
       poster_id: 325047
 
   "Zach Snyder's DC Extended Universe (DCEU)":

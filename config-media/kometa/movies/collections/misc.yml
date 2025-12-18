@@ -5,6 +5,6 @@ collections:
 
   "Non-Collection":
     template:
-      - name: trakt-list
-        list_author: furglitch
-        list_name: misc-shows
+      name: trakt-list
+      list_author: furglitch
+      list_name: misc-shows

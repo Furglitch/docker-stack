@@ -2,6 +2,7 @@ templates:
   trakt-list:
     optional:
       - url_poster
+      - ignore
     trakt_list: "https://trakt.tv/users/<<list_author>>/lists/<<list_name>>"
     libraries: Movies, TV Shows
     sync_to_users: all
@@ -11,6 +12,7 @@ templates:
   trakt-list-official:
     optional:
       - url_poster
+      - ignore
     libraries: Movies, TV Shows
     sync_to_users: all
     url_poster: "<<url_poster>>"
