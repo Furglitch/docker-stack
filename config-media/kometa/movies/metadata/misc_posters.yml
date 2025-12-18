@@ -70,14 +70,14 @@ metadata:
       name: match
       title: "Five Nights at Freddy's"
       year: 2023
-      poster_id: 432126
+      poster_id: 674000
 
   "Five Nights at Freddy's 2 (2025)":
     template:
-      - name: match
-        title: "Five Nights at Freddy's 2"
-        year: 2024
-    url_poster: https://image.tmdb.org/t/p/original/tuEpQlz7eNG9jlLgGNMLEH0xnVH.jpg
+      name: match
+      title: "Five Nights at Freddy's 2"
+      year: 2025
+      poster_id: 673999
 
   "Free Guy (2021)":
     template:

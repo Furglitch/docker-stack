@@ -84,6 +84,12 @@ collections:
         - 253835 # [Short] Los Bandoleros (2009)
       poster_id: 395688
 
+  "Five Nights at Freddy's":
+    template:
+      name: trakt-list-official
+      list_name: five-nights-at-freddy-s-collection-27000779
+      poster_id: 673998
+
   "Has Fallen":
     template:
       name: trakt-list-official
