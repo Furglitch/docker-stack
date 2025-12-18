@@ -82,6 +82,7 @@ libraries:
 playlist_files:
 - file: /config/playlists/chronological.yml
   template_variables:
+    libraries: Movies, TV Shows
     radarr_add_missing: false
     sonarr_add_missing: false
 
@@ -109,7 +110,7 @@ settings:
   default_collection_order: release
   delete_below_minimum: true
   delete_not_scheduled: false
-  sync_mode: append
+  sync_mode: sync
   playlist_sync_to_users: all
   playlist_exclude_users:
 
@@ -137,7 +138,6 @@ settings:
   verify_ssl: true
   custom_repo:
   asset_depth: 0
-
   ignore_ids:
   ignore_imdb_ids:
   overlay_artwork_filetype: jpg

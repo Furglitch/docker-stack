@@ -4,7 +4,6 @@ templates:
       - ignore
       - poster_id
     trakt_list: "https://trakt.tv/users/<<list_author>>/lists/<<list_name>>?display=show,season,episode"
-    sync_mode: sync
     collection_order: release
     ignore_ids: <<ignore>>
     minimum_items: 2
@@ -14,7 +13,6 @@ templates:
       - ignore
       - poster_id
     trakt_list: "https://trakt.tv/lists/official/<<list_name>>?display=show,season,episode"
-    sync_mode: sync
     collection_order: release
     ignore_ids: <<ignore>>
     minimum_items: 2
@@ -24,7 +22,6 @@ templates:
       - ignore
       - poster_id
     letterboxd_list: "https://letterboxd.com/<<list_author>>/list/<<list_name>>/"
-    sync_mode: sync
     collection_order: release
     ignore_ids: <<ignore>>
     minimum_items: 2
@@ -34,7 +31,6 @@ templates:
       - ignore
       - poster_id
     mdblist_list: "https://mdblist.com/lists/<<list_author>>/<<list_name>>/"
-    sync_mode: sync
     collection_order: release
     ignore_ids: <<ignore>>
     minimum_items: 2
