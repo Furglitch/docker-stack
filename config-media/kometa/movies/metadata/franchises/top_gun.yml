@@ -7,19 +7,17 @@ metadata:
   
   "Top Gun (1986)":
     template:
-      - name: match
-        title: "Top Gun"
-        year: 1986
-      - name: theposterdb
-        poster_id: 251519
+      name: match
+      title: "Top Gun"
+      year: 1986
+      poster_id: 251519
 
   "Top Gun: Maverick (2022)":
     template:
-      - name: match
-        title: "Top Gun: Maverick"
-        year: 2022
-      - name: theposterdb
-        poster_id: 251520
+      name: match
+      title: "Top Gun: Maverick"
+      year: 2022
+      poster_id: 251520
 
   # "Top Gun 3 (20XX)":
   #   template:

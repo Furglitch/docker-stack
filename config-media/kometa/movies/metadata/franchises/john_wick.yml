@@ -7,40 +7,35 @@ metadata:
 
   "John Wick (2014)":
     template:
-      - name: match
-        title: "John Wick"
-        year: 2014
-      - name: theposterdb
-        poster_id: 17551
+      name: match
+      title: "John Wick"
+      year: 2014
+      poster_id: 17551
 
   "John Wick: Chapter 2 (2017)":
     template:
-      - name: match
-        title: "John Wick: Chapter 2"
-        year: 2017
-      - name: theposterdb
-        poster_id: 17552
+      name: match
+      title: "John Wick: Chapter 2"
+      year: 2017
+      poster_id: 17552
 
   "John Wick: Chapter 3 - Parabellum (2019)":
     template:
-      - name: match
-        title: "John Wick: Chapter 3 - Parabellum"
-        year: 2019
-      - name: theposterdb
-        poster_id: 17553
+      name: match
+      title: "John Wick: Chapter 3 - Parabellum"
+      year: 2019
+      poster_id: 17553
 
   "John Wick: Chapter 4 (2023)":
     template:
-      - name: match
-        title: "John Wick: Chapter 4"
-        year: 2023
-      - name: theposterdb
-        poster_id: 372607
+      name: match
+      title: "John Wick: Chapter 4"
+      year: 2023
+      poster_id: 372607
 
   "Ballerina (2025)":
     template:
-      - name: match
-        title: "Ballerina"
-        year: 2025
-      - name: theposterdb
-        poster_id: 621269
+      name: match
+      title: "Ballerina"
+      year: 2025
+      poster_id: 621269

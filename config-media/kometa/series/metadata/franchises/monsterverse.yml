@@ -1,6 +1,5 @@
 external_templates:
   - file: config/templates/tv-meta.yml
-  - file: config/templates/season-poster.yml
 
 metadata:
 
@@ -18,10 +17,8 @@ metadata:
 
   "Monarch: Legacy of Monsters (2023)":
     template:
-      - name: match
-        title: "Monarch: Legacy of Monsters"
-        year: 2023
-      - name: theposterdb
-        poster_id: 468376
-      - name: seasons-theposterdb
-        s1_poster_id: 468377
+      name: match
+      title: "Monarch: Legacy of Monsters"
+      year: 2023
+      poster_id: 468376
+      s1_poster_id: 468377

@@ -1,11 +1,15 @@
 templates:
   trakt-list:
+    optional:
+      - url_poster
     trakt_list: "https://trakt.tv/users/<<list_author>>/lists/<<list_name>>"
     libraries: Movies, TV Shows
     sync_to_users: all
     url_poster: "<<url_poster>>"
     minimum_items: 2
   trakt-list-official:
+    optional:
+      - url_poster
     libraries: Movies
     sync_to_users: all
     url_poster: "<<url_poster>>"

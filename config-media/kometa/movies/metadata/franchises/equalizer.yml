@@ -7,24 +7,21 @@ metadata:
 
   "The Equalizer (2014)":
     template:
-      - name: match
-        title: "The Equalizer"
-        year: 2014
-      - name: theposterdb
-        poster_id: 417914
+      name: match
+      title: "The Equalizer"
+      year: 2014
+      poster_id: 417914
 
   "The Equalizer 2 (2018)":
     template:
-      - name: match
-        title: "The Equalizer 2"
-        year: 2018
-      - name: theposterdb
-        poster_id: 417915
+      name: match
+      title: "The Equalizer 2"
+      year: 2018
+      poster_id: 417915
 
   "The Equalizer 3 (2023)":
     template:
-      - name: match
-        title: "The Equalizer 3"
-        year: 2023
-      - name: theposterdb
-        poster_id: 417916
+      name: match
+      title: "The Equalizer 3"
+      year: 2023
+      poster_id: 417916

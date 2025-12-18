@@ -1,6 +1,5 @@
 external_templates:
   - file: config/templates/tv-meta.yml
-  - file: config/templates/season-poster.yml
 
 metadata:
 
@@ -8,22 +7,18 @@ metadata:
 
   "The Witcher (2019)":
     template:
-      - name: match
-        title: "The Witcher"
-        year: 2019
-      - name: theposterdb
-        poster_id: 375067
-      - name: seasons-theposterdb
-        s1_poster_id: 375074
-        s2_poster_id: 375075
-        s3_poster_id: 375076
+      name: match
+      title: "The Witcher"
+      year: 2019
+      poster_id: 375067
+      s1_poster_id: 375074
+      s2_poster_id: 375075
+      s3_poster_id: 375076
 
   "The Witcher: Blood Origin (2022)":
     template:
-      - name: match
-        title: "The Witcher: Blood Origin"
-        year: 2022
-      - name: theposterdb
-        poster_id: 375072
-      - name: seasons-theposterdb
-        s1_poster_id: 375073
+      name: match
+      title: "The Witcher: Blood Origin"
+      year: 2022
+      poster_id: 375072
+      s1_poster_id: 375073

@@ -1,6 +1,5 @@
 external_templates:
   - file: config/templates/tv-meta.yml
-  - file: config/templates/season-poster.yml
 
 metadata:
 
@@ -8,25 +7,21 @@ metadata:
 
   "Peacemaker (2022)":
     template:
-      - name: match
-        title: "Peacemaker"
-        year: 2022
-      - name: theposterdb
-        poster_id: 214053
-      - name: seasons-theposterdb
-        s1_poster_id: 205429
-        s2_poster_id: 629454
+      name: match
+      title: "Peacemaker"
+      year: 2022
+      poster_id: 214053
+      s1_poster_id: 205429
+      s2_poster_id: 629454
         # https://theposterdb.com/set/124062
 
   "Creature Commandos (2024)":
     template:
-      - name: match
-        title: "Creature Commandos"
-        year: 2024
-      - name: theposterdb
-        poster_id: 511640
-      - name: seasons-theposterdb
-        s1_poster_id: 541610
+      name: match
+      title: "Creature Commandos"
+      year: 2024
+      poster_id: 511640
+      s1_poster_id: 541610
 
   # "Lanterns (2026)":
   #   template:

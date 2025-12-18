@@ -7,40 +7,35 @@ metadata:
   
   "Raiders of the Lost Ark (1981)":
     template:
-      - name: match
-        title: "Raiders of the Lost Ark"
-        year: 1981
-      - name: theposterdb
-        poster_id: 10362
+      name: match
+      title: "Raiders of the Lost Ark"
+      year: 1981
+      poster_id: 10362
 
   "Indiana Jones and the Temple of Doom (1984)":
     template:
-      - name: match
-        title: "Indiana Jones and the Temple of Doom"
-        year: 1984
-      - name: theposterdb
-        poster_id: 10363
+      name: match
+      title: "Indiana Jones and the Temple of Doom"
+      year: 1984
+      poster_id: 10363
 
   "Indiana Jones and the Last Crusade (1989)":
     template:
-      - name: match
-        title: "Indiana Jones and the Last Crusade"
-        year: 1989
-      - name: theposterdb
-        poster_id: 10364
+      name: match
+      title: "Indiana Jones and the Last Crusade"
+      year: 1989
+      poster_id: 10364
 
   "Indiana Jones and the Kingdom of the Crystal Skull (2008)":
     template:
-      - name: match
-        title: "Indiana Jones and the Kingdom of the Crystal Skull"
-        year: 2008
-      - name: theposterdb
-        poster_id: 10365
+      name: match
+      title: "Indiana Jones and the Kingdom of the Crystal Skull"
+      year: 2008
+      poster_id: 10365
 
   "Indiana Jones and the Dial of Destiny (2023)":
     template:
-      - name: match
-        title: "Indiana Jones and the Dial of Destiny"
-        year: 2023
-      - name: theposterdb
-        poster_id: 383053
+      name: match
+      title: "Indiana Jones and the Dial of Destiny"
+      year: 2023
+      poster_id: 383053

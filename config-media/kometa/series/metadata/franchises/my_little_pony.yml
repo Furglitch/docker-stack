@@ -1,6 +1,5 @@
 external_templates:
   - file: config/templates/tv-meta.yml
-  - file: config/templates/season-poster.yml
 
 metadata:
 
@@ -8,21 +7,19 @@ metadata:
 
   "My Little Pony: Friendship Is Magic (2010)":
     template:
-      - name: match
-        title: "My Little Pony: Friendship Is Magic"
-        year: 2010
-      - name: theposterdb
-        poster_id: 482924
-      - name: seasons-theposterdb
-        s1_poster_id: 482925
-        s2_poster_id: 482926
-        s3_poster_id: 482927
-        s4_poster_id: 482928
-        s5_poster_id: 482929
-        s6_poster_id: 482930
-        s7_poster_id: 482931
-        s8_poster_id: 482932
-        s9_poster_id: 482933
+      name: match
+      title: "My Little Pony: Friendship Is Magic"
+      year: 2010
+      poster_id: 482924
+      s1_poster_id: 482925
+      s2_poster_id: 482926
+      s3_poster_id: 482927
+      s4_poster_id: 482928
+      s5_poster_id: 482929
+      s6_poster_id: 482930
+      s7_poster_id: 482931
+      s8_poster_id: 482932
+      s9_poster_id: 482933
 
   # "My Little Pony: Make Your Mark (2022)":
   #   template:

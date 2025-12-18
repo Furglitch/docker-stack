@@ -7,8 +7,7 @@ metadata:
 
   "El Camino: A Breaking Bad Movie (2019)":
     template:
-      - name: match
-        title: "El Camino: A Breaking Bad Movie"
-        year: 2019
-      - name: theposterdb
-        poster_id: 378157
+      name: match
+      title: "El Camino: A Breaking Bad Movie"
+      year: 2019
+      poster_id: 378157

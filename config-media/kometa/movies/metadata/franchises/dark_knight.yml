@@ -7,24 +7,21 @@ metadata:
 
   "Batman Begins (2005)":
     template:
-      - name: match
-        title: "Batman Begins"
-        year: 2005
-      - name: theposterdb
-        poster_id: 4791
+      name: match
+      title: "Batman Begins"
+      year: 2005
+      poster_id: 4791
 
   "The Dark Knight (2008)":
     template:
-      - name: match
-        title: "The Dark Knight"
-        year: 2008
-      - name: theposterdb
-        poster_id: 4792
+      name: match
+      title: "The Dark Knight"
+      year: 2008
+      poster_id: 4792
 
   "The Dark Knight Rises (2012)":
     template:
-      - name: match
-        title: "The Dark Knight Rises"
-        year: 2012
-      - name: theposterdb
-        poster_id: 4793
+      name: match
+      title: "The Dark Knight Rises"
+      year: 2012
+      poster_id: 4793

@@ -1,6 +1,5 @@
 external_templates:
   - file: config/templates/tv-meta.yml
-  - file: config/templates/season-poster.yml
 
 metadata:
 
@@ -8,14 +7,12 @@ metadata:
 
   "Blade Runner: Black Lotus (2021)":
     template:
-      - name: match
-        title: "Blade Runner: Black Lotus"
-        year: 2021
-      - name: theposterdb
-        poster_id: 194523
-      - name: seasons-theposterdb
-        special_poster_id: 194524
-        s1_poster_id: 194525
+      name: match
+      title: "Blade Runner: Black Lotus"
+      year: 2021
+      poster_id: 194523
+      special_poster_id: 194524
+      s1_poster_id: 194525
 
   #"Blade Runner 2099 (20XX)":
   #  template:
