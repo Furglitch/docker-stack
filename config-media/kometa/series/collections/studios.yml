@@ -16,14 +16,12 @@ collections:
       list_author: viperdu-vark
       list_name: modified-chronological-mcu
       ignore:
-      - 69069  # [Series] WHIH Newsfront (2015)
-      - 138503 # [Series] Your Friendly Neighborhood Spider-Man (2025)
-      - 88987  # [Series] Helstrom (2020)
+      - 299405    # [Series] WHIH Newsfront (2015)
+      - 412427    # [Series] Your Friendly Neighborhood Spider-Man (2025)
+      - 364038    # [Series] Helstrom (2020)
+      - 361608    # [Series] Stark Expo Shorts (2010)
+      - 372497    # [Series] The Daily Bugle (2019)
       poster_id: 145336
-    filters:
-      title.not: 
-        - "Stark Expo Shorts"  # [Series] Stark Expo Shorts (2010)
-        - "The Daily Bugle"    # [Series] The Daily Bugle (2019)
 
   "Zach Snyder's DC Extended Universe (DCEU)":
     template:
