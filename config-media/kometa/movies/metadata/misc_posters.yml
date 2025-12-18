@@ -44,6 +44,13 @@ metadata:
       year: 2024
       poster_id: 648831
 
+  "The Batman (2022)":
+    template:
+      name: match
+      title: "The Batman"
+      year: 2022
+      poster_id: 228589
+
   "Bullet Train (2022)":
     template:
       name: match
@@ -359,9 +366,16 @@ metadata:
       year: 2021
       poster_id: 170702
 
-  "The Batman (2022)":
+  "Zootopia (2016)":
     template:
       name: match
-      title: "The Batman"
-      year: 2022
-      poster_id: 228589
+      title: "Zootopia"
+      year: 2016
+      poster_id: 33372
+
+  "Zootopia 2 (2025)":
+    template:
+      name: match
+      title: "Zootopia 2"
+      year: 2025
+      poster_id: 579582
