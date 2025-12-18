@@ -8,3 +8,4 @@ collections:
       name: trakt-list
       list_author: furglitch
       list_name: misc-shows
+      minimum_items: 999
