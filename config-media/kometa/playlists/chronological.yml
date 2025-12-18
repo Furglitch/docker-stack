@@ -36,6 +36,13 @@ playlists:
       list_name: james-bond
       url_poster: "https://img.asmedia.epimg.net/resizer/v2/MJMN3TW65BIZRG7XLNQIZR6Q5E.jpg?auth=018552aee32083489b7784d62dd87c9604470f31efce06b353e36b963353e49f&width=1200&height=1200&smart=true"
 
+  "James Gunn's DC Universe (DCU)":
+    template:
+      name: trakt-list
+      list_author: fistytristy
+      list_name: dc-universe-james-gunn-s-dcu
+      url_poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwA7JRi2MYLFgMTpH7hEAVty4Q-64NSjExuA&s"
+
   "John Wick":
     template:
       name: trakt-list
@@ -48,6 +55,20 @@ playlists:
       name: trakt-list-official
       list_name: kingsman-collection
       url_poster: "https://pbs.twimg.com/profile_images/1463221870644248578/xZXxHVZO_400x400.jpg"
+
+  "Marvel Cinematic Universe":
+    template:
+      name: trakt-list
+      list_author: viperdu-vark
+      list_name: modified-chronological-mcu
+      url_poster: "https://prologue.com/wp-content/uploads/2022/02/Marvel.jpg"
+      ignore:
+      - 299405    # [Series] WHIH Newsfront (2015)
+      - 412427    # [Series] Your Friendly Neighborhood Spider-Man (2025)
+      - 364038    # [Series] Helstrom (2020)
+      - 361608    # [Series] Stark Expo Shorts (2010)
+      - 372497    # [Series] The Daily Bugle (2019)
+      - 758025   # [Short] Peter's To-Do List (2019)
 
   "Middle Earth":
     template:
@@ -165,3 +186,10 @@ playlists:
       url_poster: "https://i.pinimg.com/originals/6f/2c/57/6f2c57ced05757e1a24cd6cd0705160a.jpg"
       ignore:
       - 340102  # [Movie] The New Mutants (2020)
+
+  "Zach Snyder's DC Extended Universe (DCEU)":
+    template:
+      name: trakt-list
+      list_author: koekoeracha
+      list_name: dc-extended-universe-dceu
+      url_poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpjTHrNDcRAcrYaQwLwTGUbIZLQIONRFndw&s"
