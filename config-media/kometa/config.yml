@@ -83,6 +83,7 @@ playlist_files:
 - file: /config/playlists/chronological.yml
   template_variables:
     radarr_add_missing: false
+    sonarr_add_missing: false
 
 settings:
   run_order:
