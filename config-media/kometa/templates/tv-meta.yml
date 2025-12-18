@@ -39,7 +39,7 @@ templates:
       - "<<poster_id>>"
       - "<<special_poster_id>>"
       - "<<s1_poster_id>>"
-      - "<<s2_poster_id>>"2
+      - "<<s2_poster_id>>"
       - "<<s3_poster_id>>"
       - "<<s4_poster_id>>"
       - "<<s5_poster_id>>"
