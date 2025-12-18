@@ -3,7 +3,7 @@ external_templates:
 
 metadata:
 
-  # https://theposterdb.com/set/8
+  # https://theposterdb.com/set/363365
 
   "Tron (1982)":
     template:
@@ -12,16 +12,16 @@ metadata:
       year: 1982
       poster_id: 648842
 
-  "How to Train Your Dragon 2 (2014)":
+  "TRON: Legacy (2010)":
     template:
       name: match
-      title: "How to Train Your Dragon 2"
-      year: 2014
+      title: "TRON: Legacy"
+      year: 2010
       poster_id: 648841
 
-  "How to Train Your Dragon: The Hidden World (2019)":
+  "TRON: Ares (2025)":
     template:
       name: match
-      title: "How to Train Your Dragon: The Hidden World"
-      year: 2019
+      title: "TRON: Ares"
+      year: 2025
       poster_id: 648840
