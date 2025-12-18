@@ -50,7 +50,6 @@ services:
     environment:
       - KOMETA_TIME=00:00,06:00,12:00,18:00
       - KOMETA_CONFIG=/config/config.yml
-      - KOMETA_RUN=True
     volumes:
       - ${CONFIG_MEDIA_PATH}/kometa:/config
     logging:
