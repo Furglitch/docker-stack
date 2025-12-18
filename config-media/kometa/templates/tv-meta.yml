@@ -1,7 +1,8 @@
 templates:
   match:
-    title: "<<title>>"
-    year: "<<year>>"
+    match:
+      title: "<<title>>"
+      year: "<<year>>"
     url_poster: "https://theposterdb.com/api/assets/<<poster_id>>"
     seasons:
       0: {url_poster: "https://theposterdb.com/api/assets/<<special_poster_id>>"}

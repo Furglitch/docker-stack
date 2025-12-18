@@ -2,6 +2,7 @@ templates:
   match:
     optional:
       - poster_id
-    title: "<<title>>"
-    year: "<<year>>"
+    match:
+      title: "<<title>>"
+      year: "<<year>>"
     url_poster: "https://theposterdb.com/api/assets/<<poster_id>>"
