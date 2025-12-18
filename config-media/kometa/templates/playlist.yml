@@ -9,6 +9,8 @@ templates:
     url_poster: "<<url_poster>>"
     minimum_items: 2
     ignore_ids: <<ignore>>
+    sonarr_add_missing: false
+    radarr_add_missing: false
   trakt-list-official:
     optional:
       - url_poster
@@ -19,3 +21,5 @@ templates:
     trakt_list: "https://trakt.tv/lists/official/<<list_name>>"
     minimum_items: 2
     ignore_ids: <<ignore>>
+    sonarr_add_missing: false
+    radarr_add_missing: false
