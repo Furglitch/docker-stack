@@ -67,11 +67,11 @@ metadata:
       s1_poster_id: 542401
       s2_poster_id: 669666
 
-  "Hazbin Hotel (2024)":
+  "Hazbin Hotel (2019)":
     template:
       name: match
       title: "Hazbin Hotel"
-      year: 2023
+      year: 2019
       poster_id: 656627
       s1_poster_id: 656628
       s2_poster_id: 656629
