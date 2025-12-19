@@ -215,6 +215,13 @@ collections:
         - 597316  # [Movie] My Little Pony: A New Generation (2021)
       poster_id: 524767
 
+  "Now You See Me":
+    template:
+      name: trakt-list
+      list_author: dudeimtired
+      list_name: now-you-see-me-collection
+      poster_id: 673554
+
   "Pacific Rim":
     template:
       name: trakt-list-official

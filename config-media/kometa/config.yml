@@ -34,6 +34,7 @@ libraries:
     - file: /config/movies/metadata/franchises/mission_impossible.yml
     - file: /config/movies/metadata/franchises/monsterverse.yml
     - file: /config/movies/metadata/franchises/my_little_pony.yml
+    - file: /config/movies/metadata/franchises/now_you_see_me.yml
     - file: /config/movies/metadata/franchises/pacific_rim.yml
     - file: /config/movies/metadata/franchises/pirates_of_the_caribbean.yml
     - file: /config/movies/metadata/franchises/planet_of_the_apes.yml
