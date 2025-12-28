@@ -1,8 +1,7 @@
 #!/bin/bash
 
 if [ "$1" != "" ] && [ "$2" != "" ]; then
-    sudo mkdir -p /home/user/docker/config
-    cp -r ./config /home/user/docker
+    printf "Executing action: %s on compose: %s\n" "$1" "$2"
 else
     printf "Usage:\n"
     printf "  setup.sh [action] [compose]\n\n"
@@ -30,9 +29,8 @@ esac
 case "$2" in
     "")
         ;;
-    "media"| "web"| "all")
+    "media"| "web"| "util"| "all")
         mkdir -p /home/user/docker/config
-        #cp -r ./config-util/* /home/user/docker/config
         printf "Setting up utility containers...\n"
         docker compose -f "compose-util/docker-compose.yaml" $command
         ;;
@@ -42,24 +40,18 @@ case "$2" in
     "")
         ;;
     "media")
-        if [ "$1" == "--start" ]; then
-            cp -r ./config-media/* /home/user/docker/config
-        fi
         printf "Setting up media containers...\n"
         docker compose -f "compose-media/docker-compose.yaml" $command
         ;;
     "web")
-        if [ "$1" == "--start" ]; then
-            cp -r ./config-web/* /home/user/docker/config
-        fi
         printf "Setting up web containers...\n"
         docker compose -f "compose-web/docker-compose.yaml" $command
         ;;
+    "util")
+        printf "Setting up util containers...\n"
+        docker compose -f "compose-util/docker-compose.yaml" $command
+        ;;
     "all")
-        if [ "$1" == "--start" ]; then
-            cp -r ./config-media/* /home/user/docker/config
-            cp -r ./config-web/* /home/user/docker/config
-        fi
         printf "Setting up media containers...\n"
         docker compose -f "compose-media/docker-compose.yaml" $command
         printf "Setting up web containers...\n"
