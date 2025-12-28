@@ -189,7 +189,7 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    network_mode: 'container:gluetun'
+    network_mode: 'service:gluetun'
     environment:
       - WEBUI_PORT=8090
       - TORRENTING_PORT=8091
@@ -202,7 +202,7 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
-    network_mode: 'container:gluetun'
+    network_mode: 'service:gluetun'
     environment:
       - DOCKER_MODS=${PARK}:sabnzbd
     volumes:
