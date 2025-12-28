@@ -179,6 +179,7 @@ services:
     volumes:
       - ${CONFIG_MEDIA_PATH}/gluetun:/gluetun
     ports:
+      - ${PORT_SILLYTAVERN}:32705
       - ${PORT_SABNZBD}:8085
       - ${PORT_QBITTORRENT_UI}:8090
       - ${PORT_QBITTORRENT_IO}:8091

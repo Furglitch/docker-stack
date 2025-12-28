@@ -71,11 +71,11 @@ services:
     build: ..
     image: ghcr.io/sillytavern/sillytavern:latest
     container_name: sillytavern
+    network_mode: 'service:gluetun'
     environment:
       - NODE_ENV=production
       - FORCE_COLOR=1
-    ports:
-      - ${PORT_SILLYTAVERN}:8000
+      - PUBLIC_PORT=32705
     volumes:
       - ${CONFIG_WEB_PATH}/sillytavern/config:/home/node/app/config
       - ${CONFIG_WEB_PATH}/sillytavern/data:/home/node/app/data
