@@ -75,7 +75,7 @@ services:
     environment:
       - NODE_ENV=production
       - FORCE_COLOR=1
-      - PUBLIC_PORT=32705
+      - PUBLIC_PORT=${PORT_SILLYTAVERN}
     volumes:
       - ${CONFIG_WEB_PATH}/sillytavern/config:/home/node/app/config
       - ${CONFIG_WEB_PATH}/sillytavern/data:/home/node/app/data
