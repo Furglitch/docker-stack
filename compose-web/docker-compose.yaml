@@ -71,8 +71,7 @@ services:
     build: ..
     image: ghcr.io/sillytavern/sillytavern:latest
     container_name: sillytavern
-    networks:
-      - vpn
+    network_mode: 'container:gluetun'
     environment:
       - NODE_ENV=production
       - FORCE_COLOR=1
@@ -105,7 +104,3 @@ services:
       - ${MEDIA_SHARE}:/share
     ports:
       - ${PORT_AUDIOBOOKSHELF}:80
-
-networks:
-  vpn:
-    external: true

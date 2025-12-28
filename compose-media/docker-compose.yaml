@@ -167,8 +167,6 @@ services:
     <<: *default-service
     image: qmcgaw/gluetun:latest
     container_name: gluetun
-    networks:
-      - vpn
     cap_add:
       - NET_ADMIN
     devices:
@@ -191,8 +189,7 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    networks:
-      - vpn
+    network_mode: 'container:gluetun'
     environment:
       - WEBUI_PORT=8090
       - TORRENTING_PORT=8091
@@ -205,16 +202,10 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
-    networks:
-      - vpn
+    network_mode: 'container:gluetun'
     environment:
       - DOCKER_MODS=${PARK}:sabnzbd
     volumes:
       - ${CONFIG_MEDIA_PATH}/sabnzbd:/config
       - ${MEDIA_SHARE}/downloads/usenet:/share/downloads/usenet
       - ${MEDIA_SHARE}/downloads/usenet/incomplete:/share/downloads/usenet/incomplete
-
-networks:
-  vpn:
-    name: vpn
-    driver: bridge
