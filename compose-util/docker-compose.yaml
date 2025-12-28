@@ -22,7 +22,7 @@ services:
 
   watchtower:
     <<: *default-service
-    image: containrrr/watchtower:latest
+    image: nickfedor/watchtower:latest
     container_name: watchtower
     command: --cleanup=true --include-restarting=true --include-stopped=true --interval=86400
 
