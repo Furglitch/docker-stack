@@ -71,7 +71,6 @@ services:
     build: ..
     image: ghcr.io/sillytavern/sillytavern:latest
     container_name: sillytavern
-    network_mode: 'service:gluetun'
     networks:
       - vpn
     environment:

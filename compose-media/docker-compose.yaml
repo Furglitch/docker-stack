@@ -191,7 +191,6 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    network_mode: 'service:gluetun'
     networks:
       - vpn
     environment:
@@ -206,7 +205,6 @@ services:
     <<: *default-service
     image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
-    network_mode: 'service:gluetun'
     networks:
       - vpn
     environment:
