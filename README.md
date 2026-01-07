@@ -24,17 +24,21 @@ docker network create pterodactyl
 
 #### Usage
 
+It's recommended to follow the instructions by EdyTheCow, starting at '[Setting up Panel](https://github.com/EdyTheCow/docker-pterodactyl/tree/master?tab=readme-ov-file#setting-up-panel)', as this stack doesn't contain traefik.
+
+Instead of using `docker compose` commands directly, you can use the provided `setup.sh` script:
+
 ```bash
-./setup.sh [action]
+./setup.sh [action] [compose]
 
 action: --start | --restart | --stop | --clear
+compose: panel | wings
 ```
 
-- `--start`: runs `docker compose up -d`.
-- `--restart`: runs `docker compose restart`.
-- `--stop`: runs `docker compose stop`.
-- `--clear`: runs `docker compose down`.
-These commands will run for each compose file in the stack.
+- `--start`: runs `docker compose up -d` for the specified compose file.
+- `--restart`: runs `docker compose restart` for the specified compose file.
+- `--stop`: runs `docker compose stop` for the specified compose file.
+- `--clear`: runs `docker compose down` for the specified compose file.
 
 ---
 

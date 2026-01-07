@@ -4,33 +4,49 @@ case "$1" in
     "")
         command=""
         ;;
-    "--start")
+    "--start"|"-s"|"start")
+        phrase="Starting"
         command="up -d"
         ;;
-    "--restart")
+    "--restart"|"-r"|"restart")
+        phrase="Restarting"
         command="restart"
         ;;
-    "--stop")
+    "--stop"|"-t"|"stop")
+        phrase="Stopping"
         command="stop"
         ;;
-    "--clear")
+    "--clear"|"-c"|"clear"|"--remove"|"-rm"|"-r"|"remove"|"--down"|"-d"|"down")
+        phrase="Removing"
         command="down"
         ;;
 esac
 
-if [ "$command" != "" ]; then
+case "$2" in
+    "")
+        ;;
+    "panel")
+        compose="compose-panel/docker-compose.yaml"
+        ;;
+    "wings")
+        compose="compose-wings/docker-compose.yaml"
+        ;;
+esac
+
+if [ "$command" != "" ] && [ "$compose" != "" ]; then
+    mkdir -p /home/user/docker/config
     printf "Executing 'docker compose %s'\n" "$command"
 else
     printf "Usage:\n"
-    printf "  setup.sh [action]\n\n"
+    printf "  setup.sh [action] [compose]\n\n"
     printf "  action: --start, --restart, --stop, --clear\n"
+    printf "  compose: panel, wings\n"
 fi
 
 
-mkdir -p /home/user/docker/config
-printf "Setting up panel containers...\n"
-docker compose -f "compose-panel/docker-compose.yaml" $command
-printf "Setting up wings containers...\n"
-docker compose -f "compose-wings/docker-compose.yaml" $command
-printf "Setting up utility containers...\n"
-docker compose -f "compose-util/docker-compose.yaml" $command
+if [ "$command" != "" ] && [ "$compose" != "" ]; then
+    printf "%s utility containers...\n" "$phrase"
+    docker compose -f "/home/user/docker/compose-util/docker-compose.yaml" $command
+    printf "%s %s containers...\n" "$phrase" "$2"
+    docker compose -f "/home/user/docker/$compose" $command
+fi
