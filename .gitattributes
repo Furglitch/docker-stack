@@ -5,3 +5,5 @@ compose-wings/docker-compose.yaml text eol=lf filter=redact-compose
 compose-util/docker-compose.yaml text eol=lf filter=redact-compose
 
 config/pterodactyl/panel/var/.env text eol=lf filter=redact-env
+
+config/pterodactyl/wings/etc/config.yml text eol=lf filter=redact-wings-config

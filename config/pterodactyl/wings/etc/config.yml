@@ -1,0 +1,18 @@
+debug: false
+uuid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+token_id: XXXXXXXXXXXXXXXX
+token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+api:
+  host: 0.0.0.0
+  port: XXXX
+  ssl:
+    enabled: false
+    cert: /etc/letsencrypt/live/fqdn.example.com/fullchain.pem
+    key: /etc/letsencrypt/live/fqdn.example.com/privkey.pem
+  upload_limit: 100
+system:
+  data: /var/lib/pterodactyl/volumes
+  sftp:
+    bind_port: XXXX
+allowed_mounts: []
+remote: https://fqdn.example.com
