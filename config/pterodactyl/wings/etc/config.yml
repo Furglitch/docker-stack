@@ -16,3 +16,6 @@ system:
     bind_port: XXXX
 allowed_mounts: []
 remote: https://fqdn.example.com
+docker:
+  network:
+    name: pterodactyl_nw

@@ -24,7 +24,7 @@ services:
     restart: always
     networks:
       - pterodactyl
-      - wings0
+      - pterodactyl_nw
     ports:
       - "8080:80"
       - "8443:443"
@@ -46,11 +46,5 @@ services:
 networks:
   pterodactyl:
     external: true
-  wings0:
-    name: wings0
-    driver: bridge
-    ipam:
-      config:
-        - subnet: "172.21.0.0/16"
-    driver_opts:
-      com.docker.network.bridge.name: wings0
+  pterodactyl_nw:
+    external: true

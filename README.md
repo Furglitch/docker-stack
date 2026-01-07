@@ -17,9 +17,9 @@ git clone https://github.com/Furglitch/docker-stack.git -b docker-game /home/use
 
 #### Prerequisites
 
-You will need to create the 'pterodactyl' network first:
+You will need to create the 'pterodactyl' and 'pterodactyl_nw' networks first:
 ```bash
-docker network create pterodactyl
+docker network create pterodactyl pterodactyl_nw
 ```
 
 #### Usage
