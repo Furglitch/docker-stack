@@ -1,7 +1,5 @@
 .env text eol=lf filter=redact-env
 
-config-media/recyclarr/recyclarr.yml text eol=lf filter=redact-ip
-config-media/recyclarr/recyclarr.yml text eol=lf filter=redact-recyclarr
-
-config-web/homepage/services.yaml text eol=lf filter=redact-ip
-config-web/homepage/services.yaml text eol=lf filter=redact-homepage
+compose-panel/docker-compose.yaml text eol=lf filter=redact-compose
+compose-wings/docker-compose.yaml text eol=lf filter=redact-compose
+compose-util/docker-compose.yaml text eol=lf filter=redact-compose

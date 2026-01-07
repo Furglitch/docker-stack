@@ -1,0 +1,30 @@
+x-common: 
+  deunhealth:
+    &deunhealth
+    labels:
+      - "deunhealth.restart.on.unhealthy=true"
+  default:
+    &default
+    environment:
+      - PUID=${PUID}
+      - PGID=${GUID}
+      - UMASK=${UMASK}
+      - TZ=${TZ}
+    restart: unless-stopped
+
+services:
+
+  plex:
+    <<: *default-service
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - VERSION=docker
+      - DOCKER_MODS=${PARK}:plex
+    volumes:
+      - ${CONFIG_MEDIA_PATH}/plex:/config/Library/Application Support/Plex Media Server
+      - ${MEDIA_SHARE}:/share
+      - /tmp/plex_cache:/transcode
+    ports:
+      - ${PORT_PLEX}:32400

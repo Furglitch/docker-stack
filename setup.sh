@@ -1,16 +1,8 @@
 #!/bin/bash
 
-if [ "$1" != "" ] && [ "$2" != "" ]; then
-    printf "Executing action: %s on compose: %s\n" "$1" "$2"
-else
-    printf "Usage:\n"
-    printf "  setup.sh [action] [compose]\n\n"
-    printf "  action: --start, --restart, --stop, --clear\n"
-    printf "  compose: media, web, all\n"
-fi
-
 case "$1" in
     "")
+        command=""
         ;;
     "--start")
         command="up -d"
@@ -26,35 +18,19 @@ case "$1" in
         ;;
 esac
 
-case "$2" in
-    "")
-        ;;
-    "media"| "web"| "util"| "all")
-        mkdir -p /home/user/docker/config
-        printf "Setting up utility containers...\n"
-        docker compose -f "compose-util/docker-compose.yaml" $command
-        ;;
-esac
+if [ "$command" != "" ]; then
+    printf "Executing 'docker compose %s'\n" "$command"
+else
+    printf "Usage:\n"
+    printf "  setup.sh [action]\n\n"
+    printf "  action: --start, --restart, --stop, --clear\n"
+fi
 
-case "$2" in
-    "")
-        ;;
-    "media")
-        printf "Setting up media containers...\n"
-        docker compose -f "compose-media/docker-compose.yaml" $command
-        ;;
-    "web")
-        printf "Setting up web containers...\n"
-        docker compose -f "compose-web/docker-compose.yaml" $command
-        ;;
-    "util")
-        printf "Setting up util containers...\n"
-        docker compose -f "compose-util/docker-compose.yaml" $command
-        ;;
-    "all")
-        printf "Setting up media containers...\n"
-        docker compose -f "compose-media/docker-compose.yaml" $command
-        printf "Setting up web containers...\n"
-        docker compose -f "compose-web/docker-compose.yaml" $command
-        ;;
-esac
+
+mkdir -p /home/user/docker/config
+printf "Setting up panel containers...\n"
+docker compose -f "compose-panel/docker-compose.yaml" $command
+printf "Setting up wings containers...\n"
+docker compose -f "compose-wings/docker-compose.yaml" $command
+printf "Setting up utility containers...\n"
+docker compose -f "compose-util/docker-compose.yaml" $command
