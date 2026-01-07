@@ -12,10 +12,10 @@ read -r
 
 # Pull changed files from remote repository
 git fetch origin
-DIFF_FILES=$(git diff --name-only HEAD..origin/main)
+DIFF_FILES=$(git diff --name-only HEAD..origin/docker)
 for FILE in $DIFF_FILES; do
     echo "Updating file: $FILE"
-    git checkout origin/main -- "$FILE"
+    git checkout origin/docker -- "$FILE"
 done
 git clone --recurse-submodules --no-checkout "$(git config --get remote.origin.url)" "./.temp"
 if [ -d ./.temp/.git ]; then
