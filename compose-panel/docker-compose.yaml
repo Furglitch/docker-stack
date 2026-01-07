@@ -89,6 +89,9 @@ services:
       REDIS_HOST: "cache"
       DB_HOST: "database"
       TRUSTED_PROXIES: "*"
+    ports:
+      - "80:80"
+      - "443:443"
 
 networks:
   local:
