@@ -3,3 +3,5 @@
 compose-panel/docker-compose.yaml text eol=lf filter=redact-compose
 compose-wings/docker-compose.yaml text eol=lf filter=redact-compose
 compose-util/docker-compose.yaml text eol=lf filter=redact-compose
+
+config/pterodactyl/panel/var/.env text eol=lf filter=redact-env
