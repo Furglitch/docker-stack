@@ -39,6 +39,7 @@ services:
       - "/var/lib/docker/containers/:/var/lib/docker/containers/"
       - "/tmp/pterodactyl/:/tmp/pterodactyl/"
       - "/etc/ssl/certs:/etc/ssl/certs:ro"
+      - "/etc/letsencrypt:/etc/letsencrypt:ro"
       - "${CONFIG_PTERODACTYL_PATH}/wings/etc/:/etc/pterodactyl/"
       - "${CONFIG_PTERODACTYL_PATH}/wings/logs:/var/log/pterodactyl/"
       - "${SERVERS_DATA_FULL_PATH}:${SERVERS_DATA_FULL_PATH}"
