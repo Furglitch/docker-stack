@@ -183,6 +183,7 @@ services:
       - ${PORT_SABNZBD}:8085
       - ${PORT_QBITTORRENT_UI}:8090
       - ${PORT_QBITTORRENT_IO}:8091
+      - ${PORT_WHOOGLE}:5000
     restart: always
 
   qbittorrent:

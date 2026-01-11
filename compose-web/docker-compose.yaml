@@ -95,6 +95,25 @@ services:
       - ${CONFIG_WEB_PATH}/mediawiki/extensions:/var/www/html/extensions
       #- ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
 
+  whoogle:
+    <<: *default-service
+    image: benbusby/whoogle-search:latest
+    container_name: whoogle
+    network_mode: 'container:gluetun'
+    environment:
+      - WHOGLE_PROXY_LOC=http://${IP_LOCAL}:${NGINX_IO}
+    pids_limit: 50
+    mem_limit: 256M
+    memswap_limit: 256M
+    security_opt:
+      - no-new-privileges
+    cap_drop:
+      - ALL
+    tmpfs:
+      - /config/:size=10M,uid=${PUID},gid=${GUID},mode=1700
+      - /var/lib/tor/:size=15M,uid=${PUID},gid=${GUID},mode=1700
+      - /run/tor/:size=1M,uid=${PUID},gid=${GUID},mode=1700
+
   audiobookshelf:
     <<: *default-service
     image: ghcr.io/advplyr/audiobookshelf:latest
