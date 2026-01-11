@@ -6,40 +6,34 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ### Media Services
 
-| App            | Function                     |
-|----------------|------------------------------|
-| Plex           | Media server                 |
-| Tautulli       | Plex usage monitoring        |
-| Posterizarr    | Plex poster manager          |
-| Tdarr          | Media transcoder             |
-| Radarr         | Movie management             |
-| Sonarr         | TV Show management           |
-| Bazarr         | Subtitle management          |
-| Prowlarr       | Download indexer             |
-| FlareSolverr   | Captcha solver               |
-| Recyclarr      | TRaSH Guide syncer           |
-| Gluetun        | Container VPN router         |
-| SABnzbd        | Usenet downloader            |
-| qBittorrent    | Torrent downloader           |
+<img width="500px" height="50px" src=".github/assets/icons/sh-plex.svg" title="Plex"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-tautulli.svg" title="Tautulli"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-posterizarr.svg" title="Posterizarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-tdarr.svg" title="Tdarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-radarr.svg" title="Radarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-sonarr.svg" title="Sonarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-bazarr.svg" title="Bazarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-prowlarr.svg" title="Prowlarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-flaresolverr.svg" title="FlareSolverr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-recyclarr.svg" title="Recyclarr"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-gluetun.svg" title="Gluetun"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-sabnzbd.svg" title="SABnzbd"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-qbittorrent.svg" title="qBittorrent"/>
 
 ### Web Services
 
-| App            | Function                     |
-|----------------|------------------------------|
-| Homepage       | Home page / Sysmon           |
-| VaultWarden    | Password manager             |
-| Nextcloud      | Cloud storage                |
-| Mealie         | Recipe management            |
-| SillyTavern    | AI Chat front-end            |
-| MediaWiki      | Wiki platform                |
-| Audiobookshelf | Book/audiobook server        |
+<img width="500px" height="50px" src=".github/assets/icons/sh-homepage.svg" title="Homepage"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-vaultwarden.svg" title="VaultWarden"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-nextcloud.svg" title="Nextcloud"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-mealie.svg" title="Mealie"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-sillytavern.svg" title="SillyTavern"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-mediawiki.svg" title="MediaWiki"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-audiobookshelf.svg" title="Audiobookshelf"/>
 
 ### Stack Utilities
 
-| App            | Function                     |
-|----------------|------------------------------|
-| DeUnhealth     | Container status monitor     |
-| Watchtower     | Image update monitor         |
+<img width="500px" height="50px" src=".github/assets/icons/sh-deunhealth.svg" title="DeUnhealth"/>
+<img width="500px" height="50px" src=".github/assets/icons/sh-watchtower.svg" title="Watchtower"/>
 
 ## Installation
 
@@ -83,8 +77,4 @@ compose: media | web | all
 
 | App       | Path                                                                               | Changes                    |
 |-----------|------------------------------------------------------------------------------------|----------------------------|
-| .env      | [/.env](/.env)                                                                     | Domain info, Secrets       |
-| Recyclarr | [/config-media/recyclarr/recyclarr.yml](/config-media/recyclarr/recyclarr.yml)     | Domain info, Secrets       |
-| Homepage  | [/config-web/homepage/services.yaml](/config-web/homepage/services.yaml)           | Ports, API Keys, Passkeys  |
-| Kometa    | [/config-media/kometa/config.yml](/config-media/kometa/config.yml)                 | IPs, API Keys              |
-| MediaWiki | [/config-web/mediawiki/LocalSettings.php](/config-web/mediawiki/LocalSettings.php) | Server URL, Secrets        |
+| .env      | [.env](./.env)                                                                     | Update PUID/PGID, timezone |

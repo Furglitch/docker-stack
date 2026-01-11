@@ -1,0 +1,1 @@
+Based on a pull request I submitted to [syvixor/skills-icons](https://github.com/syvixor/skills-icons/pull/446) but was rejected.
