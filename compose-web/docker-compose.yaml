@@ -95,24 +95,17 @@ services:
       - ${CONFIG_WEB_PATH}/mediawiki/extensions:/var/www/html/extensions
       #- ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
 
-  whoogle:
+  searxng:
     <<: *default-service
-    image: benbusby/whoogle-search:latest
-    container_name: whoogle
+    image: docker.io/searxng/searxng:latest
+    container_name: searxng
     network_mode: 'container:gluetun'
     environment:
-      - WHOGLE_PROXY_LOC=http://${IP_LOCAL}:${NGINX_IO}
-    pids_limit: 50
-    mem_limit: 256M
-    memswap_limit: 256M
-    security_opt:
-      - no-new-privileges
-    cap_drop:
-      - ALL
-    tmpfs:
-      - /config/:size=10M,uid=${PUID},gid=${GUID},mode=1700
-      - /var/lib/tor/:size=15M,uid=${PUID},gid=${GUID},mode=1700
-      - /run/tor/:size=1M,uid=${PUID},gid=${GUID},mode=1700
+      - SEARXNG_BASE_URL=http://${IP_DOMAIN}/
+      - SEARXNG_PORT=${PORT_SEARXNG}
+    volumes:
+      - ${CONFIG_WEB_PATH}/searxng/config:/etc/searxng
+      - ${CONFIG_WEB_PATH}/searxng/data:/var/cache/searxng
 
   audiobookshelf:
     <<: *default-service
