@@ -6,34 +6,34 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ### Media Services
 
-<img width="500px" height="50px" src=".github/assets/icons/sh-plex.svg" title="Plex"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-tautulli.svg" title="Tautulli"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-posterizarr.svg" title="Posterizarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-tdarr.svg" title="Tdarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-radarr.svg" title="Radarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-sonarr.svg" title="Sonarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-bazarr.svg" title="Bazarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-prowlarr.svg" title="Prowlarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-flaresolverr.svg" title="FlareSolverr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-recyclarr.svg" title="Recyclarr"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-gluetun.svg" title="Gluetun"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-sabnzbd.svg" title="SABnzbd"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-qbittorrent.svg" title="qBittorrent"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-plex.svg" title="Plex"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-tautulli.svg" title="Tautulli"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-posterizarr.svg" title="Posterizarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-tdarr.svg" title="Tdarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-radarr.svg" title="Radarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-sonarr.svg" title="Sonarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-bazarr.svg" title="Bazarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-prowlarr.svg" title="Prowlarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-flaresolverr.svg" title="FlareSolverr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-recyclarr.svg" title="Recyclarr"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-gluetun.svg" title="Gluetun"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-sabnzbd.svg" title="SABnzbd"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-qbittorrent.svg" title="qBittorrent"/>
 
 ### Web Services
 
-<img width="500px" height="50px" src=".github/assets/icons/sh-homepage.svg" title="Homepage"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-vaultwarden.svg" title="VaultWarden"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-nextcloud.svg" title="Nextcloud"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-mealie.svg" title="Mealie"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-sillytavern.svg" title="SillyTavern"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-mediawiki.svg" title="MediaWiki"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-audiobookshelf.svg" title="Audiobookshelf"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-homepage.svg" title="Homepage"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-vaultwarden.svg" title="VaultWarden"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-nextcloud.svg" title="Nextcloud"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-mealie.svg" title="Mealie"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-sillytavern.svg" title="SillyTavern"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-mediawiki.svg" title="MediaWiki"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-audiobookshelf.svg" title="Audiobookshelf"/>
 
 ### Stack Utilities
 
-<img width="500px" height="50px" src=".github/assets/icons/sh-deunhealth.svg" title="DeUnhealth"/>
-<img width="500px" height="50px" src=".github/assets/icons/sh-watchtower.svg" title="Watchtower"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-deunhealth.svg" title="DeUnhealth"/>
+<img width="50px" height="50px" src=".github/assets/icons/sh-watchtower.svg" title="Watchtower"/>
 
 ## Installation
 
