@@ -58,33 +58,6 @@ services:
         max-file: "1"
         max-size: "10m"
 
-  tdarr:
-    <<: *default-service
-    container_name: tdarr
-    image: ghcr.io/haveagitgat/tdarr:latest
-    ports:
-      - ${PORT_TDARR_UI}:8265
-      - ${PORT_TDARR}:8266
-    environment:
-      - UMASK_SET=${UMASK}
-      - nodeName=ServerNode
-      - serverIP=0.0.0.0
-      - serverPort=8266
-      - webUIPort=8265
-      - internalNode=true
-      - inContainer=true
-      - ffmpegVersion=6
-    volumes:
-      - ${CONFIG_MEDIA_PATH}/tdarr/server:/app/server
-      - ${CONFIG_MEDIA_PATH}/tdarr/configs:/app/configs
-      - ${CONFIG_MEDIA_PATH}/tdarr/logs:/app/logs
-      - ${MEDIA_SHARE}:/media
-      - /tmp/tdarr_cache:/temp
-    devices:
-    - /dev/dri:/dev/dri #Required for HW transcoding / QuickSync
-    profiles:
-      - disabled
-
   ## Meta Managers ##
 
   radarr:
@@ -159,6 +132,33 @@ services:
     user: ${PUID}:${GUID}
     volumes:
       - ${CONFIG_MEDIA_PATH}/recyclarr:/config
+
+  tdarr:
+    <<: *default-service
+    container_name: tdarr
+    image: ghcr.io/haveagitgat/tdarr:latest
+    ports:
+      - ${PORT_TDARR_UI}:8265
+      - ${PORT_TDARR}:8266
+    environment:
+      - UMASK_SET=${UMASK}
+      - nodeName=ServerNode
+      - serverIP=0.0.0.0
+      - serverPort=8266
+      - webUIPort=8265
+      - internalNode=true
+      - inContainer=true
+      - ffmpegVersion=6
+    volumes:
+      - ${CONFIG_MEDIA_PATH}/tdarr/server:/app/server
+      - ${CONFIG_MEDIA_PATH}/tdarr/configs:/app/configs
+      - ${CONFIG_MEDIA_PATH}/tdarr/logs:/app/logs
+      - ${MEDIA_SHARE}:/media
+      - /tmp/tdarr_cache:/temp
+    devices:
+    - /dev/dri:/dev/dri #Required for HW transcoding / QuickSync
+    profiles:
+      - disabled
 
 
   ## Download Clients ##

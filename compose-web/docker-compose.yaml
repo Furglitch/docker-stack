@@ -95,6 +95,16 @@ services:
       - ${CONFIG_WEB_PATH}/mediawiki/extensions:/var/www/html/extensions
       #- ${CONFIG_WEB_PATH}/mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
 
+  audiobookshelf:
+    <<: *default-service
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    container_name: audiobookshelf
+    volumes:
+      - ${CONFIG_WEB_PATH}/audiobookshelf/metadata:/metadata
+      - ${MEDIA_SHARE}:/share
+    ports:
+      - ${PORT_AUDIOBOOKSHELF}:80
+
   searxng:
     <<: *default-service
     image: docker.io/searxng/searxng:latest
@@ -106,13 +116,3 @@ services:
     volumes:
       - ${CONFIG_WEB_PATH}/searxng/config:/etc/searxng
       - ${CONFIG_WEB_PATH}/searxng/data:/var/cache/searxng
-
-  audiobookshelf:
-    <<: *default-service
-    image: ghcr.io/advplyr/audiobookshelf:latest
-    container_name: audiobookshelf
-    volumes:
-      - ${CONFIG_WEB_PATH}/audiobookshelf/metadata:/metadata
-      - ${MEDIA_SHARE}:/share
-    ports:
-      - ${PORT_AUDIOBOOKSHELF}:80
