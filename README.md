@@ -5,7 +5,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 ## Included Apps
 
 ### Media Services
-<p>
+<p align="center">
 <img width="50px" height="50px" src=".github/assets/icons/sh-plex.svg" title="Plex"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-tautulli.svg" title="Tautulli"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-kometa.svg" title="Kometa"/>
@@ -24,7 +24,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ### Web Services
 
-<p>
+<p align="center">
 <img width="50px" height="50px" src=".github/assets/icons/sh-homepage.svg" title="Homepage"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-vaultwarden.svg" title="VaultWarden"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-nextcloud.svg" title="Nextcloud"/>
@@ -37,7 +37,7 @@ A collection of docker compose files for deploying multiple services, such as Se
 
 ### Stack Utilities
 
-<p>
+<p align="center">
 <img width="50px" height="50px" src=".github/assets/icons/sh-deunhealth.svg" title="DeUnhealth"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-watchtower.svg" title="Watchtower"/>
 <img width="50px" height="50px" src=".github/assets/icons/sh-nginx-pm.svg" title="Nginx Proxy Manager"/>
