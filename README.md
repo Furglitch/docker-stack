@@ -106,3 +106,4 @@ This script pulls from the git repository without overwriting local changes in f
 | Web `docker-compose.yaml` | [compose-web/docker-compose.yaml](./compose-web/docker-compose.yaml) | Re-enable MediaWiki LocalSettings.php |
 | Recyclarr | [config-media/recyclarr/recyclarr.yml](./config-media/recyclarr/recyclarr.yml) | Update URLs and API keys |
 | Homepage `services.yaml` | [config-web/homepage/services.yaml](./config-web/homepage/services.yaml) | Update URLs and API keys |
+| Kometa `config.yml` | [config-media/kometa/config.yml](./config-media/kometa/config.yml) | Update URLs and API keys |
