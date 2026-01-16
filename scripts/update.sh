@@ -40,9 +40,6 @@ fi
 
 rm -rf "./.temp"
 
-git config --global --add safe.directory /home/user/docker
-chown -R furglitch:furglitch /home/user/docker
-
 WATCHED_FILES=(
     ".env"
     "compose-web/docker-compose.yaml"
