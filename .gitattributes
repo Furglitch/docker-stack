@@ -1,3 +1,4 @@
 .env text eol=lf filter=redact-env
 config-media/recyclarr/recyclarr.yml text eol=lf filter=redact-recyclarr
 config-web/homepage/services.yaml text eol=lf filter=redact-homepage
+config-media/kometa/config.yml text eol=lf filter=redact-kometa

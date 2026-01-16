@@ -24,3 +24,9 @@ attributesfile = .gitattributes
 		-e 's|password: .*|password: PASSWORD|g' \
 		-e 's/192\\.168\\.[0-9]+\\.[0-9]+/192.168.XXX.XXX/g'
 	smudge = cat
+
+[filter "redact-kometa"]
+	clean = sed -E \
+		-e 's|token: .*|key: TOKEN|g' \
+		-e 's/192\\.168\\.[0-9]+\\.[0-9]+/192.168.XXX.XXX/g'
+	smudge = cat

@@ -46,13 +46,6 @@
         - type: prowlarr
           url: http://192.168.XXX.XXX:32504/
           key: API_KEY
-    - Posterizarr:
-        icon: "sh-posterizarr"
-        href: http://192.168.XXX.XXX:32411/
-        #widgets:
-        #- type: posterizarr
-        #  url: http://192.168.XXX.XXX:32411/
-        #  key: API_KEY
     - TDarr:
         icon: "sh-tdarr"
         href: http://192.168.XXX.XXX:32412/
